@@ -1,0 +1,7 @@
+---
+- name: First Ansible run
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Ping hosts
+      ansible.builtin.ping:

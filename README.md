@@ -12,4 +12,7 @@ pip install --upgrade pip
 pip install ansible-builder ansible-navigator
 
 # Build Container
- ansible-builder build -t localhost/amarok-ee:1.0 --container-runtime podman
+ansible-builder build -t localhost/amarok-ee:1.0 --container-runtime podman -v 3
+
+# Execute runbook in ee
+ansible-navigator run playbooks/test.yml -i inventories/lab --execution-environment-image localhost/amarok-ee:1.0 --mode stdout --container-engine podman
