@@ -1,0 +1,1 @@
+ansible-builder build -t localhost/amarok-ee:1.0 --container-runtime podman

@@ -1,0 +1,6 @@
+kubernetes
+jmespath
+passlib
+bcrypt
+netaddr
+pyyaml
