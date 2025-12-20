@@ -10,9 +10,9 @@ ansible-navigator:
         - src: ${PWD}
           dest: "/navigator/"
           options: "Z"
-        - src: ${PWD}/artifacts
-          dest: /artifacts
-          options: "Z"
+        # - src: ${PWD}/artifacts
+        #   dest: /artifacts
+        #   options: "Z"
       environment-variables:
         set: 
           ANSIBLE_CONFIG: /navigator/ansible.cfg
@@ -23,7 +23,7 @@ ansible-navigator:
 
   playbook-artifact: 
     enable: true 
-    save-as: /artifacts/playbooks/{playbook_name}/artifact-{time_stamp}.json 
+    save-as: /navigator/artifacts/playbooks/{playbook_name}/artifact-{time_stamp}.json 
     
   
     
