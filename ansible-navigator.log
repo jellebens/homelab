@@ -1,0 +1,331 @@
+2025-12-20T19:55:32.650334+00:00 CRITICAL 'ansible_navigator.actions.run_af97._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fc8d700e-0909-4f8d-871e-1bd8caaaaf75', 'counter': 1, 'stdout': '\x1b[1;35m[WARNING]: Ansible is being run in a world writable directory (/mnt/e/repos/homelab), ignoring it as an ansible.cfg source. For more information see https://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-world-writable-dir\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '0d08f07b-66cf-4c5e-8bcf-8049c672bd12', 'created': '2025-12-20T19:55:32.650143+00:00'}
+2025-12-20T19:55:32.752456+00:00 CRITICAL 'ansible_navigator.actions.run_af97._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0788f97a-e02d-49d0-b2ed-9f9a6751f157', 'counter': 2, 'stdout': '\x1b[0;34mNo config file found; using defaults\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '0d08f07b-66cf-4c5e-8bcf-8049c672bd12', 'created': '2025-12-20T19:55:32.716349+00:00'}
+2025-12-20T19:55:32.855125+00:00 CRITICAL 'ansible_navigator.actions.run_af97._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '130b4ca1-683c-4ef4-b783-9efb9fd562ef', 'counter': 3, 'stdout': '\x1b[1;35m[WARNING]: Unable to parse /mnt/e/repos/homelab/inventories/lab/vesta.yml as an inventory source\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': '0d08f07b-66cf-4c5e-8bcf-8049c672bd12', 'created': '2025-12-20T19:55:32.768831+00:00'}
+2025-12-20T19:55:32.855357+00:00 CRITICAL 'ansible_navigator.actions.run_af97._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '99bb004b-b7b8-4407-ab75-8a145d50f730', 'counter': 4, 'stdout': '\x1b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '0d08f07b-66cf-4c5e-8bcf-8049c672bd12', 'created': '2025-12-20T19:55:32.768930+00:00'}
+2025-12-20T19:55:32.855546+00:00 CRITICAL 'ansible_navigator.actions.run_af97._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a6d9afbf-846b-48ca-a7c7-c675a0060dab', 'counter': 5, 'stdout': "\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'\x1b[0m", 'start_line': 4, 'end_line': 5, 'runner_ident': '0d08f07b-66cf-4c5e-8bcf-8049c672bd12', 'created': '2025-12-20T19:55:32.774197+00:00'}
+2025-12-20T19:58:14.295435+00:00 WARNING 'ansible_navigator.main' `config was normalized to SettingsEntryValue(default=<Constants.NOT_SET: 'Not set'>, current='/mnt/e/repos/homelab/ansible.cfg', schema_default=<Constants.NOT_SET: 'Not set'>, source=<Constants.USER_CFG: 'Settings file'>).
+2025-12-20T19:58:16.430726+00:00 WARNING 'ansible_navigator.actions.run_8bcf._update_args' `config was normalized to SettingsEntryValue(default=<Constants.NOT_SET: 'Not set'>, current='/mnt/e/repos/homelab/ansible.cfg', schema_default=<Constants.NOT_SET: 'Not set'>, source=<Constants.USER_CFG: 'Settings file'>).
+2025-12-20T19:58:17.377832+00:00 CRITICAL 'ansible_navigator.actions.run_8bcf._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '28317a50-8905-4d65-a241-5480bca98c3c', 'counter': 1, 'stdout': '\x1b[1;35m[WARNING]: Ansible is being run in a world writable directory (/mnt/e/repos/homelab), ignoring it as an ansible.cfg source. For more information see https://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-world-writable-dir\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'd68dadd9-87a2-4ce2-ba39-ffac272d8605', 'created': '2025-12-20T19:58:17.377648+00:00'}
+2025-12-20T19:58:17.479672+00:00 CRITICAL 'ansible_navigator.actions.run_8bcf._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ad6331b5-0efd-4ae6-a75a-5ac5e62ac0bb', 'counter': 2, 'stdout': '\x1b[0;34mNo config file found; using defaults\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': 'd68dadd9-87a2-4ce2-ba39-ffac272d8605', 'created': '2025-12-20T19:58:17.444961+00:00'}
+2025-12-20T19:58:17.581698+00:00 CRITICAL 'ansible_navigator.actions.run_8bcf._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9182c169-f89e-4b4e-9967-6a7533441299', 'counter': 3, 'stdout': '\x1b[1;35m[WARNING]: Unable to parse /mnt/e/repos/homelab/inventories/lab/vesta.yml as an inventory source\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': 'd68dadd9-87a2-4ce2-ba39-ffac272d8605', 'created': '2025-12-20T19:58:17.497753+00:00'}
+2025-12-20T19:58:17.581949+00:00 CRITICAL 'ansible_navigator.actions.run_8bcf._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8bfbe273-8051-4eda-acaa-888509f5c74b', 'counter': 4, 'stdout': '\x1b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': 'd68dadd9-87a2-4ce2-ba39-ffac272d8605', 'created': '2025-12-20T19:58:17.497807+00:00'}
+2025-12-20T19:58:17.582148+00:00 CRITICAL 'ansible_navigator.actions.run_8bcf._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7ae5a301-ec98-4e2b-a45d-973048450927', 'counter': 5, 'stdout': "\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'\x1b[0m", 'start_line': 4, 'end_line': 5, 'runner_ident': 'd68dadd9-87a2-4ce2-ba39-ffac272d8605', 'created': '2025-12-20T19:58:17.502862+00:00'}
+2025-12-20T19:59:17.379791+00:00 WARNING 'ansible_navigator.main' Path `${PWD}/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T19:59:17.380080+00:00 WARNING 'ansible_navigator.main' `config was normalized to SettingsEntryValue(default=<Constants.NOT_SET: 'Not set'>, current='/mnt/e/repos/homelab/${PWD}/ansible.cfg', schema_default=<Constants.NOT_SET: 'Not set'>, source=<Constants.USER_CFG: 'Settings file'>).
+2025-12-20T19:59:19.555415+00:00 WARNING 'ansible_navigator.actions.run_1f9e._update_args' Path `${PWD}/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T19:59:19.555618+00:00 WARNING 'ansible_navigator.actions.run_1f9e._update_args' `config was normalized to SettingsEntryValue(default=<Constants.NOT_SET: 'Not set'>, current='/mnt/e/repos/homelab/${PWD}/ansible.cfg', schema_default=<Constants.NOT_SET: 'Not set'>, source=<Constants.USER_CFG: 'Settings file'>).
+2025-12-20T19:59:20.516989+00:00 CRITICAL 'ansible_navigator.actions.run_1f9e._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '197936a0-97b1-4c89-ba35-32164cf342b2', 'counter': 1, 'stdout': '\x1b[1;35m[WARNING]: Ansible is being run in a world writable directory (/mnt/e/repos/homelab), ignoring it as an ansible.cfg source. For more information see https://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-world-writable-dir\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'f05c4a0f-0eac-4b0e-9554-e4e1b589cbf5', 'created': '2025-12-20T19:59:20.516772+00:00'}
+2025-12-20T19:59:20.619572+00:00 CRITICAL 'ansible_navigator.actions.run_1f9e._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fb7f04d6-b749-49d2-81aa-99ae360b3cac', 'counter': 2, 'stdout': '\x1b[0;34mNo config file found; using defaults\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': 'f05c4a0f-0eac-4b0e-9554-e4e1b589cbf5', 'created': '2025-12-20T19:59:20.579758+00:00'}
+2025-12-20T19:59:20.721725+00:00 CRITICAL 'ansible_navigator.actions.run_1f9e._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b2a68ee7-7bce-41b5-8f53-0568e9e624bc', 'counter': 3, 'stdout': '\x1b[1;35m[WARNING]: Unable to parse /mnt/e/repos/homelab/inventories/lab/vesta.yml as an inventory source\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': 'f05c4a0f-0eac-4b0e-9554-e4e1b589cbf5', 'created': '2025-12-20T19:59:20.634068+00:00'}
+2025-12-20T19:59:20.722038+00:00 CRITICAL 'ansible_navigator.actions.run_1f9e._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd2ff3bcd-92dc-4f2d-8aaf-605af9fe678c', 'counter': 4, 'stdout': '\x1b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': 'f05c4a0f-0eac-4b0e-9554-e4e1b589cbf5', 'created': '2025-12-20T19:59:20.634127+00:00'}
+2025-12-20T19:59:20.722275+00:00 CRITICAL 'ansible_navigator.actions.run_1f9e._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '25764b54-ea20-4fff-9f0d-2212c8e064db', 'counter': 5, 'stdout': "\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'\x1b[0m", 'start_line': 4, 'end_line': 5, 'runner_ident': 'f05c4a0f-0eac-4b0e-9554-e4e1b589cbf5', 'created': '2025-12-20T19:59:20.640229+00:00'}
+2025-12-20T20:02:51.498563+00:00 WARNING 'ansible_navigator.main' `config was normalized to SettingsEntryValue(default=<Constants.NOT_SET: 'Not set'>, current='/mnt/e/repos/homelab/ansible.cfg', schema_default=<Constants.NOT_SET: 'Not set'>, source=<Constants.USER_CFG: 'Settings file'>).
+2025-12-20T20:02:52.775364+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9bc78838-cb93-45bc-9e51-037836fa9a94', 'counter': 1, 'stdout': '\x1b[1;35m[WARNING]: Ansible is being run in a world writable directory\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.768264+00:00'}
+2025-12-20T20:02:52.775753+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '01431d50-db4f-4c17-bae5-4f068d2365dc', 'counter': 2, 'stdout': '\x1b[1;35m(/mnt/e/repos/homelab), ignoring it as an ansible.cfg source. For more\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.768361+00:00'}
+2025-12-20T20:02:52.776004+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '6f82d163-f710-4fde-9265-f0f95f59a405', 'counter': 3, 'stdout': '\x1b[1;35minformation see\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.768384+00:00'}
+2025-12-20T20:02:52.776228+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0416337e-b609-4485-87b3-9960b3e6f3e5', 'counter': 4, 'stdout': '\x1b[1;35mhttps://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.768399+00:00'}
+2025-12-20T20:02:52.776441+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a35f9ecf-9abe-4431-b217-13e5040d2815', 'counter': 5, 'stdout': '\x1b[1;35mworld-writable-dir\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.768412+00:00'}
+2025-12-20T20:02:52.827433+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '12370ec6-ef7e-4fc9-910f-b654a764bcda', 'counter': 6, 'stdout': '\x1b[0;34mNo config file found; using defaults\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.823693+00:00'}
+2025-12-20T20:02:52.909438+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e1cc3b72-5e56-4e14-8d79-3348993b6222', 'counter': 7, 'stdout': '\x1b[1;35m[WARNING]: Unable to parse /mnt/e/repos/homelab/inventories/lab/vesta.yml as an\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.904889+00:00'}
+2025-12-20T20:02:52.909769+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bbe96f1e-6b1f-4199-900f-94edacc85dcf', 'counter': 8, 'stdout': '\x1b[1;35minventory source\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.904981+00:00'}
+2025-12-20T20:02:52.909994+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1782e5d2-15ec-4f47-9695-36e3f560211f', 'counter': 9, 'stdout': '\x1b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.905047+00:00'}
+2025-12-20T20:02:52.910207+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd80ea7e0-0276-4517-8cfa-e61787d7fef7', 'counter': 10, 'stdout': '\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.909189+00:00'}
+2025-12-20T20:02:52.910466+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '87f8d7b2-0343-41b6-94f7-ad97870467ae', 'counter': 11, 'stdout': "\x1b[1;35mthe implicit localhost does not match 'all'\x1b[0m", 'start_line': 10, 'end_line': 11, 'runner_ident': '3b875568-d9b1-4ffa-b317-affd7c1770b2', 'created': '2025-12-20T20:02:52.909250+00:00'}
+2025-12-20T20:02:53.746641+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/artifacts'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks/test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/artifacts'
+2025-12-20T20:03:26.925901+00:00 WARNING 'ansible_navigator.main' `config was normalized to SettingsEntryValue(default=<Constants.NOT_SET: 'Not set'>, current='/mnt/e/repos/homelab/ansible.cfg', schema_default=<Constants.NOT_SET: 'Not set'>, source=<Constants.USER_CFG: 'Settings file'>).
+2025-12-20T20:03:28.119388+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b192e4e7-4b9a-4489-a7a8-5169bc6f8448', 'counter': 1, 'stdout': '\x1b[1;35m[WARNING]: Ansible is being run in a world writable directory\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.113757+00:00'}
+2025-12-20T20:03:28.119740+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '195637d6-3ff9-4591-aad1-2829abb4a293', 'counter': 2, 'stdout': '\x1b[1;35m(/mnt/e/repos/homelab), ignoring it as an ansible.cfg source. For more\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.113849+00:00'}
+2025-12-20T20:03:28.119984+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '642c59ff-f644-4db1-aead-dcf0d64087ce', 'counter': 3, 'stdout': '\x1b[1;35minformation see\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.113871+00:00'}
+2025-12-20T20:03:28.120239+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a8d92ee8-f58b-439d-ac92-8044cfb39e68', 'counter': 4, 'stdout': '\x1b[1;35mhttps://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.113886+00:00'}
+2025-12-20T20:03:28.120465+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '172daecc-8c11-43d0-8d36-c5a360531ccf', 'counter': 5, 'stdout': '\x1b[1;35mworld-writable-dir\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.113898+00:00'}
+2025-12-20T20:03:28.161563+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ab70e163-7cd0-456b-8734-6b8a56bcfae7', 'counter': 6, 'stdout': '\x1b[0;34mNo config file found; using defaults\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.155657+00:00'}
+2025-12-20T20:03:28.233505+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '72b3d0df-48b8-444b-b1cb-efa97033b5c3', 'counter': 7, 'stdout': '\x1b[1;35m[WARNING]: Unable to parse /mnt/e/repos/homelab/inventories/lab/vesta.yml as an\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.231928+00:00'}
+2025-12-20T20:03:28.233789+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2a9b707b-c5cf-4145-b09c-d5295d49a4d8', 'counter': 8, 'stdout': '\x1b[1;35minventory source\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.231996+00:00'}
+2025-12-20T20:03:28.234050+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c508a060-64bb-4ecd-9694-f61c2a6d3dd6', 'counter': 9, 'stdout': '\x1b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.232015+00:00'}
+2025-12-20T20:03:28.244392+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '364398f8-bac2-422b-8a3d-849e01c4e07b', 'counter': 10, 'stdout': '\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.236206+00:00'}
+2025-12-20T20:03:28.244686+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9582fe47-ff8b-410c-ba85-7c3544a64879', 'counter': 11, 'stdout': "\x1b[1;35mthe implicit localhost does not match 'all'\x1b[0m", 'start_line': 10, 'end_line': 11, 'runner_ident': '1638f0ec-5cc1-41ed-942f-725143bc94b0', 'created': '2025-12-20T20:03:28.236244+00:00'}
+2025-12-20T20:03:29.072556+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/artifacts'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks/test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/artifacts'
+2025-12-20T20:03:51.828171+00:00 WARNING 'ansible_navigator.main' Path `${PWD}/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:03:51.828491+00:00 WARNING 'ansible_navigator.main' `config was normalized to SettingsEntryValue(default=<Constants.NOT_SET: 'Not set'>, current='/mnt/e/repos/homelab/${PWD}/ansible.cfg', schema_default=<Constants.NOT_SET: 'Not set'>, source=<Constants.USER_CFG: 'Settings file'>).
+2025-12-20T20:03:53.027957+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fec31ace-c577-4245-8b78-d45537d71a44', 'counter': 1, 'stdout': '\x1b[1;35m[WARNING]: Ansible is being run in a world writable directory\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.019617+00:00'}
+2025-12-20T20:03:53.028299+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '91cee065-b5a2-4fc2-a112-8e24692e90c4', 'counter': 2, 'stdout': '\x1b[1;35m(/mnt/e/repos/homelab), ignoring it as an ansible.cfg source. For more\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.019742+00:00'}
+2025-12-20T20:03:53.028638+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '06000376-7d6d-46af-9b48-7c450838e238', 'counter': 3, 'stdout': '\x1b[1;35minformation see\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.019773+00:00'}
+2025-12-20T20:03:53.028949+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8fad0987-def9-4856-ac20-866d7617756e', 'counter': 4, 'stdout': '\x1b[1;35mhttps://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.019795+00:00'}
+2025-12-20T20:03:53.029167+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a406fcea-d422-4d39-ad9e-5fb7fa493cfc', 'counter': 5, 'stdout': '\x1b[1;35mworld-writable-dir\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.019812+00:00'}
+2025-12-20T20:03:53.059975+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '944f36cd-2e71-4397-a15b-c75502ba3256', 'counter': 6, 'stdout': '\x1b[0;34mNo config file found; using defaults\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.059004+00:00'}
+2025-12-20T20:03:53.142453+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e37e65f6-8b26-48cb-a53d-3f40474d25a4', 'counter': 7, 'stdout': '\x1b[1;35m[WARNING]: Unable to parse /mnt/e/repos/homelab/inventories/lab/vesta.yml as an\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.133385+00:00'}
+2025-12-20T20:03:53.142742+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f96caa6f-4c0c-48b2-99a4-41c2a22dc44d', 'counter': 8, 'stdout': '\x1b[1;35minventory source\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.133441+00:00'}
+2025-12-20T20:03:53.142993+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7dfcada3-5afa-4157-9d3e-08c1b1ee59dd', 'counter': 9, 'stdout': '\x1b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.133459+00:00'}
+2025-12-20T20:03:53.143216+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b1f3f87b-0531-4448-a9e8-d09341b255c2', 'counter': 10, 'stdout': '\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.137359+00:00'}
+2025-12-20T20:03:53.143458+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5f28d0dd-cb85-4252-b151-23df2c7dd115', 'counter': 11, 'stdout': "\x1b[1;35mthe implicit localhost does not match 'all'\x1b[0m", 'start_line': 10, 'end_line': 11, 'runner_ident': 'ab22209c-4c4f-427a-8cf1-7f448efb1064', 'created': '2025-12-20T20:03:53.137402+00:00'}
+2025-12-20T20:03:53.961043+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/artifacts'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks/test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/artifacts'
+2025-12-20T20:05:23.428599+00:00 WARNING 'ansible_navigator.main' Path `/tmp/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:05:24.668004+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '98a997b9-67bb-4311-9c8a-f8ea3a9a65b4', 'counter': 1, 'stdout': '\x1b[1;35m[WARNING]: Ansible is being run in a world writable directory\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.663647+00:00'}
+2025-12-20T20:05:24.668414+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '40dcc2e4-d941-41f8-a57c-753575158648', 'counter': 2, 'stdout': '\x1b[1;35m(/mnt/e/repos/homelab), ignoring it as an ansible.cfg source. For more\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.663818+00:00'}
+2025-12-20T20:05:24.668653+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a85caf0a-32ad-4e4b-a758-d480e40963b9', 'counter': 3, 'stdout': '\x1b[1;35minformation see\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.663871+00:00'}
+2025-12-20T20:05:24.668873+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b398d24b-7046-4858-ad50-9e85d93458dc', 'counter': 4, 'stdout': '\x1b[1;35mhttps://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.663911+00:00'}
+2025-12-20T20:05:24.669084+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '31d839c4-a0d5-4dd4-a5ac-3f4791bd42f5', 'counter': 5, 'stdout': '\x1b[1;35mworld-writable-dir\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.663937+00:00'}
+2025-12-20T20:05:24.709937+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '291a604e-7b3d-4265-ac0b-5da6f7240f53', 'counter': 6, 'stdout': '\x1b[0;34mNo config file found; using defaults\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.703954+00:00'}
+2025-12-20T20:05:24.781583+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9e7f76f3-f007-4de7-bffd-eb5d42a81199', 'counter': 7, 'stdout': '\x1b[1;35m[WARNING]: Unable to parse /mnt/e/repos/homelab/inventories/lab/vesta.yml as an\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.775105+00:00'}
+2025-12-20T20:05:24.781848+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '00ef5105-01ed-45f9-a263-0b8ddf674b39', 'counter': 8, 'stdout': '\x1b[1;35minventory source\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.775162+00:00'}
+2025-12-20T20:05:24.782111+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fb346b52-876d-42d3-81e0-9ab973349ad7', 'counter': 9, 'stdout': '\x1b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.775180+00:00'}
+2025-12-20T20:05:24.782430+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c65cbce9-c9ed-4a16-b15b-b5e6b46d7e34', 'counter': 10, 'stdout': '\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.779044+00:00'}
+2025-12-20T20:05:24.782705+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f4a5f0f0-0e98-4e31-9b36-971b9ad3ee6d', 'counter': 11, 'stdout': "\x1b[1;35mthe implicit localhost does not match 'all'\x1b[0m", 'start_line': 10, 'end_line': 11, 'runner_ident': '1899a681-6d53-4249-8317-cbd78a7be791', 'created': '2025-12-20T20:05:24.779083+00:00'}
+2025-12-20T20:05:25.629709+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/artifacts'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks/test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/artifacts'
+2025-12-20T20:07:02.763195+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:07:03.985023+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bf4decf4-ca7d-4ed5-a8d3-449d496ef936', 'counter': 1, 'stdout': '\x1b[1;35m[WARNING]: Ansible is being run in a world writable directory\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:03.978718+00:00'}
+2025-12-20T20:07:03.985583+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '892c9786-f309-496c-9f72-6fccab31d7c1', 'counter': 2, 'stdout': '\x1b[1;35m(/mnt/e/repos/homelab), ignoring it as an ansible.cfg source. For more\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:03.978807+00:00'}
+2025-12-20T20:07:03.985927+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c37f5ed3-4fd6-48f0-af4a-2122703a8b1d', 'counter': 3, 'stdout': '\x1b[1;35minformation see\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:03.978830+00:00'}
+2025-12-20T20:07:03.986247+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2c79f481-939c-4125-a3a3-e06029824cea', 'counter': 4, 'stdout': '\x1b[1;35mhttps://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:03.978844+00:00'}
+2025-12-20T20:07:03.986485+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3b127c27-90bf-4462-94e1-1465af31e95f', 'counter': 5, 'stdout': '\x1b[1;35mworld-writable-dir\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:03.978856+00:00'}
+2025-12-20T20:07:04.026966+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '94e52461-88fe-48a4-97c9-ffe2bd9b728a', 'counter': 6, 'stdout': '\x1b[0;34mNo config file found; using defaults\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:04.020838+00:00'}
+2025-12-20T20:07:04.097769+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '89f9f755-fa45-489f-98ad-a5efc0d315cb', 'counter': 7, 'stdout': '\x1b[1;35m[WARNING]: Unable to parse /mnt/e/repos/homelab/inventories/lab/vesta.yml as an\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:04.096013+00:00'}
+2025-12-20T20:07:04.098052+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5c08f861-4814-463f-b377-65f380d21de8', 'counter': 8, 'stdout': '\x1b[1;35minventory source\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:04.096067+00:00'}
+2025-12-20T20:07:04.098329+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3e02979e-f797-4e19-aaed-2bfac96a0d3a', 'counter': 9, 'stdout': '\x1b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:04.096084+00:00'}
+2025-12-20T20:07:04.108573+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e8e17779-120f-4043-810b-b6d836c9cee7', 'counter': 10, 'stdout': '\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:04.100148+00:00'}
+2025-12-20T20:07:04.108788+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ffe04bac-5e8c-4850-9c30-fed848705974', 'counter': 11, 'stdout': "\x1b[1;35mthe implicit localhost does not match 'all'\x1b[0m", 'start_line': 10, 'end_line': 11, 'runner_ident': 'b5b6bb33-58e2-45f0-82ec-76e2d8e980c6', 'created': '2025-12-20T20:07:04.100187+00:00'}
+2025-12-20T20:07:04.925894+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/artifacts'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks/test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/artifacts'
+2025-12-20T20:07:20.389972+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:09:29.662113+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:09:30.056389+00:00 WARNING 'ansible_navigator.runner.base._add_env_vars_to_args' Pass through environment variable `ANSIBLE_CONFIG=/navigator/ansible.cfg` not currently set, discarded
+2025-12-20T20:09:30.739110+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2257189c-eb97-4229-92c0-6f318fce19ce', 'counter': 1, 'stdout': '\x1b[1;35m[WARNING]: Ansible is being run in a world writable directory\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.737369+00:00'}
+2025-12-20T20:09:30.739405+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '473d8409-f5d9-4be7-b21c-a5d2a0cf7276', 'counter': 2, 'stdout': '\x1b[1;35m(/mnt/e/repos/homelab), ignoring it as an ansible.cfg source. For more\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.737459+00:00'}
+2025-12-20T20:09:30.739678+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3e731d10-e288-4425-ad6e-c50791f8ce1e', 'counter': 3, 'stdout': '\x1b[1;35minformation see\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.737481+00:00'}
+2025-12-20T20:09:30.739933+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ab6dcb24-cea9-429a-bb7c-38482f8c1208', 'counter': 4, 'stdout': '\x1b[1;35mhttps://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.737495+00:00'}
+2025-12-20T20:09:30.740199+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '16d3398a-9844-4d41-b165-13294f511479', 'counter': 5, 'stdout': '\x1b[1;35mworld-writable-dir\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.737507+00:00'}
+2025-12-20T20:09:30.780761+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bc8cbee4-c42b-4218-b4e0-8b219d20ee82', 'counter': 6, 'stdout': '\x1b[0;34mNo config file found; using defaults\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.779056+00:00'}
+2025-12-20T20:09:30.851532+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c420fa7a-4020-448a-9171-9025fa4b8018', 'counter': 7, 'stdout': '\x1b[1;35m[WARNING]: Unable to parse /mnt/e/repos/homelab/inventories/lab/vesta.yml as an\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.850494+00:00'}
+2025-12-20T20:09:30.851900+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '801f622f-0ab9-438f-a46b-6032fe0257d4', 'counter': 8, 'stdout': '\x1b[1;35minventory source\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.850550+00:00'}
+2025-12-20T20:09:30.852195+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '61df9c6a-81bb-4987-a1a0-cc3b7fd5c3ca', 'counter': 9, 'stdout': '\x1b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.850570+00:00'}
+2025-12-20T20:09:30.862498+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f2ef4154-f676-43fc-8185-93c78bff5f2c', 'counter': 10, 'stdout': '\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.854369+00:00'}
+2025-12-20T20:09:30.862777+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e1eb556e-7f86-478b-ab2c-f5f41e6e4def', 'counter': 11, 'stdout': "\x1b[1;35mthe implicit localhost does not match 'all'\x1b[0m", 'start_line': 10, 'end_line': 11, 'runner_ident': '32596219-1f9f-4ef0-bd40-a2522c6f0a2b', 'created': '2025-12-20T20:09:30.854426+00:00'}
+2025-12-20T20:09:31.669738+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/artifacts'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks/test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/artifacts'
+2025-12-20T20:15:10.677522+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:15:11.209407+00:00 WARNING 'ansible_navigator.runner.base._add_env_vars_to_args' Pass through environment variable `ANSIBLE_CONFIG=/navigator/ansible.cfg` not currently set, discarded
+2025-12-20T20:16:23.768947+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:16:39.424589+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:16:57.132940+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:18:22.202440+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:19:01.626206+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:19:45.960707+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:20:40.907887+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:20:42.189304+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9e8c5bfc-0588-40f8-946e-6b0010a3910d', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '3c3d9194-2ef4-4728-9817-b7251eff9afe', 'created': '2025-12-20T20:20:42.186922+00:00'}
+2025-12-20T20:20:42.281594+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '25bc9cbd-d345-4d20-96d5-f5c0aa54591b', 'counter': 2, 'stdout': '\x1b[1;35m[WARNING]: Unable to parse /mnt/e/repos/homelab/inventories/lab/vesta.yml as an\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '3c3d9194-2ef4-4728-9817-b7251eff9afe', 'created': '2025-12-20T20:20:42.271832+00:00'}
+2025-12-20T20:20:42.287600+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0e5a7e21-01c8-43c1-b5af-840a4d980758', 'counter': 3, 'stdout': '\x1b[1;35minventory source\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': '3c3d9194-2ef4-4728-9817-b7251eff9afe', 'created': '2025-12-20T20:20:42.271899+00:00'}
+2025-12-20T20:20:42.287904+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4ad8d3bb-ae13-4f57-8bf2-fecc531756da', 'counter': 4, 'stdout': '\x1b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '3c3d9194-2ef4-4728-9817-b7251eff9afe', 'created': '2025-12-20T20:20:42.271919+00:00'}
+2025-12-20T20:20:42.288126+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fd01cb6b-2c89-4d94-9d1f-2f2ae7349cfb', 'counter': 5, 'stdout': '\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': '3c3d9194-2ef4-4728-9817-b7251eff9afe', 'created': '2025-12-20T20:20:42.276139+00:00'}
+2025-12-20T20:20:42.288377+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '05e2c792-372c-4aaf-9daf-93124c46a416', 'counter': 6, 'stdout': "\x1b[1;35mthe implicit localhost does not match 'all'\x1b[0m", 'start_line': 5, 'end_line': 6, 'runner_ident': '3c3d9194-2ef4-4728-9817-b7251eff9afe', 'created': '2025-12-20T20:20:42.276192+00:00'}
+2025-12-20T20:20:43.113841+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2025-12-20T20:21:46.615110+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2025-12-20T20:21:47.891698+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9b32c780-4e2d-43b9-bc75-b8f5aec06d5c', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'a48a1eff-f545-4e57-bd02-8781779febec', 'created': '2025-12-20T20:21:47.886982+00:00'}
+2025-12-20T20:21:49.069038+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
