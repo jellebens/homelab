@@ -1,0 +1,8 @@
+---
+- name: Setup homelab
+  hosts: mercurius.local
+  gather_facts: false
+  connection: local
+  
+  roles:
+    - ssh

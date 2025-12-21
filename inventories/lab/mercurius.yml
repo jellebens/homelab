@@ -1,4 +1,3 @@
 all:
   hosts:
     mercurius.local:
-      ansible_connection: local

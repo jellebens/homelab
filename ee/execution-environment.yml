@@ -7,10 +7,18 @@ images:
 dependencies:
   python_interpreter:
     package_system: python3
+  
   ansible_core:
     package_pip: ansible-core
+  
   ansible_runner:
     package_pip: ansible-runner
-  system:
-  - openssh-clients
-  - sshpass
+  
+  system: bindep.txt
+  
+  python: requirements.txt
+
+  galaxy: requirements.yml
+
+
+

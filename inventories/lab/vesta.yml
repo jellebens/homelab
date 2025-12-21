@@ -1,4 +1,3 @@
 all:
   hosts:
     vesta.local:
-      ansible_connection: local
