@@ -4,7 +4,7 @@ ansible-navigator:
 
   execution-environment: 
       enabled: true 
-      image: localhost/amarok-ee:1.0   
+      image: localhost/amarok-ee:1.0.2   
       container-engine: podman 
       volume-mounts:
         - src: ${PWD}
