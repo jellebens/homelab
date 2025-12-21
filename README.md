@@ -15,6 +15,4 @@ pip install ansible-builder ansible-navigator
 ansible-builder build -t localhost/amarok-ee:1.0 --container-runtime podman -v 3
 
 # Execute runbook in ee
-export ANSIBLE_CONFIG=$(pwd)/ansible.cfg
-
-ansible-navigator run playbooks/test.yml -i inventories/lab/all.yml -v
+ansible-navigator run playbooks/deploy_homelab.yml -i inventories/lab/mercurius.yml --vault-password-file ~/.ansible-vault-pass
