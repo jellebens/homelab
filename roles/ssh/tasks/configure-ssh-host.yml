@@ -53,3 +53,43 @@
     msg: "Ansible-triggered reboot"
     test_command: "whoami"
   become: true
+
+
+ 
+  
+      # # Use inventory values when present, otherwise sane defaults.
+      # ssh_test_user: "{{ hostvars[inventory_hostname].ansible_user | default('admin') }}"
+      # ssh_test_port: "{{ hostvars[inventory_hostname].ansible_port | default(22) }}"
+      # ssh_test_host: "{{ hostvars[inventory_hostname].ansible_host | default(inventory_hostname) }}"
+
+      # Optional: if you want to force a specific private key file, set this.
+      # ssh_test_identity_file: "~/.ssh/id_ed25519"
+      #ssh_test_identity_file: ""
+
+- name: Assert SSH succeeds with publickey only (no password fallback)
+  ansible.builtin.command: >-
+    ssh
+    -p {{ ansible_port | default(22) }}
+    -o BatchMode=yes
+    -o PreferredAuthentications=publickey
+    -o PubkeyAuthentication=yes
+    -o PasswordAuthentication=no
+    -o KbdInteractiveAuthentication=no
+    -o ChallengeResponseAuthentication=no
+    -o NumberOfPasswordPrompts=0
+    -o ConnectTimeout=8
+    {% if local_key_path | length > 0 %}-i {{ local_key_path }}{% endif %}
+    {{ ssh_user }}@{{ inventory_hostname }}
+    true
+  register: key_only_probe
+  changed_when: false
+  delegate_to: localhost
+
+- name: Fail if key-only probe fails
+  ansible.builtin.fail:
+    msg: >-
+      Key-only SSH assertion FAILED for {{ inventory_hostname }}.
+      This means public-key authentication is not working, or SSH would require/fallback to password.
+      ssh exit={{ key_only_probe.rc }}
+      stderr={{ key_only_probe.stderr | default('') }}
+  when: key_only_probe.rc != 0

@@ -11,6 +11,7 @@ ssh_user_groups:
 
 # Path to your public key on the control node
 local_pubkey_path: "~/.ssh/id_ed25519.pub"
+local_key_path: "~/.ssh/id_ed25519"
 
 # Security toggles
 disable_password_login: false
