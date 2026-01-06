@@ -1,0 +1,3 @@
+ansible_user: admin
+ssh_user_groups:
+  - sudo

@@ -1,0 +1,55 @@
+#Preparing target 
+- name: Ensure SSH user exists 
+  ansible.builtin.user:
+    name: "{{ ssh_user }}"
+    shell: /bin/bash
+    groups: "{{ ssh_user_groups }}"
+    append: true
+    create_home: true
+
+- name: Install SSH public key for user (like ssh-copy-id)
+  ansible.posix.authorized_key:
+    user: "{{ ssh_user }}"
+    state: present
+    manage_dir: true
+    key: "{{ lookup('file', local_pubkey_path | expanduser) }}"
+
+- name: Optionally disable SSH password authentication
+  ansible.builtin.lineinfile:
+    path: "{{ sshd_config_path }}"
+    regexp: '^#?PasswordAuthentication\s+'
+    line: 'PasswordAuthentication no'
+    state: present
+    backup: yes
+  when: disable_password_login
+  notify: Restart SSH service
+
+- name: Optionally disable root login over SSH
+  become: true
+  ansible.builtin.lineinfile:
+    path: "{{ sshd_config_path }}"
+    regexp: '^#?PermitRootLogin\s+'
+    line: 'PermitRootLogin no'
+    state: present
+    backup: yes
+  when: disable_root_ssh
+  notify: Restart SSH service
+
+- name: Ensure PubkeyAuthentication is enabled
+  become: true
+  ansible.builtin.lineinfile:
+    path: "{{ sshd_config_path }}"
+    regexp: '^#?PubkeyAuthentication\s+'
+    line: 'PubkeyAuthentication yes'
+    state: present
+    backup: yes
+
+- name: Reboot the Pi and wait for SSH
+  ansible.builtin.reboot:
+    reboot_timeout: 300        
+    connect_timeout: 10
+    post_reboot_delay: 5       
+    pre_reboot_delay: 3        
+    msg: "Ansible-triggered reboot"
+    test_command: "whoami"
+  become: true

@@ -1,1 +1,3 @@
-ansible-builder build -t localhost/amarok-ee:1.0 --container-runtime podman
+ansible-builder build -t jellebens/ansible-excecution-environment:1.0.4 --container-runtime podman
+
+podman push jellebens/ansible-excecution-environment:1.0.4

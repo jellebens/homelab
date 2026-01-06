@@ -1,3 +1,23 @@
 #SPDX-License-Identifier: MIT-0
 ---
+# Remote user that will log in via SSH key
+ssh_user: "admin"
 
+# Groups to add the user to
+# On Ubuntu/Debian: "sudo"
+# On RHEL/Rocky/CentOS: "wheel"
+ssh_user_groups:
+  - "sudo"
+
+# Path to your public key on the control node
+local_pubkey_path: "~/.ssh/id_ed25519.pub"
+
+# Security toggles
+disable_password_login: false
+disable_root_ssh: true
+
+# SSH config & services
+sshd_config_path: "/etc/ssh/sshd_config"
+sshd_service_names:
+  - "sshd"
+  - "ssh"
