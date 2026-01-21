@@ -24,4 +24,4 @@ ansible-builder build -t jellebens/ansible-excecution-environment:1.0 --containe
 podman push jellebens/ansible-excecution-environment:1.0
 
 # Execute runbook in ee
-ansible-navigator run playbooks/deploy_homelab.yml -i inventories/lab/mercurius.yml --vault-password-file ~/.ansible-vault-pass
+ansible-navigator run playbooks/deploy_homelab.yml  -i inventories/shared -i inventories/lab/mercurius.yml --vault-password-file ~/.ansible-vault-pass
