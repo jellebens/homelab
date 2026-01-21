@@ -54,18 +54,6 @@
     test_command: "whoami"
   become: true
 
-
- 
-  
-      # # Use inventory values when present, otherwise sane defaults.
-      # ssh_test_user: "{{ hostvars[inventory_hostname].ansible_user | default('admin') }}"
-      # ssh_test_port: "{{ hostvars[inventory_hostname].ansible_port | default(22) }}"
-      # ssh_test_host: "{{ hostvars[inventory_hostname].ansible_host | default(inventory_hostname) }}"
-
-      # Optional: if you want to force a specific private key file, set this.
-      # ssh_test_identity_file: "~/.ssh/id_ed25519"
-      #ssh_test_identity_file: ""
-
 - name: Assert SSH succeeds with publickey only (no password fallback)
   ansible.builtin.command: >-
     ssh
