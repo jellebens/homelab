@@ -1,3 +1,24 @@
 #SPDX-License-Identifier: MIT-0
 ---
-# handlers file for roles/network
+- name: Systemd daemon-reload
+  become: true
+  ansible.builtin.systemd:
+    daemon_reload: true
+
+- name: Restart avahi
+  become: true
+  ansible.builtin.service:
+    name: avahi-daemon
+    state: restarted
+
+- name: Restart lan-mdns
+  become: true
+  ansible.builtin.systemd:
+    name: lan-mdns.service
+    state: restarted
+
+- name: Restart wifi-mdns
+  become: true
+  ansible.builtin.systemd:
+    name: wifi-mdns.service
+    state: restarted

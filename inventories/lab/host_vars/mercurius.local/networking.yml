@@ -1,0 +1,23 @@
+---
+#Wired settings
+static_interface: eth0
+static_ip: 192.168.50.150
+static_netmask: 255.255.255.0
+static_prefix: 24
+static_gateway: 192.168.50.1
+static_dns:
+  - 192.168.50.1
+
+#Wireless settings
+disable_wlan: false
+wireless_interface: wlan0
+wireless_ip: 192.168.50.150
+wireless_netmask: 255.255.255.0
+wireless_prefix: 25
+wireless_gateway: 192.168.50.1
+wireless_dns:
+  - 192.168.50.1
+  - 192.168.50.144 
+  - 192.168.50.145 
+  - 8.8.8.8
+  - 8.8.4.4

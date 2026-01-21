@@ -1,3 +1,12 @@
 #SPDX-License-Identifier: MIT-0
 ---
-# tasks file for roles/network
+- name: Configure Wired Networking
+  import_tasks: wired.yml
+  tags:
+    - networking
+
+- name: Configure dns
+  import_tasks: install-mdns.yml
+  tags:
+    - networking
+    - dns
