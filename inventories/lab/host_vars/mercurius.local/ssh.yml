@@ -1,0 +1,3 @@
+ssh:
+  disable_password_login: true
+  disable_root: true

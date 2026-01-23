@@ -14,25 +14,39 @@
     manage_dir: true
     key: "{{ lookup('file', local_pubkey_path | expanduser) }}"
 
+- name: Ensure SSH hardening override
+  become: true
+  ansible.builtin.copy:
+    dest: /etc/ssh/sshd_config.d/99-hardening.conf
+    owner: root
+    group: root
+    mode: "0600"
+    content: |
+      Match all
+      PasswordAuthentication no
+      PermitRootLogin no
+  notify: Restart SSH service
+
 - name: Optionally disable SSH password authentication
+  become: true
   ansible.builtin.lineinfile:
-    path: "{{ sshd_config_path }}"
+    path: "/etc/ssh/sshd_config.d/99-hardening.conf"
     regexp: '^#?PasswordAuthentication\s+'
     line: 'PasswordAuthentication no'
     state: present
     backup: yes
-  when: disable_password_login
+  when: (ssh.disable_password_login | default(disable_password_login, true))
   notify: Restart SSH service
 
 - name: Optionally disable root login over SSH
   become: true
   ansible.builtin.lineinfile:
-    path: "{{ sshd_config_path }}"
+    path: "/etc/ssh/sshd_config.d/99-hardening.conf"
     regexp: '^#?PermitRootLogin\s+'
     line: 'PermitRootLogin no'
     state: present
     backup: yes
-  when: disable_root_ssh
+  when: (ssh.disable_root | default(disable_root_ssh, true))
   notify: Restart SSH service
 
 - name: Ensure PubkeyAuthentication is enabled
@@ -43,16 +57,17 @@
     line: 'PubkeyAuthentication yes'
     state: present
     backup: yes
+  notify: Restart SSH service
 
-- name: Reboot the Pi and wait for SSH
-  ansible.builtin.reboot:
-    reboot_timeout: 300        
-    connect_timeout: 10
-    post_reboot_delay: 5       
-    pre_reboot_delay: 3        
-    msg: "Ansible-triggered reboot"
-    test_command: "whoami"
+- name: Verify effective sshd settings
   become: true
+  ansible.builtin.command: sshd -T
+  register: sshd_effective
+  changed_when: false
+
+- name: Show effective sshd settings
+  ansible.builtin.debug:
+    msg: "{{ sshd_effective.stdout_lines | select('match', '^(passwordauthentication|permitrootlogin|pubkeyauthentication) ') | list }}"
 
 - name: Assert SSH succeeds with publickey only (no password fallback)
   ansible.builtin.command: >-

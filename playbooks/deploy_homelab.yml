@@ -5,6 +5,6 @@
 
   
   roles:
-    #- ssh
+    - ssh
     #- network
     - kiosk
