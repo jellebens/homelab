@@ -1,0 +1,73 @@
+- name: Install packages
+  become: true
+  ansible.builtin.apt:
+    name:
+      - unclutter
+    state: present
+    update_cache: true
+
+
+- name: Configure kiosk
+  become: true
+  ansible.builtin.copy:
+    dest: /home/{{ ansible_user }}/kiosk.sh
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: "0755"
+    content: |
+      #!/bin/bash
+      set -euo pipefail
+
+      # Let the desktop session settle
+      sleep 10
+
+      echo "Hiding the mouse cursor..."
+      unclutter -idle 0.1 -root &
+
+      echo "Starting Chromium..."
+      exec /usr/bin/chromium \
+        --noerrdialogs \
+        --disable-infobars \
+        --kiosk \
+        --app="{{ kiosk_url }}" \
+        --incognito \
+        --disable-translate \
+        --no-first-run \
+        --disable-features=TranslateUI
+
+- name: Configure kiosk service
+  become: true
+  ansible.builtin.copy:
+    dest: /etc/systemd/system/kiosk.service
+    mode: "0644"
+    content: |
+      [Unit]
+      Description=Kiosk
+      After=display-manager.service
+      Wants=display-manager.service
+
+      [Service]
+      Type=simple
+      User={{ ansible_user }}
+      Group={{ ansible_user }}
+      Environment=DISPLAY=:0
+      Environment=XAUTHORITY=/home/{{ ansible_user }}/.Xauthority
+      ExecStart=/home/{{ ansible_user }}/kiosk.sh
+      Restart=always
+      RestartSec=5
+
+      [Install]
+      WantedBy=multi-user.target
+
+
+- name: Reload systemd
+  become: true
+  ansible.builtin.systemd:
+    daemon_reload: true
+
+- name: Enable and start kiosk service
+  become: true
+  ansible.builtin.systemd:
+    name: kiosk.service
+    enabled: true
+    state: started

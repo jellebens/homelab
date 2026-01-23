@@ -4532,3 +4532,902 @@ Traceback (most recent call last):
   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
     os.mkdir(self, mode)
 PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T18:47:13.293689+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T18:47:16.791614+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T18:47:54.714281+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T18:48:37.446126+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid
+2026-01-23T18:48:38.797348+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T18:49:20.622900+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T18:49:43.025342+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T18:49:52.624755+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T18:52:13.928866+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T18:52:15.265820+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9b158d55-2c6c-416f-bd9a-5f1d12ef4c49', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'fdd0e416-bdaa-4058-bfa8-db5da397dbe7', 'created': '2026-01-23T18:52:15.265333+00:00'}
+2026-01-23T18:52:18.826935+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T18:52:58.984222+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T18:53:00.267362+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b338cfc2-a535-419b-9087-0b28f4421712', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '260d76eb-4a9f-4dc2-bc4b-30162571f6a2', 'created': '2026-01-23T18:53:00.260060+00:00'}
+2026-01-23T18:53:04.947769+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T18:58:14.131799+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T18:58:15.476397+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c9e4e1a7-a0fa-4307-9124-948490179bbf', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'ec2456b6-45d9-442f-899e-0c9de241e55c', 'created': '2026-01-23T18:58:15.472080+00:00'}
+2026-01-23T18:58:19.535479+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T18:59:05.033727+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T18:59:06.382600+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a7ac2fca-e737-4f12-bf65-d0f32d2ea8c5', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'b469e586-01d5-41d2-a3a2-a005c66f1280', 'created': '2026-01-23T18:59:06.381849+00:00'}
+2026-01-23T18:59:15.411579+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:02:19.520146+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:02:20.867013+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1d4fdf36-5b60-41fa-836f-3d25f4eba49b', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'de0d5d7b-9114-49c6-a377-6eab49ef7c28', 'created': '2026-01-23T19:02:20.858015+00:00'}
+2026-01-23T19:02:27.806726+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:09:13.034592+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:09:14.387568+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a91fe5ac-7266-4e69-9f8e-654ca9bcf525', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '618d427e-705a-4c3c-854d-6bf42e70f4e6', 'created': '2026-01-23T19:09:14.383278+00:00'}
+2026-01-23T19:09:22.653050+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:10:38.283134+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:10:39.604611+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '6d65da84-2782-4b3b-8c31-95c86ac46f13', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '48616ed4-981f-414e-9150-67c01ca5317f', 'created': '2026-01-23T19:10:39.603617+00:00'}
+2026-01-23T19:13:58.644910+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:17:20.244432+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:17:21.628340+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a76aa613-dd9b-4021-92fb-76842290fba9', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '9afd9d9d-367f-41da-ac94-af21af25cb0a', 'created': '2026-01-23T19:17:21.623261+00:00'}
+2026-01-23T19:22:58.751677+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:24:56.526980+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:24:57.884073+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c88d623a-e43c-4f3f-9575-f0f989d90a14', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '62e4494b-0a38-406b-b546-9b68d16e317c', 'created': '2026-01-23T19:24:57.874164+00:00'}
+2026-01-23T19:25:09.033762+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:25:15.043258+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:25:16.356870+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ae12bce1-ee66-4da7-b6a6-f5acfe0b2197', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '31f7adae-529c-4db7-8c6b-96f7eb2ce279', 'created': '2026-01-23T19:25:16.355148+00:00'}
+2026-01-23T19:25:27.462212+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:29:59.553171+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:30:00.953804+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'cac9853f-d6b2-4d4b-815f-e3c18e60d074', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'c49f8843-03ec-44a3-a51d-43cc62fea2dd', 'created': '2026-01-23T19:30:00.943153+00:00'}
+2026-01-23T19:30:07.307923+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:32:56.221841+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:32:57.596771+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8b067da2-d07e-4d7d-8575-e9136a280551', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '93165173-7353-43a8-ba92-502aa0b889fa', 'created': '2026-01-23T19:32:57.596228+00:00'}
+2026-01-23T19:33:04.874440+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:33:53.256145+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:33:54.608401+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4ff437ef-79ef-405a-b03b-af233cf0d3a7', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '09679c43-949d-4070-9a40-a48e6174fb40', 'created': '2026-01-23T19:33:54.604185+00:00'}
+2026-01-23T19:34:01.713168+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:38:04.375717+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:38:05.751689+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '95556edd-e889-4d1d-819c-50ab513e3baa', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '1d83a648-7865-4332-b182-267344fb5980', 'created': '2026-01-23T19:38:05.747150+00:00'}
+2026-01-23T19:38:11.653944+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:39:03.722907+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:39:05.074444+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3a080dea-3eae-44c1-9060-7d258813e4b1', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '14aae034-a79b-41fa-bb8b-1e51f5b3b104', 'created': '2026-01-23T19:39:05.073855+00:00'}
+2026-01-23T19:39:10.968443+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:43:39.875753+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:43:41.281612+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '36cb8bd2-a3ce-4720-a699-dd39f69bfea6', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'e828ae49-f6e0-40aa-9f94-218cfb570b04', 'created': '2026-01-23T19:43:41.279612+00:00'}
+2026-01-23T19:43:48.553836+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:45:20.235384+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:45:21.598528+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4dd1edc1-eed6-4b51-9f34-d02943bc4c4a', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '7016c51d-ffb8-4568-a5ec-03227bcd722f', 'created': '2026-01-23T19:45:21.590159+00:00'}
+2026-01-23T19:45:27.519188+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:45:54.795573+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:45:56.151625+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '74761122-ad1f-4cc9-baf4-85eb87bb75c4', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '3e26cdb9-a8b5-4560-960e-98300e9146d1', 'created': '2026-01-23T19:45:56.145936+00:00'}
+2026-01-23T19:46:03.234607+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:46:47.790367+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:46:48.328009+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c4132d57-98c4-4af9-b1ce-b6084a2a51da', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '3fa66421-951a-4ad6-bc9f-19f8bacbe66b', 'created': '2026-01-23T19:46:48.320992+00:00'}
+2026-01-23T19:46:55.300231+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:49:26.926422+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:49:28.323610+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a20de050-910e-4177-8357-17e90e454690', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '838f2ebc-3bde-48fb-9d34-b07fa0d04670', 'created': '2026-01-23T19:49:28.318536+00:00'}
+2026-01-23T19:49:35.585512+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T19:51:30.317369+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T19:51:31.661553+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '52f5f4f7-af46-4791-9ba2-c50041817585', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '84fbce26-5c6f-4f59-a31d-9dd668816bfa', 'created': '2026-01-23T19:51:31.659548+00:00'}
+2026-01-23T19:51:37.878105+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-23T20:01:22.391379+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-23T20:01:23.762442+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c9e1b2b3-3507-4dad-800a-0ff82a581fb8', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'eec8a1c8-493d-4170-8bac-ae34618e90d7', 'created': '2026-01-23T20:01:23.761729+00:00'}
+2026-01-23T20:01:31.997254+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'

@@ -1,0 +1,7 @@
+#SPDX-License-Identifier: MIT-0
+---
+- name: Configure Kiosk
+  import_tasks: configure-kiosk.yml
+  tags:
+    - ui
+    - kiosk
