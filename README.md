@@ -1,27 +1,39 @@
-# homelab
+# Homelab
 Homelab Ansible Playbooks
 
-
-
-# Prerequisites
-
+## Prerequisites
+```bash
 python3 -m venv ~/.venvs/ansible-navigator
 source ~/.venvs/ansible-navigator/bin/activate
 
 pip install --upgrade pip
 pip install ansible-builder ansible-navigator
+```
 
-# Logon to docker.io
+### Logon to docker.io
+```bash
 podman login docker.io
+```
 
-## Check login info
+### Check login info
+```bash
 podman login --get-login docker.io
+```
 
-
-# Build Container
+## Build Container
+```bash
 ansible-builder build -t jellebens/ansible-excecution-environment:1.0 --container-runtime podman -v 3
 
 podman push jellebens/ansible-excecution-environment:1.0
+```
 
-# Execute runbook in ee
+## Create a role
+ansible-galaxy role init roles/k3s
+
+## Execute runbook in ee
+```bash
 ansible-navigator run playbooks/deploy_homelab.yml  -i inventories/shared -i inventories/lab/mercurius.yml --vault-password-file ~/.ansible-vault-pass
+```
+
+Use --tags to only run specific roles
+

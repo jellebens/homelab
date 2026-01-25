@@ -5,6 +5,9 @@
 
   
   roles:
-    - ssh
-    #- network
-    - kiosk
+    - role: ssh
+      tags: [ssh, network]
+    - role: network
+      tags: [network]
+    - role: kiosk
+      tags: [kiosk]

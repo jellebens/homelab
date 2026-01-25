@@ -29,8 +29,9 @@
         --noerrdialogs \
         --disable-infobars \
         --kiosk \
+        --force-dark-mode \
+        --enable-features=WebUIDarkMode \
         --app="{{ kiosk_url }}" \
-        --incognito \
         --disable-translate \
         --no-first-run \
         --disable-features=TranslateUI
@@ -65,9 +66,8 @@
   ansible.builtin.systemd:
     daemon_reload: true
 
-- name: Enable and start kiosk service
+- name: Restart kiosk service
   become: true
   ansible.builtin.systemd:
     name: kiosk.service
-    enabled: true
-    state: started
+    state: restarted

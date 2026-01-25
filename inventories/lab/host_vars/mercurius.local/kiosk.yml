@@ -1,3 +1,2 @@
 ---
-kiosk_url: "http://vesta.local:8123/"
-kiosk_user: "admin"
+kiosk_url: "http://vesta.local:8123/dashboard-homelab/0?kiosk"
