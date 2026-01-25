@@ -1,3 +1,13 @@
 #SPDX-License-Identifier: MIT-0
 ---
-# tasks file for roles/k3s
+- name: Enable cgroup on all nodes
+  import_tasks: enable-cgroup.yml
+
+
+- name: Install and Configure the master nodes
+  import_tasks: install-master-nodes.yml
+  when: "'masters' in group_names"
+
+- name: Install and Configure the worker nodes
+  import_tasks: install-worker-nodes.yml
+  when: "'workers' in group_names"

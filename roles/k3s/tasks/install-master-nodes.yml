@@ -1,0 +1,37 @@
+---
+- name: Validate networking variables
+  ansible.builtin.assert:
+    that:
+      - k3s_version is defined
+    fail_msg: >
+      Missing vars for {{ inventory_hostname }}.
+      Expected: k3s_version
+- name: Install k3s master
+  become: true
+  shell: curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION={{ k3s_version }} K3S_NODE_NAME={{ inventory_hostname }} K3S_KUBECONFIG_MODE="644" sh -s - server --cluster-init
+
+
+- name: Wait for node-token file to appear
+  become: true
+  ansible.builtin.shell: test -f /var/lib/rancher/k3s/server/node-token
+  register: token_file
+  retries: 30          # try for up to 5 minutes (30 * 10s)
+  delay: 10
+  until: token_file.rc == 0
+
+- name: Read K3S node token
+  become: true
+  ansible.builtin.command: cat /var/lib/rancher/k3s/server/node-token
+  register: k3s_token
+  failed_when: k3s_token.rc != 0 or k3s_token.stdout is undefined
+  changed_when: false
+
+- name: Set K3S_TOKEN as a fact
+  set_fact:
+    k3s_token: "{{ k3s_token.stdout | trim }}"
+
+- name: Fetch kubeconfig
+  fetch:
+    src: /etc/rancher/k3s/k3s.yaml
+    dest: {{ kubeconfig_path | default('~/.kube/k3s.yaml') }}
+    flat: true

@@ -11,3 +11,5 @@
       tags: [network]
     - role: kiosk
       tags: [kiosk]
+    - role: k3s
+      tags: [k3s]

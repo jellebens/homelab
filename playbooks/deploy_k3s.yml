@@ -1,0 +1,17 @@
+---
+- name: Setup k3s cluster
+  hosts: k3s
+  gather_facts: true
+
+  
+  roles:
+    - role: ssh
+      tags: [ssh, network]
+    - role: network
+      tags: [network]
+    - role: k3s
+      tags: [k3s]
+    - role: argocd
+      tags: [argocd]
+    - role: monitoring
+      tags: [monitoring]
