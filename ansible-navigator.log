@@ -6042,3 +6042,782 @@ Traceback (most recent call last):
   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
     os.mkdir(self, mode)
 PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:12:05.548211+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:12:08.379611+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '14346599-01d3-47a8-ba9e-e65e19fd128f', 'counter': 1, 'stdout': '\x1b[0;31mERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.374895+00:00'}
+2026-01-26T18:12:08.379773+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '6dd3b154-bb15-4e3a-9d8e-641891d5fb3a', 'counter': 2, 'stdout': '\x1b[0;31mJSON: Expecting value: line 1 column 1 (char 0)\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375024+00:00'}
+2026-01-26T18:12:08.379848+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '08ce4508-45f4-468e-b793-a9c21200a32c', 'counter': 3, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375058+00:00'}
+2026-01-26T18:12:08.379939+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a9341678-8ef1-41a7-8c8b-7be1a51e951a', 'counter': 4, 'stdout': '\x1b[0;31mSyntax Error while loading YAML.\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375079+00:00'}
+2026-01-26T18:12:08.380022+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8744ac0e-b1f6-4da1-bbd6-5e032a10b1e4', 'counter': 5, 'stdout': "\x1b[0;31m  found unacceptable key (unhashable type: 'AnsibleMapping')\x1b[0m", 'start_line': 4, 'end_line': 5, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375096+00:00'}
+2026-01-26T18:12:08.380104+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '287d45b5-6432-4d1c-83e1-e36b2370d7ce', 'counter': 6, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375113+00:00'}
+2026-01-26T18:12:08.380168+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '053096a3-8847-40bf-834f-476bf64353f2', 'counter': 7, 'stdout': "\x1b[0;31mThe error appears to be in '/navigator/roles/k3s/tasks/install-master-nodes.yml': line 38, column 12, but may\x1b[0m", 'start_line': 6, 'end_line': 7, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375129+00:00'}
+2026-01-26T18:12:08.380248+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bac7a868-aeee-4320-932e-698ba5962bca', 'counter': 8, 'stdout': '\x1b[0;31mbe elsewhere in the file depending on the exact syntax problem.\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375146+00:00'}
+2026-01-26T18:12:08.380312+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '218e56e7-102f-4524-9fb1-740afd83ead7', 'counter': 9, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375338+00:00'}
+2026-01-26T18:12:08.380376+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'cc2079d5-55a3-4df7-8eda-23789c9bcaab', 'counter': 10, 'stdout': '\x1b[0;31mThe offending line appears to be:\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375487+00:00'}
+2026-01-26T18:12:08.380441+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '697577bd-94f5-49ee-a9a2-f3d3c338c53f', 'counter': 11, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 10, 'end_line': 11, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375515+00:00'}
+2026-01-26T18:12:08.380507+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '973990c0-d866-43bc-be7a-a2d07d90f7c8', 'counter': 12, 'stdout': '\x1b[0;31m    src: /etc/rancher/k3s/k3s.yaml\x1b[0m', 'start_line': 11, 'end_line': 12, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375532+00:00'}
+2026-01-26T18:12:08.380572+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '499b381f-455b-4c00-aa78-137c6be03280', 'counter': 13, 'stdout': "\x1b[0;31m    dest: {{ kubeconfig_path | default('~/.kube/k3s.yaml') }}\x1b[0m", 'start_line': 12, 'end_line': 13, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375545+00:00'}
+2026-01-26T18:12:08.380636+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '08c701e1-bcde-4eed-94df-8fdc880342e0', 'counter': 14, 'stdout': '\x1b[0;31m           ^ here\x1b[0m', 'start_line': 13, 'end_line': 14, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375558+00:00'}
+2026-01-26T18:12:08.380710+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7811a744-6b43-4855-a35f-2856158f82ef', 'counter': 15, 'stdout': '\x1b[0;31mWe could be wrong, but this one looks like it might be an issue with\x1b[0m', 'start_line': 14, 'end_line': 15, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375570+00:00'}
+2026-01-26T18:12:08.380775+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd635b16e-b168-448b-90d4-de66eaef844a', 'counter': 16, 'stdout': '\x1b[0;31mmissing quotes. Always quote template expression brackets when they\x1b[0m', 'start_line': 15, 'end_line': 16, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375588+00:00'}
+2026-01-26T18:12:08.380836+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ea00353a-c0e2-4c2d-98fc-73ec872e0da5', 'counter': 17, 'stdout': '\x1b[0;31mstart a value. For instance:\x1b[0m', 'start_line': 16, 'end_line': 17, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375649+00:00'}
+2026-01-26T18:12:08.380899+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fc294409-4073-4757-b8a2-4e233822ed47', 'counter': 18, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 17, 'end_line': 18, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375698+00:00'}
+2026-01-26T18:12:08.380968+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7aaf377e-7aac-4c83-9cf9-d8c2460c5a59', 'counter': 19, 'stdout': '\x1b[0;31m    with_items:\x1b[0m', 'start_line': 18, 'end_line': 19, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375766+00:00'}
+2026-01-26T18:12:08.381033+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'cf9ea12c-fbca-464c-9532-ed61e624cc37', 'counter': 20, 'stdout': '\x1b[0;31m      - {{ foo }}\x1b[0m', 'start_line': 19, 'end_line': 20, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375812+00:00'}
+2026-01-26T18:12:08.381098+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '707e51a5-c934-4afd-aaac-fd6f47cb0dd1', 'counter': 21, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 20, 'end_line': 21, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375830+00:00'}
+2026-01-26T18:12:08.381160+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f2a63fb3-b444-4417-bcdd-2465f4353888', 'counter': 22, 'stdout': '\x1b[0;31mShould be written as:\x1b[0m', 'start_line': 21, 'end_line': 22, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375844+00:00'}
+2026-01-26T18:12:08.381223+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4e88c0b7-d3c5-4df0-8afe-c92c8f5ff250', 'counter': 23, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 22, 'end_line': 23, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375859+00:00'}
+2026-01-26T18:12:08.381293+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd26e0c78-5b9c-4a04-aa10-1e3826873070', 'counter': 24, 'stdout': '\x1b[0;31m    with_items:\x1b[0m', 'start_line': 23, 'end_line': 24, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375871+00:00'}
+2026-01-26T18:12:08.381363+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'cc72a8ea-74a1-4ac2-a444-5172dab85443', 'counter': 25, 'stdout': '\x1b[0;31m      - "{{ foo }}"\x1b[0m', 'start_line': 24, 'end_line': 25, 'runner_ident': '594e6123-abe5-4fd1-a753-8fb30d60bd2b', 'created': '2026-01-26T18:12:08.375913+00:00'}
+2026-01-26T18:12:09.281387+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:12:50.919805+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:12:52.476869+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd028f58d-ff92-4286-8668-0bc35bb4db44', 'counter': 1, 'stdout': '\x1b[0;31mERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473731+00:00'}
+2026-01-26T18:12:52.477033+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '110ca24a-e880-4182-b18f-ec539e56fc0a', 'counter': 2, 'stdout': '\x1b[0;31mJSON: Expecting value: line 1 column 1 (char 0)\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473850+00:00'}
+2026-01-26T18:12:52.477110+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b424720e-9bad-48c3-83b4-aab46fed8040', 'counter': 3, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473876+00:00'}
+2026-01-26T18:12:52.477186+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '36b3b626-e3af-4de9-b568-92bcdb58ea12', 'counter': 4, 'stdout': '\x1b[0;31mSyntax Error while loading YAML.\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473892+00:00'}
+2026-01-26T18:12:52.477272+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd0f785f3-2016-40ce-b899-a8fc3c9c979b', 'counter': 5, 'stdout': "\x1b[0;31m  found unacceptable key (unhashable type: 'AnsibleMapping')\x1b[0m", 'start_line': 4, 'end_line': 5, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473904+00:00'}
+2026-01-26T18:12:52.477340+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '94345288-8bb9-4186-baea-b1349f84a4da', 'counter': 6, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473917+00:00'}
+2026-01-26T18:12:52.477407+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '72063d7c-bd0f-42f4-95c7-3a0bb5898d9c', 'counter': 7, 'stdout': "\x1b[0;31mThe error appears to be in '/navigator/roles/k3s/tasks/install-master-nodes.yml': line 38, column 12, but may\x1b[0m", 'start_line': 6, 'end_line': 7, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473928+00:00'}
+2026-01-26T18:12:52.477474+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8115ac4d-a197-4d0d-9b0e-2755d3b382d0', 'counter': 8, 'stdout': '\x1b[0;31mbe elsewhere in the file depending on the exact syntax problem.\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473939+00:00'}
+2026-01-26T18:12:52.477539+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '709f7ec0-e3f0-4486-aa0c-5ac678f5038f', 'counter': 9, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473949+00:00'}
+2026-01-26T18:12:52.477606+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ad7f1262-1c9a-43f8-a20e-2680608f9a15', 'counter': 10, 'stdout': '\x1b[0;31mThe offending line appears to be:\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473960+00:00'}
+2026-01-26T18:12:52.477673+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3b438b36-4afa-4eaa-9e10-eff2dcdda745', 'counter': 11, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 10, 'end_line': 11, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473973+00:00'}
+2026-01-26T18:12:52.477739+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e9476225-0383-4cad-bb31-d10b48b0255a', 'counter': 12, 'stdout': '\x1b[0;31m    src: /etc/rancher/k3s/k3s.yaml\x1b[0m', 'start_line': 11, 'end_line': 12, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473986+00:00'}
+2026-01-26T18:12:52.477803+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '101e27c2-e1c1-483e-9f99-443a1694d789', 'counter': 13, 'stdout': "\x1b[0;31m    dest: {{ kubeconfig_path | default('~/.kube/k3s.yaml') }}\x1b[0m", 'start_line': 12, 'end_line': 13, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.473997+00:00'}
+2026-01-26T18:12:52.477875+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e20de814-20b0-4675-a5cf-cea3472d85ad', 'counter': 14, 'stdout': '\x1b[0;31m           ^ here\x1b[0m', 'start_line': 13, 'end_line': 14, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474009+00:00'}
+2026-01-26T18:12:52.477940+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '291ca8db-bb64-456f-a6e8-a54ae2ee79b6', 'counter': 15, 'stdout': '\x1b[0;31mWe could be wrong, but this one looks like it might be an issue with\x1b[0m', 'start_line': 14, 'end_line': 15, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474021+00:00'}
+2026-01-26T18:12:52.478006+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '77cc7d70-b3e3-433c-9d5d-05f8709d054d', 'counter': 16, 'stdout': '\x1b[0;31mmissing quotes. Always quote template expression brackets when they\x1b[0m', 'start_line': 15, 'end_line': 16, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474033+00:00'}
+2026-01-26T18:12:52.478072+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5ef5843b-bbaf-443d-b304-45e3dff0ec8c', 'counter': 17, 'stdout': '\x1b[0;31mstart a value. For instance:\x1b[0m', 'start_line': 16, 'end_line': 17, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474046+00:00'}
+2026-01-26T18:12:52.478139+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '80eeb96c-6d07-4d54-a812-5fcff0963ccb', 'counter': 18, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 17, 'end_line': 18, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474057+00:00'}
+2026-01-26T18:12:52.478212+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e1833e31-00f7-4971-a0c3-a4235b96b206', 'counter': 19, 'stdout': '\x1b[0;31m    with_items:\x1b[0m', 'start_line': 18, 'end_line': 19, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474071+00:00'}
+2026-01-26T18:12:52.478279+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0cda1a87-6d0c-4f90-bf53-6cdea6b61f35', 'counter': 20, 'stdout': '\x1b[0;31m      - {{ foo }}\x1b[0m', 'start_line': 19, 'end_line': 20, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474082+00:00'}
+2026-01-26T18:12:52.478343+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0490b5ea-fe2f-44b7-9668-e735d3d1d85d', 'counter': 21, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 20, 'end_line': 21, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474094+00:00'}
+2026-01-26T18:12:52.478409+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0af54a7e-a09c-402e-b86f-eb12dab2ee7e', 'counter': 22, 'stdout': '\x1b[0;31mShould be written as:\x1b[0m', 'start_line': 21, 'end_line': 22, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474105+00:00'}
+2026-01-26T18:12:52.478476+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd32a07ac-b385-43ab-b605-123d65551f0a', 'counter': 23, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 22, 'end_line': 23, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474116+00:00'}
+2026-01-26T18:12:52.478547+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '27c92cc9-b5c2-40e3-b31d-7450bb32370d', 'counter': 24, 'stdout': '\x1b[0;31m    with_items:\x1b[0m', 'start_line': 23, 'end_line': 24, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474129+00:00'}
+2026-01-26T18:12:52.478627+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '57696fbf-bf18-48e6-a4f6-6825e2e2b6d5', 'counter': 25, 'stdout': '\x1b[0;31m      - "{{ foo }}"\x1b[0m', 'start_line': 24, 'end_line': 25, 'runner_ident': 'ef5c64e6-1bd8-4f07-af66-775188c7555b', 'created': '2026-01-26T18:12:52.474140+00:00'}
+2026-01-26T18:12:53.391534+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:13:21.181684+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:13:22.712338+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8f6c5403-b3de-43fc-9fd7-756154ec788b', 'counter': 1, 'stdout': '\x1b[0;31mERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.706989+00:00'}
+2026-01-26T18:13:22.712520+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '54e7a984-2cc5-4da3-9b53-3d5f24c6c89c', 'counter': 2, 'stdout': '\x1b[0;31mJSON: Expecting value: line 1 column 1 (char 0)\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707098+00:00'}
+2026-01-26T18:13:22.712595+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '24383924-0eeb-4347-adb1-788563cbdeb5', 'counter': 3, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707155+00:00'}
+2026-01-26T18:13:22.712682+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a39a5b82-7ea7-4b3e-a83a-c33b2c912d6b', 'counter': 4, 'stdout': '\x1b[0;31mSyntax Error while loading YAML.\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707178+00:00'}
+2026-01-26T18:13:22.712752+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e1b7a577-e51b-4d7e-8739-dbed1175ae18', 'counter': 5, 'stdout': "\x1b[0;31m  found unacceptable key (unhashable type: 'AnsibleMapping')\x1b[0m", 'start_line': 4, 'end_line': 5, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707193+00:00'}
+2026-01-26T18:13:22.712817+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5e4ec0d9-7636-4584-8828-27c81bfbeefd', 'counter': 6, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707207+00:00'}
+2026-01-26T18:13:22.712882+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '40154dab-1c9c-4b5c-9cb2-0bbeb59ae4d1', 'counter': 7, 'stdout': "\x1b[0;31mThe error appears to be in '/navigator/roles/k3s/tasks/install-master-nodes.yml': line 38, column 12, but may\x1b[0m", 'start_line': 6, 'end_line': 7, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707219+00:00'}
+2026-01-26T18:13:22.712951+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'df8088a8-dbfc-4fe5-a0da-dbaf5f7027ec', 'counter': 8, 'stdout': '\x1b[0;31mbe elsewhere in the file depending on the exact syntax problem.\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707229+00:00'}
+2026-01-26T18:13:22.713017+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1ffab2ec-6737-4e7b-9cc9-2714cb70d768', 'counter': 9, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707240+00:00'}
+2026-01-26T18:13:22.713083+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8fa3bf08-33be-4b3e-9203-cf6d465fadda', 'counter': 10, 'stdout': '\x1b[0;31mThe offending line appears to be:\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707251+00:00'}
+2026-01-26T18:13:22.713148+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ef2b3960-b01a-4854-8de2-6d9ecbe17db3', 'counter': 11, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 10, 'end_line': 11, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707263+00:00'}
+2026-01-26T18:13:22.713211+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '650609b0-72c5-454a-a042-a0addef65b80', 'counter': 12, 'stdout': '\x1b[0;31m    src: /etc/rancher/k3s/k3s.yaml\x1b[0m', 'start_line': 11, 'end_line': 12, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707275+00:00'}
+2026-01-26T18:13:22.713282+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd7f88415-249e-4f28-aacd-fa8014f7ca3e', 'counter': 13, 'stdout': "\x1b[0;31m    dest: {{ kubeconfig_path | default('~/.kube/k3s.yaml') }}\x1b[0m", 'start_line': 12, 'end_line': 13, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707286+00:00'}
+2026-01-26T18:13:22.713347+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '6a469051-8f36-47ab-94ec-7bd161cbdfcf', 'counter': 14, 'stdout': '\x1b[0;31m           ^ here\x1b[0m', 'start_line': 13, 'end_line': 14, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707359+00:00'}
+2026-01-26T18:13:22.713411+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9ba846c9-b058-49e7-8172-5b4fe569bdbe', 'counter': 15, 'stdout': '\x1b[0;31mWe could be wrong, but this one looks like it might be an issue with\x1b[0m', 'start_line': 14, 'end_line': 15, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707411+00:00'}
+2026-01-26T18:13:22.713474+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e51bbe7b-f737-4f0d-b4ed-c134c42d6979', 'counter': 16, 'stdout': '\x1b[0;31mmissing quotes. Always quote template expression brackets when they\x1b[0m', 'start_line': 15, 'end_line': 16, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707430+00:00'}
+2026-01-26T18:13:22.713537+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'de9b3e33-5d72-4f85-96fc-6a31d9041e49', 'counter': 17, 'stdout': '\x1b[0;31mstart a value. For instance:\x1b[0m', 'start_line': 16, 'end_line': 17, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707446+00:00'}
+2026-01-26T18:13:22.713602+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4516b625-3b4b-4c24-9831-41d4e2a67d70', 'counter': 18, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 17, 'end_line': 18, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707458+00:00'}
+2026-01-26T18:13:22.713665+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e927c3b0-0d91-488c-98b3-041162ec251d', 'counter': 19, 'stdout': '\x1b[0;31m    with_items:\x1b[0m', 'start_line': 18, 'end_line': 19, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707475+00:00'}
+2026-01-26T18:13:22.713727+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4b98c78b-79a3-49fc-a489-c1848cca8b8c', 'counter': 20, 'stdout': '\x1b[0;31m      - {{ foo }}\x1b[0m', 'start_line': 19, 'end_line': 20, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707486+00:00'}
+2026-01-26T18:13:22.713790+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '155366fe-bb18-46b6-bf02-8e70b6ca6efa', 'counter': 21, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 20, 'end_line': 21, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707497+00:00'}
+2026-01-26T18:13:22.713854+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f53f0eaf-6b02-4fc5-a6aa-72d7e173d9ff', 'counter': 22, 'stdout': '\x1b[0;31mShould be written as:\x1b[0m', 'start_line': 21, 'end_line': 22, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707515+00:00'}
+2026-01-26T18:13:22.713923+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3765bc71-fbfc-4559-ae3f-ed8b0db857c1', 'counter': 23, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 22, 'end_line': 23, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707526+00:00'}
+2026-01-26T18:13:22.713986+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '44986c52-abe8-443b-9281-fce458d438a0', 'counter': 24, 'stdout': '\x1b[0;31m    with_items:\x1b[0m', 'start_line': 23, 'end_line': 24, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707538+00:00'}
+2026-01-26T18:13:22.714090+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1991cd2b-7b28-474a-87a5-92d84aa7e493', 'counter': 25, 'stdout': '\x1b[0;31m      - "{{ foo }}"\x1b[0m', 'start_line': 24, 'end_line': 25, 'runner_ident': '0daa09b4-f18e-4fe9-aa55-6db03f574934', 'created': '2026-01-26T18:13:22.707549+00:00'}
+2026-01-26T18:13:23.611253+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:14:04.410190+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:15:39.187732+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid
+2026-01-26T18:21:02.324036+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:21:03.696447+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:22:52.396801+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:22:54.905416+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:23:57.341773+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:23:59.731574+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:24:56.729903+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:24:59.172148+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:25:39.066286+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:25:41.553680+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:25:52.229399+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:25:54.683229+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:26:30.847181+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:26:33.333850+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:26:59.307760+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:27:01.684334+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:27:30.064047+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:27:32.500742+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:27:47.854667+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:27:50.357351+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:28:27.826375+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:28:31.990770+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:28:40.503993+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:28:44.619664+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:29:18.559031+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:29:22.812622+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:32:23.215588+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:32:29.358967+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:32:40.369713+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:35:36.375792+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid
+2026-01-26T18:35:38.926645+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:35:50.052278+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T18:35:55.363788+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T18:36:08.732726+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-01-26T19:19:35.404318+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-01-26T19:25:07.857373+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_homelab'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'

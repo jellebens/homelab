@@ -6,6 +6,8 @@
     fail_msg: >
       Missing vars for {{ inventory_hostname }}.
       Expected: k3s_version
+
+      
 - name: Install k3s master
   become: true
   shell: curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION={{ k3s_version }} K3S_NODE_NAME={{ inventory_hostname }} K3S_KUBECONFIG_MODE="644" sh -s - server --cluster-init
@@ -33,5 +35,5 @@
 - name: Fetch kubeconfig
   fetch:
     src: /etc/rancher/k3s/k3s.yaml
-    dest: {{ kubeconfig_path | default('~/.kube/k3s.yaml') }}
+    dest: "{{ kubeconfig_path | default('~/.kube/k3s.yaml') }}"
     flat: true

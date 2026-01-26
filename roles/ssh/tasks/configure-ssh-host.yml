@@ -1,18 +1,31 @@
-#Preparing target 
+---
+- name: Validate variables
+  ansible.builtin.assert:
+    that:
+      - ssh.user is defined
+      - ssh.user.groups is defined
+      - ssh.user.name is defined
+      - ssh.local_key_path is defined
+    fail_msg: >
+      Missing networking vars for {{ inventory_hostname }}. \r\n
+      Expected: ssh.user, ssh.user.name, ssh.user.groups, ssh.local_key_path
+
+
 - name: Ensure SSH user exists 
+  become: true
   ansible.builtin.user:
-    name: "{{ ssh_user }}"
+    name: "{{ ssh.user.name }}"
     shell: /bin/bash
-    groups: "{{ ssh_user_groups }}"
+    groups: "{{ ssh.user.groups }}"
     append: true
     create_home: true
 
 - name: Install SSH public key for user (like ssh-copy-id)
   ansible.posix.authorized_key:
-    user: "{{ ssh_user }}"
+    user: "{{ ssh.user.name }}"
     state: present
     manage_dir: true
-    key: "{{ lookup('file', local_pubkey_path | expanduser) }}"
+    key: "{{ lookup('file', ssh.local_pubkey_path | expanduser) }}"
 
 - name: Ensure SSH hardening override
   become: true
@@ -52,7 +65,7 @@
 - name: Ensure PubkeyAuthentication is enabled
   become: true
   ansible.builtin.lineinfile:
-    path: "{{ sshd_config_path }}"
+    path: "{{ sshd.config_path }}"
     regexp: '^#?PubkeyAuthentication\s+'
     line: 'PubkeyAuthentication yes'
     state: present
@@ -81,8 +94,8 @@
     -o ChallengeResponseAuthentication=no
     -o NumberOfPasswordPrompts=0
     -o ConnectTimeout=8
-    {% if local_key_path | length > 0 %}-i {{ local_key_path }}{% endif %}
-    {{ ssh_user }}@{{ inventory_hostname }}
+    {% if ssh.local_key_path | length > 0 %}-i {{ ssh.local_key_path }}{% endif %}
+    {{ ssh.user.name }}@{{ inventory_hostname }}
     true
   register: key_only_probe
   changed_when: false
