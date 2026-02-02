@@ -2,12 +2,12 @@
 - name: Validate variables
   ansible.builtin.assert:
     that:
-      - ssh.local_key_path is defined
-      - ssh.local_pubkey_path is defined
-      - ssh.user is defined
+      - ssh_local_key_path is defined
+      - ssh_local_pubkey_path is defined
+      - ansible_ssh_user is defined
     fail_msg: >
       Missing networking vars for {{ inventory_hostname }}.
-      Expected: ssh.user, ssh.local_key_path, ssh.local_pubkey_path
+      Expected: ansible_ssh_user, ssh_local_key_path, ssh_local_pubkey_path
 
 
 - name: Ensure ~/.ssh exists
@@ -33,14 +33,14 @@
 
 - name: Ensure local public key exists on control node
   ansible.builtin.stat:
-    path: "{{ ssh.local_pubkey_path | expanduser }}"
+    path: "{{ ssh_local_pubkey_path | expanduser }}"
   register: pubkey_stat
   delegate_to: localhost
   run_once: true
 
 - name: Fail if local public key is missing
   ansible.builtin.fail:
-    msg: "Public key not found at {{ ssh.local_pubkey_path }} on the control machine."
+    msg: "Public key not found at {{ ssh_local_pubkey_path }} on the control machine."
   when: not pubkey_stat.stat.exists
   delegate_to: localhost
   run_once: true

@@ -2,14 +2,14 @@
 - name: Validate networking variables
   ansible.builtin.assert:
     that:
-      - static.interface is defined
-      - static.ip is defined
-      - static.prefix is defined
-      - static.gateway is defined
-      - static.dns is defined
+      - static_interface is defined
+      - static_ip is defined
+      - static_prefix is defined
+      - static_gateway is defined
+      - static_dns is defined
     fail_msg: >
       Missing networking vars for {{ inventory_hostname }}.
-      Expected: static.interface, static.ip, static.prefix, static.gateway, static.dns
+      Expected: static_interface, static_ip, static_prefix, static_gateway, static_dns
       
 - name: Verify NetworkManager is running
   ansible.builtin.systemd:
@@ -17,7 +17,7 @@
     state: started
   ignore_errors: false
 
-- name: Get connection name for {{ static.interface }}
+- name: Get connection name for {{ static_interface }}
   ansible.builtin.command: nmcli -t -f NAME,DEVICE connection show
   register: nm_connections
   become: true
@@ -26,14 +26,13 @@
   ansible.builtin.set_fact:
     nm_connection_name: "{{ item.split(':')[0] }}"
   with_items: "{{ nm_connections.stdout_lines }}"
-  when: item.split(':')[1] == static.interface
-
+  when: item.split(':')[1] == static_interface
 - name: Configure static IP on {{ static_interface }}
   ansible.builtin.command: >
     nmcli connection modify "{{ nm_connection_name }}"
-    ipv4.addresses {{ static.ip }}/{{ static.prefix }}
-    ipv4.gateway {{ static.gateway }}
-    ipv4.dns "{{ static.dns | join(' ') }}"
+    ipv4.addresses {{ static_ip }}/{{ static_prefix }}
+    ipv4.gateway {{ static_gateway }}
+    ipv4.dns "{{ static_dns | join(' ') }}"
     ipv4.method manual
     connection.autoconnect yes
   register: nm_modify

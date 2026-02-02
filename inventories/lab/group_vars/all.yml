@@ -1,3 +1,11 @@
-ansible_user: admin
-ansible_user_groups:
+---
+# sshd configuration
+ansible_ssh_user: admin
+ssh_local_pubkey_path: "~/.ssh/id_ed25519.pub"
+ssh_local_key_path: "~/.ssh/id_ed25519"
+ssh_disable_password_login: true
+ssh_disable_root_login: true
+ssh_user_groups:
   - sudo
+
+sshd_config_path: /etc/ssh/sshd_config

@@ -1,7 +1,7 @@
 ---
 #Wired settings
 static_interface: eth0
-static_ip: 192.168.50.151
+static_ip: 192.168.50.153
 static_netmask: 255.255.255.0
 static_prefix: 24
 static_gateway: 192.168.50.1

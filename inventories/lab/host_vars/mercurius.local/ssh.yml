@@ -1,9 +1,0 @@
-ssh:
-  local_pubkey_path: "~/.ssh/id_ed25519.pub"
-  local_key_path: "~/.ssh/id_ed25519"
-  disable_password_login: true
-  disable_root: true
-  user:
-    name: admin
-    groups:
-      - sudo

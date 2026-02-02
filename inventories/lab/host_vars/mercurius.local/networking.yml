@@ -1,10 +1,12 @@
 ---
 #Wired settings
-static:
-  interface: eth0
-  ip: 192.168.50.150
-  netmask: 255.255.255.0
-  prefix: 24
-  gateway: 192.168.50.1
-  dns:
+static_interface: eth0
+static_ip: 192.168.50.150
+static_netmask: 255.255.255.0
+static_prefix: 24
+static_gateway: 192.168.50.1
+static_dns:
   - 192.168.50.1
+
+#Wireless settings
+wireless_interface: wlan0

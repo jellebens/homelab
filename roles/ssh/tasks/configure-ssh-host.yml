@@ -2,30 +2,29 @@
 - name: Validate variables
   ansible.builtin.assert:
     that:
-      - ssh.user is defined
-      - ssh.user.groups is defined
-      - ssh.user.name is defined
-      - ssh.local_key_path is defined
+      - ssh_user_groups is defined
+      - ansible_ssh_user is defined
+      - ssh_local_key_path is defined
     fail_msg: >
       Missing networking vars for {{ inventory_hostname }}. \r\n
-      Expected: ssh.user, ssh.user.name, ssh.user.groups, ssh.local_key_path
+      Expected: ssh_user, ssh_user.name, ssh_user_groups, ssh_local_key_path
 
 
 - name: Ensure SSH user exists 
   become: true
   ansible.builtin.user:
-    name: "{{ ssh.user.name }}"
+    name: "{{ ansible_ssh_user }}"
     shell: /bin/bash
-    groups: "{{ ssh.user.groups }}"
+    groups: "{{ ssh_user_groups }}"
     append: true
     create_home: true
 
 - name: Install SSH public key for user (like ssh-copy-id)
   ansible.posix.authorized_key:
-    user: "{{ ssh.user.name }}"
+    user: "{{ ansible_ssh_user }}"
     state: present
     manage_dir: true
-    key: "{{ lookup('file', ssh.local_pubkey_path | expanduser) }}"
+    key: "{{ lookup('file', ssh_local_pubkey_path | expanduser) }}"
 
 - name: Ensure SSH hardening override
   become: true
@@ -48,7 +47,7 @@
     line: 'PasswordAuthentication no'
     state: present
     backup: yes
-  when: (ssh.disable_password_login | default(disable_password_login, true))
+  when: (ssh_disable_password_login | default(ssh_disable_password_login, true))
   notify: Restart SSH service
 
 - name: Optionally disable root login over SSH
@@ -59,13 +58,13 @@
     line: 'PermitRootLogin no'
     state: present
     backup: yes
-  when: (ssh.disable_root | default(disable_root_ssh, true))
+  when: (ssh_disable_root_login | default(ssh_disable_root_login, true))
   notify: Restart SSH service
 
 - name: Ensure PubkeyAuthentication is enabled
   become: true
   ansible.builtin.lineinfile:
-    path: "{{ sshd.config_path }}"
+    path: "{{ sshd_config_path }}"
     regexp: '^#?PubkeyAuthentication\s+'
     line: 'PubkeyAuthentication yes'
     state: present
@@ -94,8 +93,8 @@
     -o ChallengeResponseAuthentication=no
     -o NumberOfPasswordPrompts=0
     -o ConnectTimeout=8
-    {% if ssh.local_key_path | length > 0 %}-i {{ ssh.local_key_path }}{% endif %}
-    {{ ssh.user.name }}@{{ inventory_hostname }}
+    {% if ssh_local_key_path | length > 0 %}-i {{ ssh_local_key_path }}{% endif %}
+    {{ ansible_ssh_user }}@{{ inventory_hostname }}
     true
   register: key_only_probe
   changed_when: false
