@@ -5,8 +5,9 @@
   tags:
     - networking
 
-- name: Configure dns
+- name: Configure MultiCast DNS
   import_tasks: install-mdns.yml
+  when: mdns_config | default(true)
   tags:
     - networking
     - dns

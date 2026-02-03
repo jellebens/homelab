@@ -30,6 +30,9 @@ podman push jellebens/ansible-excecution-environment:1.0
 ## Create a role
 ansible-galaxy role init roles/k3s
 
+## Encrypt secret
+ansible-vault encrypt_string 'mySecretValue' --name "ansible_ssh_pass" --vault-password-file ~/.ansible-vault-pass
+
 ## Execute runbook in ee
 ```bash
 ansible-navigator run playbooks/deploy_homelab.yml  -i inventories/shared -i inventories/lab/mercurius.yml --vault-password-file ~/.ansible-vault-pass
