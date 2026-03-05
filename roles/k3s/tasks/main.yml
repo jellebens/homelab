@@ -11,3 +11,11 @@
 - name: Install and Configure the worker nodes
   import_tasks: install-worker-nodes.yml
   when: "'workers' in group_names"
+
+- name: prepare local host
+  when: inventory_hostname == groups['masters'][0]
+  import_tasks: prep_control_node.yml
+
+- name: Validate k3s cluster
+  import_tasks: validate_k3s.yml
+

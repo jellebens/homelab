@@ -7,10 +7,19 @@
       Missing vars for {{ inventory_hostname }}.
       Expected: k3s_version
 
-      
+- name: Check if k3s server uninstall script exists
+  ansible.builtin.stat:
+    path: /usr/local/bin/k3s-uninstall.sh
+  register: k3s_server_uninstall
+
+- name: Uninstall k3s server if installed
+  become: true
+  ansible.builtin.command: /usr/local/bin/k3s-uninstall.sh
+  when: k3s_server_uninstall.stat.exists
+        
 - name: Install k3s master
   become: true
-  shell: curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION={{ k3s_version }} K3S_NODE_NAME={{ inventory_hostname }} K3S_KUBECONFIG_MODE="644" sh -s - server --cluster-init
+  shell: curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION={{ k3s_version }} sh -s - server --cluster-init
 
 
 - name: Wait for node-token file to appear
@@ -37,3 +46,4 @@
     src: /etc/rancher/k3s/k3s.yaml
     dest: "{{ kubeconfig_path | default('~/.kube/k3s.yaml') }}"
     flat: true
+  become: true

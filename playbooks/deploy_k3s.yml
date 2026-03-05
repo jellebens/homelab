@@ -11,7 +11,7 @@
       tags: [network]
     - role: k3s
       tags: [k3s]
-    - role: argocd
-      tags: [argocd]
-    - role: monitoring
-      tags: [monitoring]
+    # - role: argocd
+    #   tags: [argocd]
+    # - role: monitoring
+    #   tags: [monitoring]

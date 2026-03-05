@@ -5,9 +5,8 @@
   tags:
     - networking
 
-- name: Configure MultiCast DNS
-  import_tasks: install-mdns.yml
-  when: mdns_config | default(true)
+- name: Configure WiFi
+  import_tasks: wifi.yml
+  when: disable_wifi | default(false)
   tags:
     - networking
-    - dns

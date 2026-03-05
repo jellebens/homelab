@@ -3,7 +3,6 @@
   ansible.builtin.assert:
     that:
       - k3s_version is defined
-      - k3s_server_ip is defined
       - hostvars[groups['masters'][0]].k3s_token is defined
     fail_msg: >
       Missing vars for {{ inventory_hostname }}.
@@ -20,18 +19,27 @@
 
 - name: Wait for kube-apiserver
   ansible.builtin.wait_for:
-    host: "{{ k3s_server_ip }}"
+    host: "{{ hostvars[groups['masters'][0]].ansible_host | default(groups['masters'][0]) }}"
     port: 6443
     delay: 5
     timeout: 200
     state: started
 
+- name: Check if k3s agent uninstall script exists
+  ansible.builtin.stat:
+    path: /usr/local/bin/k3s-agent-uninstall.sh
+  register: k3s_agent_uninstall
+
+- name: Uninstall k3s agent if installed
+  become: true
+  ansible.builtin.command: /usr/local/bin/k3s-agent-uninstall.sh
+  when: k3s_agent_uninstall.stat.exists
 
 - name: Install k3s worker (agent)
   become: true
   ansible.builtin.shell: curl -sfL https://get.k3s.io | \
       INSTALL_K3S_VERSION={{ k3s_version }} \
-      K3S_URL={{ api }} \
+      K3S_URL=https://{{ hostvars[groups['masters'][0]].ansible_host | default(groups['masters'][0]) }}:{{ k3s_port }} \
       K3S_TOKEN="{{ hostvars[groups['masters'][0]].k3s_token }}" 
       K3S_NODE_NAME={{ inventory_hostname }} \
       K3S_KUBECONFIG_MODE="644" \

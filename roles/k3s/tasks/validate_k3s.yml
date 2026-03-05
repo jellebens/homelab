@@ -1,0 +1,29 @@
+- name: Wait for API
+  command: kubectl get nodes
+  register: api_check
+  retries: 20
+  delay: 10
+  until: api_check.rc == 0
+  changed_when: false
+
+- name: Verify nodes Ready
+  shell: |
+    kubectl get nodes --no-headers | awk '{print $2}'
+  register: node_states
+  changed_when: false
+
+- name: Fail if node not ready
+  fail:
+    msg: "Cluster nodes not Ready"
+  when: "'NotReady' in node_states.stdout"
+
+- name: Check kube-system pods
+  shell: |
+    kubectl get pods -n kube-system --no-headers | awk '{print $3}'
+  register: pod_states
+  changed_when: false
+
+- name: Fail if system pods unhealthy
+  fail:
+    msg: "System pods unhealthy"
+  when: "'Running' not in pod_states.stdout"

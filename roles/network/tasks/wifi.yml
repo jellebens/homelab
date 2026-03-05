@@ -1,0 +1,16 @@
+- name: Disable WiFi
+  become: true
+  ansible.builtin.lineinfile:
+    path: /boot/firmware/config.txt
+    line: dtoverlay=disable-wifi
+    state: present
+
+- name: Reboot to apply
+  become: true
+  ansible.builtin.reboot:
+    reboot_timeout: 300        
+    connect_timeout: 10
+    post_reboot_delay: 5       
+    pre_reboot_delay: 3        
+    msg: "Ansible-triggered reboot after disabling WiFi"
+    test_command: "whoami"

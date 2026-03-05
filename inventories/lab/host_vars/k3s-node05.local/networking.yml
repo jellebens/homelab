@@ -1,14 +1,10 @@
 ---
 #Wired settings
 static_interface: eth0
-static_ip: 192.168.50.165
-static_netmask: 255.255.255.0
-static_prefix: 24
-static_gateway: 192.168.50.1
-static_dns:
-    - 192.168.50.1
+
 
 #Wireless settings
 wireless_interface: wlan0
 
 mdns_config: false
+disable_wifi: true

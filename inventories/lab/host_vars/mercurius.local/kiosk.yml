@@ -1,2 +1,2 @@
 ---
-kiosk_url: "http://vesta.local:8123/dashboard-homelab/0?kiosk"
+kiosk_url: "http://vesta:8123/dashboard-homelab/0?kiosk"

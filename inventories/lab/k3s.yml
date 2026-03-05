@@ -5,7 +5,7 @@ all:
         masters:
           hosts:
             k3s-master01.local: {}
-        worker:
+        workers:
           hosts:
             k3s-node01.local: {}
             k3s-node02.local: {}
