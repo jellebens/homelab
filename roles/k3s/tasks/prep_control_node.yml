@@ -1,23 +1,54 @@
 
-- name: Ensure .kube directory exists
-  file:
-    path: "/home/{{ ansible_user }}/.kube"
-    state: directory
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: "0755"
+---
+- name: default prep control node
+  debug:
+   msg: "{{ inventory_hostname }} - {{ lookup('env','HOST_HOME_DIR') }} - {{ lookup('env','USER') }} - {{ lookup('env','HOME') }}"
 
-- name: Copy k3s kubeconfig
-  copy:
+- name: Inspect /hosthome in EE
+  delegate_to: localhost
+  become: false
+  ansible.builtin.command: sh -lc 'set -eux; ls -ld /hosthome || true; stat /hosthome || true; mount | grep -E "hosthome|/hosthome" || true'
+  register: hosthome_dbg
+  changed_when: false
+
+- debug:
+    var: hosthome_dbg.stdout_lines
+
+- name: Set Cluster API Server address for kubeconfig
+  set_fact:
+    cluster_api_server: "{{ hostvars[groups['masters'][0]].ansible_host | default(groups['masters'][0], true) }}"
+
+- name: Set kubeconfig path for chosen user
+  set_fact:
+    kubeconfig_path: "{{ lookup('env','HOST_HOME_DIR') }}/.kube/config"
+
+- name: Read k3s kubeconfig (rancher/k3s.yaml) into fact
+  become: true
+  ansible.builtin.slurp:
     src: /etc/rancher/k3s/k3s.yaml
-    dest: "/home/{{ ansible_user }}/.kube/config"
-    remote_src: true
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: "0600"
+  register: k3s_kubeconfig_raw
 
-- name: Replace localhost with control plane IP
-  replace:
-    path: "/home/{{ ansible_user }}/.kube/config"
-    regexp: "127.0.0.1"
-    replace: "{{ ansible_host }}"
+- name: Set kubeconfig fact (decoded)
+  ansible.builtin.set_fact:
+    k3s_kubeconfig: "{{ k3s_kubeconfig_raw.content | b64decode }}"
+
+- name: Replace localhost with first master
+  set_fact:
+    kubeconfig: >-
+      {{ k3s_kubeconfig |
+         regex_replace('https://127.0.0.1:6443',
+                       'https://' + cluster_api_server + ':6443') }}
+
+- name: Ensure kube directory exists on controller (as chosen user)
+  delegate_to: localhost
+  ansible.builtin.file:
+    path: "{{kubeconfig_path | dirname}}"
+    state: directory
+    mode: "0700"
+
+- name: Write kubeconfig to controller (as chosen user)
+  delegate_to: localhost
+  ansible.builtin.copy:
+    dest: "{{kubeconfig_path}}"
+    content: "{{ kubeconfig }}"
+    mode: "0600"

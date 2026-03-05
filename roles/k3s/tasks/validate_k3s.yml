@@ -5,12 +5,14 @@
   delay: 10
   until: api_check.rc == 0
   changed_when: false
+  delegate_to: localhost
 
 - name: Verify nodes Ready
   shell: |
     kubectl get nodes --no-headers | awk '{print $2}'
   register: node_states
   changed_when: false
+  delegate_to: localhost
 
 - name: Fail if node not ready
   fail:
@@ -22,6 +24,7 @@
     kubectl get pods -n kube-system --no-headers | awk '{print $3}'
   register: pod_states
   changed_when: false
+  delegate_to: localhost
 
 - name: Fail if system pods unhealthy
   fail:

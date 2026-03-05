@@ -5,9 +5,11 @@
       - ssh_user_groups is defined
       - ansible_ssh_user is defined
       - ssh_local_key_path is defined
+      - ssh_local_pubkey_path is defined
+      - sshd_config_path is defined
     fail_msg: >
       Missing networking vars for {{ inventory_hostname }}. \r\n
-      Expected: ssh_user, ssh_user.name, ssh_user_groups, ssh_local_key_path
+      Expected: ssh_user, ssh_user.name, ssh_user_groups, ssh_local_key_path, ssh_local_pubkey_path, sshd_config_path
 
 
 - name: Ensure SSH user exists 
@@ -20,6 +22,7 @@
     create_home: true
 
 - name: Install SSH public key for user (like ssh-copy-id)
+  become: true
   ansible.posix.authorized_key:
     user: "{{ ansible_ssh_user }}"
     state: present
@@ -34,9 +37,9 @@
     group: root
     mode: "0600"
     content: |
-      Match all
       PasswordAuthentication no
       PermitRootLogin no
+      PubkeyAuthentication yes
   notify: Restart SSH service
 
 - name: Optionally disable SSH password authentication
@@ -47,7 +50,7 @@
     line: 'PasswordAuthentication no'
     state: present
     backup: yes
-  when: (ssh_disable_password_login | default(ssh_disable_password_login, true))
+  when: (ssh_disable_password_login | default(true) | bool)
   notify: Restart SSH service
 
 - name: Optionally disable root login over SSH
@@ -58,7 +61,7 @@
     line: 'PermitRootLogin no'
     state: present
     backup: yes
-  when: (ssh_disable_root_login | default(ssh_disable_root_login, true))
+  when: (ssh_disable_root_login | default(true) | bool)
   notify: Restart SSH service
 
 - name: Ensure PubkeyAuthentication is enabled
@@ -71,9 +74,12 @@
     backup: yes
   notify: Restart SSH service
 
-- name: Verify effective sshd settings
+- name: Verify effective sshd settings (incl Match)
   become: true
-  ansible.builtin.command: sshd -T
+  ansible.builtin.command: >-
+    sshd -T
+    -C user={{ ansible_ssh_user }}
+    -C host={{ inventory_hostname }}
   register: sshd_effective
   changed_when: false
 
@@ -82,6 +88,7 @@
     msg: "{{ sshd_effective.stdout_lines | select('match', '^(passwordauthentication|permitrootlogin|pubkeyauthentication) ') | list }}"
 
 - name: Assert SSH succeeds with publickey only (no password fallback)
+  become: false #prevents “oops I’m root on localhost”
   ansible.builtin.command: >-
     ssh
     -p {{ ansible_port | default(22) }}
@@ -93,12 +100,16 @@
     -o ChallengeResponseAuthentication=no
     -o NumberOfPasswordPrompts=0
     -o ConnectTimeout=8
-    {% if ssh_local_key_path | length > 0 %}-i {{ ssh_local_key_path }}{% endif %}
+    -o StrictHostKeyChecking=accept-new
+    -o UserKnownHostsFile={{ ansible_env.HOME }}/.ssh/known_hosts
+    -i {{ ssh_local_key_path | expanduser }}
     {{ ansible_ssh_user }}@{{ inventory_hostname }}
     true
   register: key_only_probe
   changed_when: false
   delegate_to: localhost
+  environment:
+    HOME: "{{ ansible_env.HOME }}"
 
 - name: Fail if key-only probe fails
   ansible.builtin.fail:

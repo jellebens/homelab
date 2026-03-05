@@ -3,16 +3,22 @@ ansible-navigator:
   mode: stdout
 
   execution-environment: 
-      enabled: true 
+      enabled: true     
       image: docker.io/jellebens/ansible-excecution-environment:1.0.3   
       container-engine: podman 
       volume-mounts:
         - src: ${PWD}
           dest: "/navigator/"
           options: "Z"
+        - src: /home/$USER
+          dest: /hosthome
+          options: rw
       environment-variables:
+        pass:
+        - USER
         set: 
           ANSIBLE_CONFIG: /navigator/ansible.cfg
+          HOST_HOME_DIR: /hosthome
   ansible: 
     config: 
       help: false 
