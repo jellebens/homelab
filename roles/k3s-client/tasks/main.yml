@@ -1,0 +1,17 @@
+#SPDX-License-Identifier: MIT-0
+---
+- name: prepare local host
+  import_tasks: get-kubeconfig.yml
+  when: inventory_hostname == groups['masters'][0]
+  run_once: true
+  tags:
+    - k3s
+    - client
+
+- name: Validate k3s cluster
+  import_tasks: validate_k3s.yml
+  when: inventory_hostname == groups['masters'][0]
+  run_once: true
+  tags:
+    - k3s
+    - client

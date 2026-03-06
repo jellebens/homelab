@@ -9,25 +9,12 @@
   import_tasks: install-master-nodes.yml
   when: "'masters' in group_names"
   tags:
+    - k3s
     - masters
 
 - name: Install and Configure the worker nodes
   import_tasks: install-worker-nodes.yml
   when: "'workers' in group_names"
   tags:
+    - k3s
     - workers
-
-- name: prepare local host
-  import_tasks: prep_control_node.yml
-  when: inventory_hostname == groups['masters'][0]
-  run_once: true
-  tags:
-    - client
-    - kubeconfig
-
-- name: Validate k3s cluster
-  import_tasks: validate_k3s.yml
-  when: inventory_hostname == groups['masters'][0]
-  run_once: true
-  tags:
-    - validate

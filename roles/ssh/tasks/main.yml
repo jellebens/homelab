@@ -2,7 +2,11 @@
 ---
 - name: Ensure SSH keys are available on control node
   import_tasks: prepare-control-node.yml
+  tags:
+    - ssh
+    - ssh-client
 
 - name: Configure ssh on host
   import_tasks: configure-ssh-host.yml
-
+  tags:
+    - ssh

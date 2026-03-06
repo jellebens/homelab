@@ -6,11 +6,9 @@
   
   roles:
     - role: ssh
-      tags: [ssh, network]
     - role: network
-      tags: [network]
     - role: k3s
-      tags: [k3s]
+    - role: k3s-client
     # - role: argocd
     #   tags: [argocd]
     # - role: monitoring
