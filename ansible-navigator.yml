@@ -4,7 +4,7 @@ ansible-navigator:
 
   execution-environment: 
       enabled: true     
-      image: docker.io/jellebens/ansible-excecution-environment:1.0.7   
+      image: docker.io/jellebens/ansible-excecution-environment:1.0.8   
       container-engine: podman 
       volume-mounts:
         - src: ${PWD}

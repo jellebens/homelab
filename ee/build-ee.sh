@@ -1,3 +1,4 @@
-ansible-builder build -t jellebens/ansible-excecution-environment:1.0.7 --container-runtime podman
+VERSION=$1
+ansible-builder build -v 3 -t jellebens/ansible-excecution-environment:$VERSION --container-runtime podman
 
-podman push jellebens/ansible-excecution-environment:1.0.7
+podman push jellebens/ansible-excecution-environment:$VERSION

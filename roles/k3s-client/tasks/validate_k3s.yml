@@ -8,12 +8,9 @@
   changed_when: false
   failed_when: api_check.rc != 0 and api_check.attempts | default(1) >= 20
 
-- debug:
-    var: api_check
-
 - name: Verify nodes Ready
   shell: |
-    kubectl get nodes --no-headers | awk '{print $2}'
+    kubectl get nodes --kubeconfig {{kubeconfig_path}} --no-headers | awk '{print $2}'
   register: node_states
   changed_when: false
   delegate_to: localhost
@@ -23,14 +20,23 @@
     msg: "Cluster nodes not Ready"
   when: "'NotReady' in node_states.stdout"
 
-- name: Check kube-system pods
-  shell: |
-    kubectl get pods -n kube-system --no-headers | awk '{print $3}'
-  register: pod_states
-  changed_when: false
+- name: Get kube-system pods
   delegate_to: localhost
+  command: kubectl get pods -n kube-system --kubeconfig {{kubeconfig_path}} -o json
+  register: system_pods
+  changed_when: false
 
-- name: Fail if system pods unhealthy
+- name: Find unhealthy pods
+  set_fact:
+    unhealthy_pods: >-
+      {{
+        system_pods.stdout | from_json
+        | json_query(
+          "items[?status.phase!='Running' || status.containerStatuses[?ready==`false`]].metadata.name"
+        )
+      }}
+
+- name: Fail if kube-system pods unhealthy
   fail:
-    msg: "System pods unhealthy"
-  when: "'Running' not in pod_states.stdout"
+    msg: "Unhealthy kube-system pods detected: {{ unhealthy_pods }}"
+  when: unhealthy_pods | length > 0

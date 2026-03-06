@@ -6,7 +6,7 @@
   run_once: true
   tags:
     - k3s
-    - client
+    - k3s-client
 
 - name: Validate k3s cluster
   import_tasks: validate_k3s.yml
@@ -14,4 +14,4 @@
   run_once: true
   tags:
     - k3s
-    - client
+    - k3s-client
