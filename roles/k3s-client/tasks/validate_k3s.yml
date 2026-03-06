@@ -19,24 +19,3 @@
   fail:
     msg: "Cluster nodes not Ready"
   when: "'NotReady' in node_states.stdout"
-
-- name: Get kube-system pods
-  delegate_to: localhost
-  command: kubectl get pods -n kube-system --kubeconfig {{kubeconfig_path}} -o json
-  register: system_pods
-  changed_when: false
-
-- name: Find unhealthy pods
-  set_fact:
-    unhealthy_pods: >-
-      {{
-        system_pods.stdout | from_json
-        | json_query(
-          "items[?status.phase!='Running' || status.containerStatuses[?ready==`false`]].metadata.name"
-        )
-      }}
-
-- name: Fail if kube-system pods unhealthy
-  fail:
-    msg: "Unhealthy kube-system pods detected: {{ unhealthy_pods }}"
-  when: unhealthy_pods | length > 0

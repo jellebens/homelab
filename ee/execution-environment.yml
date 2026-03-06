@@ -2,14 +2,14 @@ version: 3
 
 images:
   base_image:
-    name: docker.io/redhat/ubi9:9.7
+    name: registry.access.redhat.com/ubi10/ubi:10.1
 
 dependencies:
   python_interpreter:
-    package_system: python3
+    package_system: python3.12
   
   ansible_core:
-    package_pip: ansible-core
+    package_pip: ansible-core>=2.17
   
   ansible_runner:
     package_pip: ansible-runner
@@ -19,6 +19,10 @@ dependencies:
   python: requirements.txt
 
   galaxy: requirements.yml
+
+  exclude:
+    system:
+    - openshift-clients
   
 additional_build_steps:
   append_final:
@@ -27,4 +31,6 @@ additional_build_steps:
     - RUN curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
     - RUN curl -L https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -o /usr/local/bin/yq
     - RUN chmod +x /usr/local/bin/yq
+
+
 
