@@ -1,5 +1,5 @@
-- name: Wait for API
-  command: kubectl --kubeconfig {{kubeconfig_path}} get nodes
+- name: K3S | Wait for API
+  command: kubectl --kubeconfig {{kubeconfig}} get nodes
   delegate_to: localhost
   register: api_check
   retries: 3
@@ -8,14 +8,14 @@
   changed_when: false
   failed_when: api_check.rc != 0 and api_check.attempts | default(1) >= 20
 
-- name: Verify nodes Ready
+- name: K3S | Verify nodes Ready
   shell: |
-    kubectl get nodes --kubeconfig {{kubeconfig_path}} --no-headers | awk '{print $2}'
+    kubectl get nodes --kubeconfig {{kubeconfig}} --no-headers | awk '{print $2}'
   register: node_states
   changed_when: false
   delegate_to: localhost
 
-- name: Fail if node not ready
+- name: K3S |Fail if node not ready
   fail:
     msg: "Cluster nodes not Ready"
   when: "'NotReady' in node_states.stdout"

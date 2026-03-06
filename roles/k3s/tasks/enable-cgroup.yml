@@ -1,10 +1,10 @@
 ---
-- name: Read Raspberry Pi kernel cmdline
+- name: K3S | Read Raspberry Pi kernel cmdline
   ansible.builtin.command: cat /boot/firmware/cmdline.txt
   register: cmdlineContent
   changed_when: false
 
-- name: Enable cgroups in kernel cmdline
+- name: K3S | Enable cgroups in kernel cmdline
   become: true
   ansible.builtin.lineinfile:
     path: /boot/firmware/cmdline.txt
@@ -14,12 +14,12 @@
   when: "'cgroup_enable=memory' not in cmdlineContent.stdout"
   notify: reboot_pi
 
-- name: Read kernel cmdline to verify cgroup settings
+- name: K3S | Read kernel cmdline to verify cgroup settings
   ansible.builtin.command: cat /proc/cmdline
   register: verifyCmdline
   changed_when: false
 
-- name: Fail if cgroup settings are not enabled
+- name: K3S | Fail if cgroup settings are not enabled
   ansible.builtin.fail:
     msg: "Cgroup settings were not enabled in the kernel cmdline."
   when: "'cgroup_enable=memory' not in verifyCmdline.stdout"

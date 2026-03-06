@@ -1,5 +1,5 @@
 ---
-- name: Validate networking variables
+- name: K3S | Validate networking variables
   ansible.builtin.assert:
     that:
       - k3s_version is defined
@@ -7,17 +7,17 @@
       Missing vars for {{ inventory_hostname }}.
       Expected: k3s_version
 
-- name: Check if k3s server uninstall script exists
+- name: K3S | Check if k3s server uninstall script exists
   ansible.builtin.stat:
     path: /usr/local/bin/k3s-uninstall.sh
   register: k3s_server_uninstall
 
-- name: Uninstall k3s server if installed
+- name: K3S | Uninstall k3s server if installed
   become: true
   ansible.builtin.command: /usr/local/bin/k3s-uninstall.sh
   when: k3s_server_uninstall.stat.exists
 
-- name: Install k3s master
+- name: K3S | Install k3s master
   become: true
   shell: curl -sfL https://get.k3s.io | sh -
   args:
@@ -30,7 +30,7 @@
       --tls-san {{ ansible_host }}
       --node-name {{ inventory_hostname }}
 
-- name: Wait for node-token file to appear
+- name: K3S | Wait for node-token file to appear
   become: true
   ansible.builtin.shell: test -f /var/lib/rancher/k3s/server/node-token
   register: token_file
@@ -38,13 +38,13 @@
   delay: 10
   until: token_file.rc == 0
 
-- name: Read K3S node token
+- name: K3S | Read K3S node token
   become: true
   ansible.builtin.command: cat /var/lib/rancher/k3s/server/node-token
   register: k3s_token
   failed_when: k3s_token.rc != 0 or k3s_token.stdout is undefined
   changed_when: false
 
-- name: Set K3S_TOKEN as a fact
+- name: K3S | Set K3S_TOKEN as a fact
   set_fact:
     k3s_token: "{{ k3s_token.stdout | trim }}"

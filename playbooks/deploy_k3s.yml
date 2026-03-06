@@ -2,14 +2,15 @@
 - name: Setup k3s cluster
   hosts: k3s
   gather_facts: true
-
   
+  vars:
+    kubeconfig: "{{ lookup('env','HOST_HOME_DIR') }}/.kube/config"
+
   roles:
     - role: ssh
     - role: network
     - role: k3s
     - role: k3s-client
-    # - role: argocd
-    #   tags: [argocd]
+    - role: argocd
     # - role: monitoring
     #   tags: [monitoring]
