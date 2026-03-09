@@ -27,6 +27,8 @@
     INSTALL_K3S_EXEC: >
       server
       --cluster-init
+      --flannel-backend=none 
+      --disable-network-policy
       --tls-san {{ ansible_host }}
       --node-name {{ inventory_hostname }}
 
@@ -48,3 +50,7 @@
 - name: K3S | Set K3S_TOKEN as a fact
   set_fact:
     k3s_token: "{{ k3s_token.stdout | trim }}"
+
+- name: K3S | Install cillium 
+  ansible.builtin.shell: cilium install --version 1.19.1 --set=ipam.operator.clusterPoolIPv4PodCIDRList="10.42.0.0/16"
+  delegate_to: localhost

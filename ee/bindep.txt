@@ -1,6 +1,0 @@
-git [platform:rpm]
-openssh-clients [platform:rpm]
-openssl [platform:rpm]
-#sshpass [platform:rpm]
-tar [platform:rpm]
-gzip [platform:rpm]
