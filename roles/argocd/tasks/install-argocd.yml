@@ -1,4 +1,15 @@
 ---
+- name: ARGOCD | Check if kubeconfig exists
+  delegate_to: localhost
+  ansible.builtin.stat:
+    path: "{{ kubeconfig }}"
+  register: kubeconfig_present
+  
+- name: ARGOCD | Create kubeconfig
+  ansible.builtin.include_role:
+    name: k3s
+  when: not kubeconfig_present.stat.exists
+
 - name: ARGOCD | Create argocd namespace
   delegate_to: localhost
   kubernetes.core.k8s:

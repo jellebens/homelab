@@ -31,6 +31,8 @@
       --disable-network-policy
       --tls-san {{ ansible_host }}
       --node-name {{ inventory_hostname }}
+      --write-kubeconfig-mode 644
+
 
 - name: K3S | Wait for node-token file to appear
   become: true
@@ -51,6 +53,12 @@
   set_fact:
     k3s_token: "{{ k3s_token.stdout | trim }}"
 
-- name: K3S | Install cillium 
-  ansible.builtin.shell: cilium install --version 1.19.1 --set=ipam.operator.clusterPoolIPv4PodCIDRList="10.42.0.0/16"
-  delegate_to: localhost
+- name: K3S | Wait for kube-apiserver to respond
+  become: true
+  ansible.builtin.command: >
+    kubectl get --raw=/readyz
+  register: apiready
+  changed_when: false
+  retries: 30
+  delay: 5
+  until: apiready.rc == 0 and ('ok' in apiready.stdout | lower)

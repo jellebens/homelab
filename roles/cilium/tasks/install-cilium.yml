@@ -1,0 +1,61 @@
+---
+- name: Check if kubeconfig exists
+  delegate_to: localhost
+  ansible.builtin.stat:
+    path: "{{ kubeconfig }}"
+  register: kubeconfig_present
+
+- name: Test
+  ansible.builtin.debug:
+    msg: "Kubeconfig exists: {{ kubeconfig_present.stat.exists }} - {{ kubeconfig }}"
+
+- name: Create kubeconfig
+  ansible.builtin.include_role:
+    name: k3s
+  when: not kubeconfig_present.stat.exists
+
+- name: Install Cilium
+  delegate_to: localhost
+  kubernetes.core.helm:
+    name: cilium
+    chart_ref: oci://quay.io/cilium/charts/cilium
+    release_namespace: kube-system
+    create_namespace: true
+    kubeconfig: "{{ kubeconfig }}"
+    values:
+      kubeProxyReplacement: false
+      ipam:
+        operator:
+          clusterPoolIPv4PodCIDRList:
+            - "10.42.0.0/16"
+
+- name: Wait for Cilium pods
+  delegate_to: localhost
+  ansible.builtin.command: >
+    kubectl -n kube-system rollout status ds/cilium --timeout=300s
+  environment:
+    KUBECONFIG: "{{ kubeconfig }}"
+  register: cilium_ds
+  changed_when: false
+
+- name: Wait for Cilium operator
+  delegate_to: localhost
+  ansible.builtin.command: >
+    kubectl -n kube-system rollout status deploy/cilium-operator --timeout=300s
+  environment:
+    KUBECONFIG: "{{ kubeconfig }}"
+  register: cilium_operator
+  changed_when: false
+
+- name: Wait until node is Ready
+  delegate_to: localhost
+  ansible.builtin.command: >
+    kubectl get node {{ ansible_hostname }}
+    -o jsonpath={.status.conditions[?(@.type=="Ready")].status}
+  environment:
+    KUBECONFIG: "{{ kubeconfig }}"
+  register: node_ready
+  changed_when: false
+  retries: 30
+  delay: 10
+  until: node_ready.stdout == "True"

@@ -15508,3 +15508,1041 @@ Traceback (most recent call last):
   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
     os.mkdir(self, mode)
 PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T18:30:15.798866+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:30:16.355510+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2026-03-10T18:30:16.355592+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2026-03-10T18:30:16.355607+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: docker.io/jellebens/ansible-excecution-environment:1.1.1: image not known
+
+2026-03-10T18:30:17.648107+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed
+2026-03-10T18:32:53.680854+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:32:54.358759+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2026-03-10T18:32:54.358852+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2026-03-10T18:32:54.358867+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: docker.io/jellebens/ansible-excecution-environment:1.1.1: image not known
+
+2026-03-10T18:32:57.886426+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '89595281-5e9d-43b1-9aab-78cdb6a1eca2', 'counter': 1, 'stdout': '\x1b[0;31m[ERROR]: YAML parsing failed: This may be an issue with missing quotes around a template block.\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880120+00:00'}
+2026-03-10T18:32:57.886594+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0306c2f1-ba95-4536-af37-e5d61ffa6948', 'counter': 2, 'stdout': '\x1b[0;31mOrigin: /navigator/roles/argocd/tasks/install-argocd.yml:5:11\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880310+00:00'}
+2026-03-10T18:32:57.886725+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4db22e03-de7f-4725-aaf5-83138a5c1ca7', 'counter': 3, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880397+00:00'}
+2026-03-10T18:32:57.886885+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'dbde9492-b034-4dc5-bb33-7e9925a3c836', 'counter': 4, 'stdout': '\x1b[0;31m3   delegate_to: localhost\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880433+00:00'}
+2026-03-10T18:32:57.887069+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b6c49f74-98ee-47c4-86ff-0c5f1f74316a', 'counter': 5, 'stdout': '\x1b[0;31m4   ansible.builtin.stat:\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880458+00:00'}
+2026-03-10T18:32:57.887197+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c5e7a23b-ef1e-4b73-8441-cb2dd9b4d714', 'counter': 6, 'stdout': '\x1b[0;31m5     path: {{ kubeconfig }}\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880482+00:00'}
+2026-03-10T18:32:57.887618+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fc460cf9-3ce0-4097-8d0b-d440fa72c9ef', 'counter': 7, 'stdout': '\x1b[0;31m            ^ column 11\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880504+00:00'}
+2026-03-10T18:32:57.887691+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd122e0ae-e288-404b-bf52-c04ab6832abb', 'counter': 8, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880527+00:00'}
+2026-03-10T18:32:57.887759+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e2ff79d7-f4b2-483c-8f6f-bbec7cb4ee20', 'counter': 9, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880548+00:00'}
+2026-03-10T18:32:57.887849+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'de050aec-206c-448b-8574-a62dfc86d722', 'counter': 10, 'stdout': '\x1b[0;31mFor example:\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880568+00:00'}
+2026-03-10T18:32:57.887914+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bf437b8b-42a8-4cdd-ab8c-8680b673b879', 'counter': 11, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 10, 'end_line': 11, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880578+00:00'}
+2026-03-10T18:32:57.887956+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bbfa92d2-07df-4045-9a50-c7d1c0b44f68', 'counter': 12, 'stdout': '\x1b[0;31m    raw: {{ some_var }}\x1b[0m', 'start_line': 11, 'end_line': 12, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880589+00:00'}
+2026-03-10T18:32:57.888003+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '896e5da1-2ae0-4edd-bb36-0ae4eb0fb072', 'counter': 13, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 12, 'end_line': 13, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880600+00:00'}
+2026-03-10T18:32:57.888131+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ea19c901-0415-4abb-ac14-154bbf585afb', 'counter': 14, 'stdout': '\x1b[0;31mShould be:\x1b[0m', 'start_line': 13, 'end_line': 14, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880611+00:00'}
+2026-03-10T18:32:57.888195+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '46a81cd7-1b84-49ab-8470-a661a1dcfd05', 'counter': 15, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 14, 'end_line': 15, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880623+00:00'}
+2026-03-10T18:32:57.888260+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd2487f60-7550-4829-9e61-c11fc1bbf431', 'counter': 16, 'stdout': '\x1b[0;31m    raw: "{{ some_var }}"\x1b[0m', 'start_line': 15, 'end_line': 16, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880633+00:00'}
+2026-03-10T18:32:57.888336+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '87a76527-f0bd-4306-9200-b89b19727e9d', 'counter': 17, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 16, 'end_line': 17, 'runner_ident': 'f9a124b8-5091-4ec0-ad97-29a2422670df', 'created': '2026-03-10T18:32:57.880648+00:00'}
+2026-03-10T18:32:58.792742+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T18:33:20.472235+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:33:21.960092+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b2093c50-7c9c-402c-b6b8-cd8c9482e87d', 'counter': 1, 'stdout': "\x1b[0;31m[ERROR]: 'delegate_to' is not a valid attribute for a IncludeRole\x1b[0m", 'start_line': 0, 'end_line': 1, 'runner_ident': '014b2c0e-372c-4411-aa98-2235cd2eabb8', 'created': '2026-03-10T18:33:21.958783+00:00'}
+2026-03-10T18:33:21.960234+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '607f7216-8a03-4670-88e7-d9ba8c082587', 'counter': 2, 'stdout': '\x1b[0;31mOrigin: /navigator/roles/argocd/tasks/install-argocd.yml:8:3\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '014b2c0e-372c-4411-aa98-2235cd2eabb8', 'created': '2026-03-10T18:33:21.958875+00:00'}
+2026-03-10T18:33:21.960302+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '6092bf60-de1c-4089-b6d4-fa91723f056e', 'counter': 3, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 2, 'end_line': 3, 'runner_ident': '014b2c0e-372c-4411-aa98-2235cd2eabb8', 'created': '2026-03-10T18:33:21.958898+00:00'}
+2026-03-10T18:33:21.960369+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'af96aec7-a738-43a3-a093-fbccadbef02a', 'counter': 4, 'stdout': '\x1b[0;31m6   register: kubeconfiig_present\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '014b2c0e-372c-4411-aa98-2235cd2eabb8', 'created': '2026-03-10T18:33:21.958912+00:00'}
+2026-03-10T18:33:21.960446+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b8855da9-f184-4f3d-a761-8d660c6a333a', 'counter': 5, 'stdout': '\x1b[0;31m7   \x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': '014b2c0e-372c-4411-aa98-2235cd2eabb8', 'created': '2026-03-10T18:33:21.958925+00:00'}
+2026-03-10T18:33:21.960509+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a5d5bfc7-f545-4712-af9d-bc5978f0d825', 'counter': 6, 'stdout': '\x1b[0;31m8 - name: ARGOCD | Create kubeconfig\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': '014b2c0e-372c-4411-aa98-2235cd2eabb8', 'created': '2026-03-10T18:33:21.958936+00:00'}
+2026-03-10T18:33:21.960571+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '131b5e91-ac20-4863-8618-d843973fe19a', 'counter': 7, 'stdout': '\x1b[0;31m    ^ column 3\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': '014b2c0e-372c-4411-aa98-2235cd2eabb8', 'created': '2026-03-10T18:33:21.958947+00:00'}
+2026-03-10T18:33:21.960632+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9b1cb977-4d9e-4043-99e2-9308f5f55a32', 'counter': 8, 'stdout': '\x1b[0;31m\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': '014b2c0e-372c-4411-aa98-2235cd2eabb8', 'created': '2026-03-10T18:33:21.958959+00:00'}
+2026-03-10T18:33:22.776510+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T18:33:37.805588+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:33:44.884002+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T18:34:49.013398+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:34:55.695498+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T18:36:15.256706+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:36:55.071403+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T18:42:13.017159+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:42:55.686951+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T18:50:09.241374+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:52:24.665414+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid
+2026-03-10T18:52:30.312989+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:53:26.408266+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid
+2026-03-10T18:53:32.859200+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:53:34.203718+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c59a3358-a16c-45b2-b283-b2475c52dfd3', 'counter': 1, 'stdout': 'usage: ansible-playbook [-h] [--version] [-v] [--private-key PRIVATE_KEY_FILE]', 'start_line': 0, 'end_line': 1, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203155+00:00'}
+2026-03-10T18:53:34.204016+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2327f806-d0a0-403c-875b-a82f1bb04884', 'counter': 2, 'stdout': '                        [-u REMOTE_USER] [-c CONNECTION] [-T TIMEOUT]', 'start_line': 1, 'end_line': 2, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203306+00:00'}
+2026-03-10T18:53:34.205258+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '60f7b773-3baa-443d-a507-a82d4a650ad0', 'counter': 3, 'stdout': '                        [--ssh-common-args SSH_COMMON_ARGS]', 'start_line': 2, 'end_line': 3, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203338+00:00'}
+2026-03-10T18:53:34.207359+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3357b785-1a27-4a1e-b4ca-f8a1c55242f7', 'counter': 4, 'stdout': '                        [--sftp-extra-args SFTP_EXTRA_ARGS]', 'start_line': 3, 'end_line': 4, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203355+00:00'}
+2026-03-10T18:53:34.207670+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3b5db412-2b06-4651-a051-b54932d49816', 'counter': 5, 'stdout': '                        [--scp-extra-args SCP_EXTRA_ARGS]', 'start_line': 4, 'end_line': 5, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203368+00:00'}
+2026-03-10T18:53:34.207745+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '83764f58-535b-408b-a644-35a0084ccfea', 'counter': 6, 'stdout': '                        [--ssh-extra-args SSH_EXTRA_ARGS]', 'start_line': 5, 'end_line': 6, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203379+00:00'}
+2026-03-10T18:53:34.207808+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '541a340d-f79f-4cb1-8545-287a1569367e', 'counter': 7, 'stdout': '                        [-k | --connection-password-file CONNECTION_PASSWORD_FILE]', 'start_line': 6, 'end_line': 7, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203391+00:00'}
+2026-03-10T18:53:34.209270+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'cd8f0720-c001-4250-b1f1-225b8a74b5fb', 'counter': 8, 'stdout': '                        [--force-handlers] [-b]', 'start_line': 7, 'end_line': 8, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203401+00:00'}
+2026-03-10T18:53:34.210388+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fb447989-62bc-4e8f-926e-094dfcfea3ac', 'counter': 9, 'stdout': '                        [--become-method BECOME_METHOD]', 'start_line': 8, 'end_line': 9, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203413+00:00'}
+2026-03-10T18:53:34.210992+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ae387d67-6902-4ec5-8d02-f9d8eaa24fb3', 'counter': 10, 'stdout': '                        [--become-user BECOME_USER]', 'start_line': 9, 'end_line': 10, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203424+00:00'}
+2026-03-10T18:53:34.211066+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f24f81ae-b206-4aa0-9b92-f14cf7520e56', 'counter': 11, 'stdout': '                        [-K | --become-password-file BECOME_PASSWORD_FILE]', 'start_line': 10, 'end_line': 11, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203434+00:00'}
+2026-03-10T18:53:34.211135+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bbb26ca3-3443-487f-a11a-56aceb8363a8', 'counter': 12, 'stdout': '                        [-t TAGS] [--skip-tags SKIP_TAGS] [-C] [-D]', 'start_line': 11, 'end_line': 12, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203445+00:00'}
+2026-03-10T18:53:34.211436+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3a7b9f09-1d02-481c-ba94-87a0054222ad', 'counter': 13, 'stdout': '                        [-i INVENTORY] [--list-hosts] [-l SUBSET]', 'start_line': 12, 'end_line': 13, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203455+00:00'}
+2026-03-10T18:53:34.213542+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '081f013a-911f-41ad-8db6-71d5aaa5ea39', 'counter': 14, 'stdout': '                        [--flush-cache] [-e EXTRA_VARS] [--vault-id VAULT_IDS]', 'start_line': 13, 'end_line': 14, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203467+00:00'}
+2026-03-10T18:53:34.214474+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5fd756f0-384b-4659-8696-e1ba050380cd', 'counter': 15, 'stdout': '                        [-J | --vault-password-file VAULT_PASSWORD_FILES]', 'start_line': 14, 'end_line': 15, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203478+00:00'}
+2026-03-10T18:53:34.214710+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b75bd6f9-44af-48b7-ae8e-8d9a1743d920', 'counter': 16, 'stdout': '                        [-f FORKS] [-M MODULE_PATH] [--syntax-check]', 'start_line': 15, 'end_line': 16, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203489+00:00'}
+2026-03-10T18:53:34.214784+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0733fe59-6f57-4f09-8223-1dde18051c48', 'counter': 17, 'stdout': '                        [--list-tasks] [--list-tags] [--step]', 'start_line': 16, 'end_line': 17, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203500+00:00'}
+2026-03-10T18:53:34.214846+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '062583e0-07b1-4a26-ab0f-5996fc0045e1', 'counter': 18, 'stdout': '                        [--start-at-task START_AT_TASK]', 'start_line': 17, 'end_line': 18, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203513+00:00'}
+2026-03-10T18:53:34.215226+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '08c73f7e-d9e5-4076-9d86-4f72f533bb8c', 'counter': 19, 'stdout': '                        playbook [playbook ...]', 'start_line': 18, 'end_line': 19, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203524+00:00'}
+2026-03-10T18:53:34.215645+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'dc3b2a88-1495-46ad-afba-cace5c82f9d2', 'counter': 20, 'stdout': 'ansible-playbook: error: unrecognized arguments: 3', 'start_line': 19, 'end_line': 20, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.203536+00:00'}
+2026-03-10T18:53:34.216842+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '92a51447-2e8c-408c-baed-94138cfad8af', 'counter': 21, 'stdout': ' ', 'start_line': 20, 'end_line': 21, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.204205+00:00'}
+2026-03-10T18:53:34.216913+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '123ec9a6-95f2-4a60-98e8-dcea51834b84', 'counter': 22, 'stdout': 'usage: ansible-playbook [-h] [--version] [-v] [--private-key PRIVATE_KEY_FILE]', 'start_line': 21, 'end_line': 22, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.204297+00:00'}
+2026-03-10T18:53:34.217033+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9934d9c4-1781-47be-871c-af102f6db99c', 'counter': 23, 'stdout': '                        [-u REMOTE_USER] [-c CONNECTION] [-T TIMEOUT]', 'start_line': 22, 'end_line': 23, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.204382+00:00'}
+2026-03-10T18:53:34.217152+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2c381967-d999-4dc5-87b9-c91d81103eb5', 'counter': 24, 'stdout': '                        [--ssh-common-args SSH_COMMON_ARGS]', 'start_line': 23, 'end_line': 24, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.204470+00:00'}
+2026-03-10T18:53:34.217216+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0a5462bb-e5f7-4d25-b1ad-9fce2de41308', 'counter': 25, 'stdout': '                        [--sftp-extra-args SFTP_EXTRA_ARGS]', 'start_line': 24, 'end_line': 25, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.204554+00:00'}
+2026-03-10T18:53:34.217276+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5c01620f-509d-47d1-9d76-dfb1aed6a84c', 'counter': 26, 'stdout': '                        [--scp-extra-args SCP_EXTRA_ARGS]', 'start_line': 25, 'end_line': 26, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.204638+00:00'}
+2026-03-10T18:53:34.217337+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2bcd4eb3-0be9-48e2-b1b2-a329d85a789c', 'counter': 27, 'stdout': '                        [--ssh-extra-args SSH_EXTRA_ARGS]', 'start_line': 26, 'end_line': 27, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.204723+00:00'}
+2026-03-10T18:53:34.217401+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9dd0bd13-5ad9-40fa-908b-7c3eef146095', 'counter': 28, 'stdout': '                        [-k | --connection-password-file CONNECTION_PASSWORD_FILE]', 'start_line': 27, 'end_line': 28, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.204808+00:00'}
+2026-03-10T18:53:34.217462+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8f58624a-e93a-4a1a-9041-1c49cecf9e11', 'counter': 29, 'stdout': '                        [--force-handlers] [-b]', 'start_line': 28, 'end_line': 29, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.204891+00:00'}
+2026-03-10T18:53:34.217532+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '572fde1f-b54f-4d8e-94cc-54833ea1f2aa', 'counter': 30, 'stdout': '                        [--become-method BECOME_METHOD]', 'start_line': 29, 'end_line': 30, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.204977+00:00'}
+2026-03-10T18:53:34.217592+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '98a8b960-d4ac-423e-90a4-ffdff402fecf', 'counter': 31, 'stdout': '                        [--become-user BECOME_USER]', 'start_line': 30, 'end_line': 31, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.205064+00:00'}
+2026-03-10T18:53:34.217652+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '31e9ac58-4850-42df-b70f-c0dd6c10b637', 'counter': 32, 'stdout': '                        [-K | --become-password-file BECOME_PASSWORD_FILE]', 'start_line': 31, 'end_line': 32, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.205153+00:00'}
+2026-03-10T18:53:34.217712+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1c57b345-81fd-4781-a508-652154050f5d', 'counter': 33, 'stdout': '                        [-t TAGS] [--skip-tags SKIP_TAGS] [-C] [-D]', 'start_line': 32, 'end_line': 33, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.205382+00:00'}
+2026-03-10T18:53:34.217773+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2c224271-e793-43b3-9f34-fd9d96f8b9fe', 'counter': 34, 'stdout': '                        [-i INVENTORY] [--list-hosts] [-l SUBSET]', 'start_line': 33, 'end_line': 34, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.205480+00:00'}
+2026-03-10T18:53:34.217834+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '46e9511a-67de-4504-997a-7f75d6292fa6', 'counter': 35, 'stdout': '                        [--flush-cache] [-e EXTRA_VARS] [--vault-id VAULT_IDS]', 'start_line': 34, 'end_line': 35, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.205566+00:00'}
+2026-03-10T18:53:34.217894+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '50f94b34-b48a-40a7-913a-3a706654ff7a', 'counter': 36, 'stdout': '                        [-J | --vault-password-file VAULT_PASSWORD_FILES]', 'start_line': 35, 'end_line': 36, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.205654+00:00'}
+2026-03-10T18:53:34.217954+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '6610ec18-7814-489e-a94d-fe8f76b066ac', 'counter': 37, 'stdout': '                        [-f FORKS] [-M MODULE_PATH] [--syntax-check]', 'start_line': 36, 'end_line': 37, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.205742+00:00'}
+2026-03-10T18:53:34.218017+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fff35046-4607-4742-a6c1-185acf519305', 'counter': 38, 'stdout': '                        [--list-tasks] [--list-tags] [--step]', 'start_line': 37, 'end_line': 38, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.205826+00:00'}
+2026-03-10T18:53:34.218089+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4960a419-4922-4d8b-ac23-0efd0fe5b523', 'counter': 39, 'stdout': '                        [--start-at-task START_AT_TASK]', 'start_line': 38, 'end_line': 39, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.205913+00:00'}
+2026-03-10T18:53:34.218153+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '27410b55-bf01-416a-bf3f-2d71aa9ec888', 'counter': 40, 'stdout': '                        playbook [playbook ...]', 'start_line': 39, 'end_line': 40, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.205996+00:00'}
+2026-03-10T18:53:34.218184+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '91971505-c9a6-48e4-af5e-94bd8ee5f801', 'counter': 41, 'stdout': '', 'start_line': 40, 'end_line': 41, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206079+00:00'}
+2026-03-10T18:53:34.218239+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '33f0cf3b-dda0-49fc-88f7-4e008da6e5f9', 'counter': 42, 'stdout': 'Runs Ansible playbooks, executing the defined tasks on the targeted hosts.', 'start_line': 41, 'end_line': 42, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206166+00:00'}
+2026-03-10T18:53:34.218270+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '70740f10-6499-4a22-9222-626f7495a8eb', 'counter': 43, 'stdout': '', 'start_line': 42, 'end_line': 43, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206249+00:00'}
+2026-03-10T18:53:34.218319+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5ab60d0b-1428-41c1-b6b3-a8413c062208', 'counter': 44, 'stdout': 'positional arguments:', 'start_line': 43, 'end_line': 44, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206333+00:00'}
+2026-03-10T18:53:34.218380+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b6f45411-c870-4e1a-b323-68d562d7f045', 'counter': 45, 'stdout': '  playbook              Playbook(s)', 'start_line': 44, 'end_line': 45, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206416+00:00'}
+2026-03-10T18:53:34.218410+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '38b97062-2460-43a6-b5a1-1481422e8f93', 'counter': 46, 'stdout': '', 'start_line': 45, 'end_line': 46, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206499+00:00'}
+2026-03-10T18:53:34.218454+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3c8f17c3-cebe-4179-a5ae-cfeb3115382e', 'counter': 47, 'stdout': 'options:', 'start_line': 46, 'end_line': 47, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206585+00:00'}
+2026-03-10T18:53:34.218514+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ecf2f22a-7764-4a4d-8d34-3da81ef07e61', 'counter': 48, 'stdout': '  --become-password-file BECOME_PASSWORD_FILE, --become-pass-file BECOME_PASSWORD_FILE', 'start_line': 47, 'end_line': 48, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206672+00:00'}
+2026-03-10T18:53:34.218580+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ec367131-3cc3-4fcb-9cc9-5de932c1cd13', 'counter': 49, 'stdout': '                        Become password file', 'start_line': 48, 'end_line': 49, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206760+00:00'}
+2026-03-10T18:53:34.218641+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '92c08319-9c7c-48cb-adce-1ca8fcdf01a4', 'counter': 50, 'stdout': '  --connection-password-file CONNECTION_PASSWORD_FILE, --conn-pass-file CONNECTION_PASSWORD_FILE', 'start_line': 49, 'end_line': 50, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206848+00:00'}
+2026-03-10T18:53:34.218705+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '97fa0e6c-0132-45a4-9ea1-867d74c429eb', 'counter': 51, 'stdout': '                        Connection password file', 'start_line': 50, 'end_line': 51, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.206936+00:00'}
+2026-03-10T18:53:34.218772+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '47d83615-bb44-48f7-bb3d-645a1171c2ff', 'counter': 52, 'stdout': '  --flush-cache         clear the fact cache for every host in inventory', 'start_line': 51, 'end_line': 52, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.207024+00:00'}
+2026-03-10T18:53:34.218834+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fa8bb395-683b-47d8-861d-804f28e268d5', 'counter': 53, 'stdout': '  --force-handlers      run handlers even if a task fails', 'start_line': 52, 'end_line': 53, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.207136+00:00'}
+2026-03-10T18:53:34.218894+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0c9c4740-f775-40e7-996d-ec4b7dbe3d19', 'counter': 54, 'stdout': '  --list-hosts          outputs a list of matching hosts; does not execute', 'start_line': 53, 'end_line': 54, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.207296+00:00'}
+2026-03-10T18:53:34.218960+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ab3226fe-7655-460b-a8d6-f91dcde54c46', 'counter': 55, 'stdout': '                        anything else', 'start_line': 54, 'end_line': 55, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.207511+00:00'}
+2026-03-10T18:53:34.219021+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '30694d5a-e941-40be-83b1-c2fee7cd61f8', 'counter': 56, 'stdout': '  --list-tags           list all available tags', 'start_line': 55, 'end_line': 56, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.207601+00:00'}
+2026-03-10T18:53:34.219081+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e29e6053-9a77-403f-9051-d9c2fe137ba9', 'counter': 57, 'stdout': '  --list-tasks          list all tasks that would be executed', 'start_line': 56, 'end_line': 57, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208056+00:00'}
+2026-03-10T18:53:34.219142+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3b51ca82-4ace-442b-a5a0-a7eb7d08d9ba', 'counter': 58, 'stdout': '  --skip-tags SKIP_TAGS', 'start_line': 57, 'end_line': 58, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208145+00:00'}
+2026-03-10T18:53:34.219240+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '416d4c4d-3fcc-49dd-b1a9-818a20a4bd98', 'counter': 59, 'stdout': '                        only run plays and tasks whose tags do not match these', 'start_line': 58, 'end_line': 59, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208230+00:00'}
+2026-03-10T18:53:34.219310+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1c1082ca-14e8-4c8f-9a23-66bcf719b393', 'counter': 60, 'stdout': '                        values. This argument may be specified multiple times.', 'start_line': 59, 'end_line': 60, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208313+00:00'}
+2026-03-10T18:53:34.219371+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4f9b2954-c3e9-409b-a8ce-7dc34f2e9ba1', 'counter': 61, 'stdout': '  --start-at-task START_AT_TASK', 'start_line': 60, 'end_line': 61, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208399+00:00'}
+2026-03-10T18:53:34.219442+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b3cb2939-0b60-40bf-b196-a9d87a55df43', 'counter': 62, 'stdout': '                        start the playbook at the task matching this name', 'start_line': 61, 'end_line': 62, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208485+00:00'}
+2026-03-10T18:53:34.219504+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2b3db31b-4305-402f-b144-83b3162d9e05', 'counter': 63, 'stdout': '  --step                one-step-at-a-time: confirm each task before running', 'start_line': 62, 'end_line': 63, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208570+00:00'}
+2026-03-10T18:53:34.219564+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1b2632ef-2c99-437a-a6c7-857300cbf6ee', 'counter': 64, 'stdout': '  --syntax-check        perform a syntax check on the playbook, but do not', 'start_line': 63, 'end_line': 64, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208653+00:00'}
+2026-03-10T18:53:34.219625+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9025a927-e1cc-4ef7-85e8-373daf78e2a2', 'counter': 65, 'stdout': '                        execute it', 'start_line': 64, 'end_line': 65, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208736+00:00'}
+2026-03-10T18:53:34.219686+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '04005e7f-bf4b-487a-b39e-16922a33df09', 'counter': 66, 'stdout': '  --vault-id VAULT_IDS  the vault identity to use. This argument may be', 'start_line': 65, 'end_line': 66, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208819+00:00'}
+2026-03-10T18:53:34.219747+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'be003912-8657-4ad5-a56f-d72c068f17c9', 'counter': 67, 'stdout': '                        specified multiple times.', 'start_line': 66, 'end_line': 67, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208914+00:00'}
+2026-03-10T18:53:34.219817+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4b6a27e9-f38b-40e2-a723-b49bdf5b4255', 'counter': 68, 'stdout': '  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES', 'start_line': 67, 'end_line': 68, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.208997+00:00'}
+2026-03-10T18:53:34.219879+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e128c963-d3f3-436d-924d-b1633e6d9332', 'counter': 69, 'stdout': '                        vault password file', 'start_line': 68, 'end_line': 69, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.209079+00:00'}
+2026-03-10T18:53:34.219939+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '31a4ed39-0f4a-4a0b-add4-352ea1731962', 'counter': 70, 'stdout': "  --version             show program's version number, config file location,", 'start_line': 69, 'end_line': 70, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.209161+00:00'}
+2026-03-10T18:53:34.220000+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9ded3900-3d9f-455b-bd66-be8bc0db649a', 'counter': 71, 'stdout': '                        configured module search path, module location,', 'start_line': 70, 'end_line': 71, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.209369+00:00'}
+2026-03-10T18:53:34.220060+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bc673180-a51b-4329-b82e-8e292c380f8a', 'counter': 72, 'stdout': '                        executable location and exit', 'start_line': 71, 'end_line': 72, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.209456+00:00'}
+2026-03-10T18:53:34.220120+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd8cc2083-1563-454e-8bee-33bfc1b39740', 'counter': 73, 'stdout': "  -C, --check           don't make any changes; instead, try to predict some", 'start_line': 72, 'end_line': 73, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.209540+00:00'}
+2026-03-10T18:53:34.220180+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5eedc699-e5d9-4f90-9dbd-f4ba7c15c9ff', 'counter': 74, 'stdout': '                        of the changes that may occur', 'start_line': 73, 'end_line': 74, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.209623+00:00'}
+2026-03-10T18:53:34.220241+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c655909e-7614-4beb-9172-1b1f5f7dfabd', 'counter': 75, 'stdout': '  -D, --diff            when changing (small) files and templates, show the', 'start_line': 74, 'end_line': 75, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.209706+00:00'}
+2026-03-10T18:53:34.220302+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '638e0d1c-b643-4760-8b3d-b768c13d8523', 'counter': 76, 'stdout': '                        differences in those files; works great with --check', 'start_line': 75, 'end_line': 76, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.209791+00:00'}
+2026-03-10T18:53:34.220371+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f9611cd8-fb38-42ec-9838-9d1904e4f36b', 'counter': 77, 'stdout': '  -J, --ask-vault-password, --ask-vault-pass', 'start_line': 76, 'end_line': 77, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.209874+00:00'}
+2026-03-10T18:53:34.220433+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '141e0fd6-aaa1-4e69-8a2b-d66f331de701', 'counter': 78, 'stdout': '                        ask for vault password', 'start_line': 77, 'end_line': 78, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.209959+00:00'}
+2026-03-10T18:53:34.220494+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b975c7c8-e58c-4896-8e64-7184593bfb96', 'counter': 79, 'stdout': '  -K, --ask-become-pass', 'start_line': 78, 'end_line': 79, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.210042+00:00'}
+2026-03-10T18:53:34.220559+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5f4aeb2f-56c5-4602-b416-de2861cc790b', 'counter': 80, 'stdout': '                        ask for privilege escalation password', 'start_line': 79, 'end_line': 80, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.210125+00:00'}
+2026-03-10T18:53:34.220620+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '00ad1dda-90d4-481c-b5c2-b4bb8f0ae513', 'counter': 81, 'stdout': '  -M MODULE_PATH, --module-path MODULE_PATH', 'start_line': 80, 'end_line': 81, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.210208+00:00'}
+2026-03-10T18:53:34.220681+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0c3c4916-7c99-4589-a7ed-eef585a28986', 'counter': 82, 'stdout': '                        prepend colon-separated path(s) to module library', 'start_line': 81, 'end_line': 82, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.210291+00:00'}
+2026-03-10T18:53:34.220741+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7174bad2-b480-4899-9bf7-86e69f6ca07e', 'counter': 83, 'stdout': '                        (default={{ ANSIBLE_HOME ~', 'start_line': 82, 'end_line': 83, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.210489+00:00'}
+2026-03-10T18:53:34.220840+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bb5366de-fd44-4288-819f-1676589d7224', 'counter': 84, 'stdout': '                        "/plugins/modules:/usr/share/ansible/plugins/modules"', 'start_line': 83, 'end_line': 84, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.210586+00:00'}
+2026-03-10T18:53:34.220912+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ea119141-2f51-47d0-af45-ea3098cac7e8', 'counter': 85, 'stdout': '                        }}). This argument may be specified multiple times.', 'start_line': 84, 'end_line': 85, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.210676+00:00'}
+2026-03-10T18:53:34.220983+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f06d2ae4-ac8d-40f9-afae-c3774d152ee7', 'counter': 86, 'stdout': '  -e EXTRA_VARS, --extra-vars EXTRA_VARS', 'start_line': 85, 'end_line': 86, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.210762+00:00'}
+2026-03-10T18:53:34.221047+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4d656b8d-d622-4085-a09b-71d5c98afc93', 'counter': 87, 'stdout': '                        set additional variables as key=value or YAML/JSON, if', 'start_line': 86, 'end_line': 87, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.210831+00:00'}
+2026-03-10T18:53:34.221109+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '57fb391b-a1f9-42d9-a524-eefef6228d9e', 'counter': 88, 'stdout': '                        filename prepend with @. This argument may be', 'start_line': 87, 'end_line': 88, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.210922+00:00'}
+2026-03-10T18:53:34.221171+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8743843d-72a7-4d27-8e1a-e1853e4d8ef7', 'counter': 89, 'stdout': '                        specified multiple times.', 'start_line': 88, 'end_line': 89, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.211351+00:00'}
+2026-03-10T18:53:34.221233+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '576694f4-9008-4db1-abd0-f9b360818df3', 'counter': 90, 'stdout': '  -f FORKS, --forks FORKS', 'start_line': 89, 'end_line': 90, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.211587+00:00'}
+2026-03-10T18:53:34.221297+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '10941e59-2ed7-40b8-81f8-206ae4e2e546', 'counter': 91, 'stdout': '                        specify number of parallel processes to use', 'start_line': 90, 'end_line': 91, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.211676+00:00'}
+2026-03-10T18:53:34.221360+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4d2d8343-fbb9-4041-9895-104588b8110e', 'counter': 92, 'stdout': '                        (default=5)', 'start_line': 91, 'end_line': 92, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.211759+00:00'}
+2026-03-10T18:53:34.221421+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bf85fd30-b22f-454c-8c26-72b246e66486', 'counter': 93, 'stdout': '  -h, --help            show this help message and exit', 'start_line': 92, 'end_line': 93, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.211842+00:00'}
+2026-03-10T18:53:34.221483+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f4e53535-c04c-4821-ac65-2c87f448bbd0', 'counter': 94, 'stdout': '  -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY', 'start_line': 93, 'end_line': 94, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.211926+00:00'}
+2026-03-10T18:53:34.221545+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e8dd81d1-1141-4e08-9ede-d5fb76f4bcf0', 'counter': 95, 'stdout': '                        specify inventory host path or comma separated host', 'start_line': 94, 'end_line': 95, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212010+00:00'}
+2026-03-10T18:53:34.221621+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8f6cc153-1523-410c-9833-9c4a40e6732f', 'counter': 96, 'stdout': '                        list. This argument may be specified multiple times.', 'start_line': 95, 'end_line': 96, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212092+00:00'}
+2026-03-10T18:53:34.221684+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4bc0cc9c-d023-4fee-b34b-56c5962c4533', 'counter': 97, 'stdout': '  -k, --ask-pass        ask for connection password', 'start_line': 96, 'end_line': 97, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212175+00:00'}
+2026-03-10T18:53:34.221747+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '344e90b1-05aa-4c51-9c10-7cf4a21d9333', 'counter': 98, 'stdout': '  -l SUBSET, --limit SUBSET', 'start_line': 97, 'end_line': 98, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212257+00:00'}
+2026-03-10T18:53:34.221808+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '6384ab08-be29-4573-bb12-5a88d565858d', 'counter': 99, 'stdout': '                        further limit selected hosts to an additional pattern', 'start_line': 98, 'end_line': 99, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212340+00:00'}
+2026-03-10T18:53:34.221869+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2f1e1b4a-4319-45f1-96a9-1b899e4e5227', 'counter': 100, 'stdout': '  -t TAGS, --tags TAGS  only run plays and tasks tagged with these values.', 'start_line': 99, 'end_line': 100, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212423+00:00'}
+2026-03-10T18:53:34.221929+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd37344ed-1d20-46c3-864e-7235769e5856', 'counter': 101, 'stdout': '                        This argument may be specified multiple times.', 'start_line': 100, 'end_line': 101, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212508+00:00'}
+2026-03-10T18:53:34.221991+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0ae9823b-d7fe-4795-94e4-6213e206fbf6', 'counter': 102, 'stdout': '  -v, --verbose         Causes Ansible to print more debug messages. Adding', 'start_line': 101, 'end_line': 102, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212590+00:00'}
+2026-03-10T18:53:34.222051+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e3c331b3-64a2-4dbb-ab6e-11b2f459ab9f', 'counter': 103, 'stdout': '                        multiple -v will increase the verbosity, the builtin', 'start_line': 102, 'end_line': 103, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212673+00:00'}
+2026-03-10T18:53:34.222111+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '71e4c09e-3b3f-4bf1-a65f-722ec4d3e480', 'counter': 104, 'stdout': '                        plugins currently evaluate up to -vvvvvv. A reasonable', 'start_line': 103, 'end_line': 104, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212761+00:00'}
+2026-03-10T18:53:34.222179+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9323b709-a439-478d-aeed-510f9c496f10', 'counter': 105, 'stdout': '                        level to start is -vvv, connection debugging might', 'start_line': 104, 'end_line': 105, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212848+00:00'}
+2026-03-10T18:53:34.222240+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5a27481f-414e-4b9e-8bd8-60f403a68e24', 'counter': 106, 'stdout': '                        require -vvvv. This argument may be specified multiple', 'start_line': 105, 'end_line': 106, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.212936+00:00'}
+2026-03-10T18:53:34.222302+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0e6930ec-c10c-46b9-83b3-bb5d777ebf3e', 'counter': 107, 'stdout': '                        times.', 'start_line': 106, 'end_line': 107, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213019+00:00'}
+2026-03-10T18:53:34.222333+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fc8ed7e6-dd61-489d-a531-e2808f508fcc', 'counter': 108, 'stdout': '', 'start_line': 107, 'end_line': 108, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213101+00:00'}
+2026-03-10T18:53:34.222381+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7e50ba96-5c53-4e09-933e-26597645656e', 'counter': 109, 'stdout': 'Connection Options:', 'start_line': 108, 'end_line': 109, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213183+00:00'}
+2026-03-10T18:53:34.222440+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '65c79991-9163-4a71-a14e-d9acc3702ee1', 'counter': 110, 'stdout': '  control as whom and how to connect to hosts', 'start_line': 109, 'end_line': 110, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213265+00:00'}
+2026-03-10T18:53:34.222470+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a1a519fd-e7df-43ff-941c-dd82fce4014e', 'counter': 111, 'stdout': '', 'start_line': 110, 'end_line': 111, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213362+00:00'}
+2026-03-10T18:53:34.222515+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5e771f46-fdcf-4310-a52a-5b3ce71049d4', 'counter': 112, 'stdout': '  --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE', 'start_line': 111, 'end_line': 112, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213444+00:00'}
+2026-03-10T18:53:34.222591+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0740d981-7cde-4985-b344-f14e1bfd2fac', 'counter': 113, 'stdout': '                        use this file to authenticate the connection', 'start_line': 112, 'end_line': 113, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213643+00:00'}
+2026-03-10T18:53:34.222657+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '73e2ce5f-8dc1-4e99-a844-e5a9c13ae848', 'counter': 114, 'stdout': '  --scp-extra-args SCP_EXTRA_ARGS', 'start_line': 113, 'end_line': 114, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213730+00:00'}
+2026-03-10T18:53:34.222717+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '80287352-0cb1-4d64-a1d4-b40ac5bb3651', 'counter': 115, 'stdout': '                        specify extra arguments to pass to scp only (e.g. -l)', 'start_line': 114, 'end_line': 115, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213813+00:00'}
+2026-03-10T18:53:34.222779+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2b48e431-80f3-4f69-a3ac-6e71714e28c8', 'counter': 116, 'stdout': '  --sftp-extra-args SFTP_EXTRA_ARGS', 'start_line': 115, 'end_line': 116, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213896+00:00'}
+2026-03-10T18:53:34.222839+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c0a91c06-5f10-4d57-815b-a7d877be52fc', 'counter': 117, 'stdout': '                        specify extra arguments to pass to sftp only (e.g. -f,', 'start_line': 116, 'end_line': 117, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.213984+00:00'}
+2026-03-10T18:53:34.222899+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5f830474-bd3c-4e0c-83c8-a17785f718c6', 'counter': 118, 'stdout': '                        -l)', 'start_line': 117, 'end_line': 118, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.214067+00:00'}
+2026-03-10T18:53:34.222959+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f6560e27-6efc-4959-8075-a78b0fa4d63e', 'counter': 119, 'stdout': '  --ssh-common-args SSH_COMMON_ARGS', 'start_line': 118, 'end_line': 119, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.214149+00:00'}
+2026-03-10T18:53:34.223019+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '58131695-1473-4b68-84e6-51d2aacbb892', 'counter': 120, 'stdout': '                        specify common arguments to pass to sftp/scp/ssh (e.g.', 'start_line': 119, 'end_line': 120, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.214232+00:00'}
+2026-03-10T18:53:34.223080+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0f5f722e-4eb1-4030-bdfc-81259ee60323', 'counter': 121, 'stdout': '                        ProxyCommand)', 'start_line': 120, 'end_line': 121, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.214316+00:00'}
+2026-03-10T18:53:34.223142+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '444ab4c4-6f23-475d-a71a-767164cf844f', 'counter': 122, 'stdout': '  --ssh-extra-args SSH_EXTRA_ARGS', 'start_line': 121, 'end_line': 122, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.214399+00:00'}
+2026-03-10T18:53:34.223204+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1d79021b-ab67-4878-919d-6fbd6e5dd301', 'counter': 123, 'stdout': '                        specify extra arguments to pass to ssh only (e.g. -R)', 'start_line': 122, 'end_line': 123, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.214573+00:00'}
+2026-03-10T18:53:34.223305+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '60925de5-cb92-4678-9437-1770cd9bc57b', 'counter': 124, 'stdout': '  -T TIMEOUT, --timeout TIMEOUT', 'start_line': 123, 'end_line': 124, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.214643+00:00'}
+2026-03-10T18:53:34.223365+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c528d9dd-daf9-415a-a371-e32d976789eb', 'counter': 125, 'stdout': '                        override the connection timeout in seconds (default', 'start_line': 124, 'end_line': 125, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.215051+00:00'}
+2026-03-10T18:53:34.223426+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '18c6ebc4-f408-4343-8987-26f4df4b098e', 'counter': 126, 'stdout': '                        depends on connection)', 'start_line': 125, 'end_line': 126, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.215158+00:00'}
+2026-03-10T18:53:34.223488+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f45de4cc-e4e8-4096-bcd0-679663fcc379', 'counter': 127, 'stdout': '  -c CONNECTION, --connection CONNECTION', 'start_line': 126, 'end_line': 127, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.215381+00:00'}
+2026-03-10T18:53:34.223548+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '91490bb4-7437-4e57-a19c-821dd1d8b5bc', 'counter': 128, 'stdout': '                        connection type to use (default=ssh)', 'start_line': 127, 'end_line': 128, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.215469+00:00'}
+2026-03-10T18:53:34.223619+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a08dae08-e352-413d-9b41-a2b2c32491bf', 'counter': 129, 'stdout': '  -u REMOTE_USER, --user REMOTE_USER', 'start_line': 128, 'end_line': 129, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.215582+00:00'}
+2026-03-10T18:53:34.223680+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '08c773c5-0972-41e9-b89d-1c1ff184e0b4', 'counter': 130, 'stdout': '                        connect as this user (default=None)', 'start_line': 129, 'end_line': 130, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.215792+00:00'}
+2026-03-10T18:53:34.223710+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ef0a09b5-80fc-4d3e-9772-288b68dad964', 'counter': 131, 'stdout': '', 'start_line': 130, 'end_line': 131, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.215885+00:00'}
+2026-03-10T18:53:34.223753+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c02772cd-a80e-41ab-a4bb-e47718618afc', 'counter': 132, 'stdout': 'Privilege Escalation Options:', 'start_line': 131, 'end_line': 132, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.215970+00:00'}
+2026-03-10T18:53:34.223819+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8f14b05a-6383-4e11-88be-13a42e121622', 'counter': 133, 'stdout': '  control how and which user you become as on target hosts', 'start_line': 132, 'end_line': 133, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.216054+00:00'}
+2026-03-10T18:53:34.223848+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '82bbb983-3572-434f-9b32-7ab70845a555', 'counter': 134, 'stdout': '', 'start_line': 133, 'end_line': 134, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.216143+00:00'}
+2026-03-10T18:53:34.223892+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f7f2666b-2d28-4be6-bae6-7ce77798b3c3', 'counter': 135, 'stdout': '  --become-method BECOME_METHOD', 'start_line': 134, 'end_line': 135, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.216226+00:00'}
+2026-03-10T18:53:34.223957+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '672c1980-7cba-4ba7-9871-ff95dd6c9d8e', 'counter': 136, 'stdout': '                        privilege escalation method to use (default=sudo), use', 'start_line': 135, 'end_line': 136, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.216311+00:00'}
+2026-03-10T18:53:34.224020+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'aa2e5ec4-1fc7-4f56-9db1-1f477b330de4', 'counter': 137, 'stdout': '                        `ansible-doc -t become -l` to list valid choices.', 'start_line': 136, 'end_line': 137, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.216399+00:00'}
+2026-03-10T18:53:34.224079+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'cad9ebe6-28e9-4e42-9bb0-f91299c5f1cc', 'counter': 138, 'stdout': '  --become-user BECOME_USER', 'start_line': 137, 'end_line': 138, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.216482+00:00'}
+2026-03-10T18:53:34.224118+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b2e8fac0-16b3-47d6-926a-6b07879e5c03', 'counter': 139, 'stdout': '                        run operations as this user (default=root)', 'start_line': 138, 'end_line': 139, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.216564+00:00'}
+2026-03-10T18:53:34.224158+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3016f89c-fd71-4343-9f61-4fc5a368de91', 'counter': 140, 'stdout': '  -b, --become          run operations with become (does not imply password', 'start_line': 139, 'end_line': 140, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.216647+00:00'}
+2026-03-10T18:53:34.224217+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e4b7bc54-c860-46ab-a32a-69e7b03e4a63', 'counter': 141, 'stdout': '                        prompting)', 'start_line': 140, 'end_line': 141, 'runner_ident': '821fdd99-d980-4546-9ba6-2cc870ae9d73', 'created': '2026-03-10T18:53:34.216730+00:00'}
+2026-03-10T18:53:35.117036+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T18:53:45.384813+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:53:46.793979+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '98c82d02-ce36-49e3-abee-17cf1f4b00b8', 'counter': 1, 'stdout': '\x1b[0;34mansible-playbook [core 2.20.3]\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.786314+00:00'}
+2026-03-10T18:53:46.794123+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3f2aa4d0-abbe-4daf-86c1-8f6df3e4acd3', 'counter': 2, 'stdout': '\x1b[0;34m  config file = /navigator/ansible.cfg\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.786412+00:00'}
+2026-03-10T18:53:46.794192+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '67a4dd58-6109-4c8a-b424-d66a08a84878', 'counter': 3, 'stdout': "\x1b[0;34m  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']\x1b[0m", 'start_line': 2, 'end_line': 3, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.786436+00:00'}
+2026-03-10T18:53:46.794258+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5ca3449a-ccd6-4ff9-b4c3-9d987e1b9389', 'counter': 4, 'stdout': '\x1b[0;34m  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.786450+00:00'}
+2026-03-10T18:53:46.794323+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4f30cc60-261a-4733-a9a3-f3faead89b85', 'counter': 5, 'stdout': '\x1b[0;34m  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.786463+00:00'}
+2026-03-10T18:53:46.794396+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3ff7ece4-e94c-435d-af2a-a2f4c76f21a5', 'counter': 6, 'stdout': '\x1b[0;34m  executable location = /usr/local/bin/ansible-playbook\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.786473+00:00'}
+2026-03-10T18:53:46.794460+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9a7cc4a5-2d89-4c3b-afc6-ef58b0b6dc55', 'counter': 7, 'stdout': '\x1b[0;34m  python version = 3.12.12 (main, Jan 16 2026, 00:00:00) [GCC 14.3.1 20250617 (Red Hat 14.3.1-2)] (/usr/bin/python3)\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.786484+00:00'}
+2026-03-10T18:53:46.794525+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fcee557e-9918-4022-8286-fdd4cd2dfcd1', 'counter': 8, 'stdout': '\x1b[0;34m  jinja version = 3.1.6\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.786494+00:00'}
+2026-03-10T18:53:46.794592+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '50dd8392-62f4-4cf7-ac28-245e51854e25', 'counter': 9, 'stdout': '\x1b[0;34m  pyyaml version = 6.0.3 (with libyaml v0.2.5)\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.786504+00:00'}
+2026-03-10T18:53:46.794656+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5a6538f4-d47e-423b-abad-0de649157ce5', 'counter': 10, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.786515+00:00'}
+2026-03-10T18:53:46.835531+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd55af2a2-7c7b-460e-87ad-047d760e0fa3', 'counter': 11, 'stdout': '\x1b[0;34mhost_list declined parsing /home/jelle/repos/homelab/inventories/shared/hosts.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 10, 'end_line': 11, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.828206+00:00'}
+2026-03-10T18:53:46.835630+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '58723347-1158-4f36-9e2b-e1aa02edd12b', 'counter': 12, 'stdout': '\x1b[0;34mscript declined parsing /home/jelle/repos/homelab/inventories/shared/hosts.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 11, 'end_line': 12, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.828259+00:00'}
+2026-03-10T18:53:46.835693+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '12d29636-dd37-4e92-b5a2-49053583e4eb', 'counter': 13, 'stdout': '\x1b[0;34mParsed /home/jelle/repos/homelab/inventories/shared/hosts.yml inventory source with ini plugin\x1b[0m', 'start_line': 12, 'end_line': 13, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.828748+00:00'}
+2026-03-10T18:53:46.835757+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8c779483-9dea-491d-b68a-4de87bd8e2ce', 'counter': 14, 'stdout': '\x1b[0;34mhost_list declined parsing /home/jelle/repos/homelab/inventories/lab/k3s.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 13, 'end_line': 14, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.829361+00:00'}
+2026-03-10T18:53:46.835825+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bfdd68c6-34c7-4f36-b7f7-ed81a6e1b006', 'counter': 15, 'stdout': '\x1b[0;34mscript declined parsing /home/jelle/repos/homelab/inventories/lab/k3s.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 14, 'end_line': 15, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.829394+00:00'}
+2026-03-10T18:53:46.835889+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e9536c2c-48c4-45e0-8f91-e1b0e76018ab', 'counter': 16, 'stdout': '\x1b[0;34mParsed /home/jelle/repos/homelab/inventories/lab/k3s.yml inventory source with yaml plugin\x1b[0m', 'start_line': 15, 'end_line': 16, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.830827+00:00'}
+2026-03-10T18:53:46.886962+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f4d9349c-c410-438e-b793-d19c49e3a2b3', 'counter': 17, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/ssh/tasks/prepare-control-node.yml\x1b[0m', 'start_line': 16, 'end_line': 17, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.877576+00:00'}
+2026-03-10T18:53:46.887057+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1dfab0e0-f66f-4a5b-bcd9-a1acf96851dd', 'counter': 18, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/ssh/tasks/configure-ssh-host.yml\x1b[0m', 'start_line': 17, 'end_line': 18, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.881619+00:00'}
+2026-03-10T18:53:46.897327+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'fbec3c2e-b438-4873-8009-9d3b9833e79a', 'counter': 19, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/network/tasks/wired.yml\x1b[0m', 'start_line': 18, 'end_line': 19, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.887882+00:00'}
+2026-03-10T18:53:46.897396+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e9ce09e1-0787-40fe-b284-8476c1a94b73', 'counter': 20, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/network/tasks/wifi.yml\x1b[0m', 'start_line': 19, 'end_line': 20, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.890400+00:00'}
+2026-03-10T18:53:46.897418+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3af6beb0-8724-459f-bac1-9f0fda42dbf1', 'counter': 21, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/enable-cgroup.yml\x1b[0m', 'start_line': 20, 'end_line': 21, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.894961+00:00'}
+2026-03-10T18:53:46.907678+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '085736c0-f04f-4914-ab69-f1112d06d224', 'counter': 22, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/install-master-nodes.yml\x1b[0m', 'start_line': 21, 'end_line': 22, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.897509+00:00'}
+2026-03-10T18:53:46.907764+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9a5790b1-6201-4162-82c6-29e9edc101dd', 'counter': 23, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/install-worker-nodes.yml\x1b[0m', 'start_line': 22, 'end_line': 23, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.901493+00:00'}
+2026-03-10T18:53:46.907967+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b7738772-e98c-424e-80f6-36e760bf97bb', 'counter': 24, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s-client/tasks/get-kubeconfig.yml\x1b[0m', 'start_line': 23, 'end_line': 24, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.905813+00:00'}
+2026-03-10T18:53:46.908041+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '511068db-cd95-4eb4-bfd1-03f023fc6530', 'counter': 25, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s-client/tasks/validate_k3s.yml\x1b[0m', 'start_line': 24, 'end_line': 25, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.907901+00:00'}
+2026-03-10T18:53:46.918307+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '26d03fdd-3d2f-4a2a-96f6-2f1f571ff893', 'counter': 26, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/argocd/tasks/install-argocd.yml\x1b[0m', 'start_line': 25, 'end_line': 26, 'runner_ident': '73dea6db-7740-4e88-949c-d136e9bb6395', 'created': '2026-03-10T18:53:46.911508+00:00'}
+2026-03-10T18:54:25.626366+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid
+2026-03-10T18:55:10.953803+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:55:12.341993+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '225c2ccb-cd4c-462d-96be-721397623e1d', 'counter': 1, 'stdout': '\x1b[0;34mansible-playbook [core 2.20.3]\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.335963+00:00'}
+2026-03-10T18:55:12.342136+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1c80b245-484a-4842-8407-85d5fb23d5e4', 'counter': 2, 'stdout': '\x1b[0;34m  config file = /navigator/ansible.cfg\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.336059+00:00'}
+2026-03-10T18:55:12.342207+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '28507653-3b07-4d64-bfda-d091516a84e9', 'counter': 3, 'stdout': "\x1b[0;34m  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']\x1b[0m", 'start_line': 2, 'end_line': 3, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.336083+00:00'}
+2026-03-10T18:55:12.342255+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5de85163-80dc-4679-9cd5-ac1721610258', 'counter': 4, 'stdout': '\x1b[0;34m  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.336098+00:00'}
+2026-03-10T18:55:12.342307+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2a717e3c-3bb5-4211-adc2-990c2adb772b', 'counter': 5, 'stdout': '\x1b[0;34m  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.336112+00:00'}
+2026-03-10T18:55:12.342384+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '30272b3b-8be8-4cfe-9d10-95ad8e0c8141', 'counter': 6, 'stdout': '\x1b[0;34m  executable location = /usr/local/bin/ansible-playbook\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.336123+00:00'}
+2026-03-10T18:55:12.342448+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b0ecf9cb-5dab-4113-93ca-990520688406', 'counter': 7, 'stdout': '\x1b[0;34m  python version = 3.12.12 (main, Jan 16 2026, 00:00:00) [GCC 14.3.1 20250617 (Red Hat 14.3.1-2)] (/usr/bin/python3)\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.336137+00:00'}
+2026-03-10T18:55:12.342512+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0034a2d5-bab0-4248-9175-600de0bbb848', 'counter': 8, 'stdout': '\x1b[0;34m  jinja version = 3.1.6\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.336148+00:00'}
+2026-03-10T18:55:12.342573+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '640830b5-2e39-4684-864c-1b7a22f9a089', 'counter': 9, 'stdout': '\x1b[0;34m  pyyaml version = 6.0.3 (with libyaml v0.2.5)\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.336159+00:00'}
+2026-03-10T18:55:12.342633+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f1734132-38ac-4e31-be6a-9fac81a4b673', 'counter': 10, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.336169+00:00'}
+2026-03-10T18:55:12.393615+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'df740cee-897c-4a9b-b4bc-e86fab0232f4', 'counter': 11, 'stdout': '\x1b[0;34mhost_list declined parsing /home/jelle/repos/homelab/inventories/shared/hosts.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 10, 'end_line': 11, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.383692+00:00'}
+2026-03-10T18:55:12.393712+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '6f6c2898-2c35-4cc5-9e20-ac83e2c5882a', 'counter': 12, 'stdout': '\x1b[0;34mscript declined parsing /home/jelle/repos/homelab/inventories/shared/hosts.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 11, 'end_line': 12, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.383747+00:00'}
+2026-03-10T18:55:12.393776+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '696ce192-621d-4ddf-9a73-aeef94ce6d78', 'counter': 13, 'stdout': '\x1b[0;34mParsed /home/jelle/repos/homelab/inventories/shared/hosts.yml inventory source with ini plugin\x1b[0m', 'start_line': 12, 'end_line': 13, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.384266+00:00'}
+2026-03-10T18:55:12.393849+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '24f7bfc3-ef43-4108-8769-7097a2881a15', 'counter': 14, 'stdout': '\x1b[0;34mhost_list declined parsing /home/jelle/repos/homelab/inventories/lab/k3s.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 13, 'end_line': 14, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.384872+00:00'}
+2026-03-10T18:55:12.393907+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '877cc9dc-6095-4316-9ea3-48fedd94b4fd', 'counter': 15, 'stdout': '\x1b[0;34mscript declined parsing /home/jelle/repos/homelab/inventories/lab/k3s.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 14, 'end_line': 15, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.384907+00:00'}
+2026-03-10T18:55:12.393966+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '060679e9-bfc2-478c-bb4f-655b4cc34eec', 'counter': 16, 'stdout': '\x1b[0;34mParsed /home/jelle/repos/homelab/inventories/lab/k3s.yml inventory source with yaml plugin\x1b[0m', 'start_line': 15, 'end_line': 16, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.386285+00:00'}
+2026-03-10T18:55:12.434824+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e98007b1-c4b8-42fa-9038-1daa7dc54799', 'counter': 17, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/ssh/tasks/prepare-control-node.yml\x1b[0m', 'start_line': 16, 'end_line': 17, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.432853+00:00'}
+2026-03-10T18:55:12.445033+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0dee8e51-96fa-401e-a963-d839ed2dfd2d', 'counter': 18, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/ssh/tasks/configure-ssh-host.yml\x1b[0m', 'start_line': 17, 'end_line': 18, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.437147+00:00'}
+2026-03-10T18:55:12.445116+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b24de0c1-ac86-4e64-b276-51d04334793d', 'counter': 19, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/network/tasks/wired.yml\x1b[0m', 'start_line': 18, 'end_line': 19, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.443696+00:00'}
+2026-03-10T18:55:12.455283+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '65a55700-5443-425c-9c99-0e0bce8c337b', 'counter': 20, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/network/tasks/wifi.yml\x1b[0m', 'start_line': 19, 'end_line': 20, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.446215+00:00'}
+2026-03-10T18:55:12.455368+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '2e3ee8d4-10b1-4c42-a9e4-1e8dc07a591d', 'counter': 21, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/enable-cgroup.yml\x1b[0m', 'start_line': 20, 'end_line': 21, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.450705+00:00'}
+2026-03-10T18:55:12.455431+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0387f6b4-d53d-471b-a571-f0afdbd16ca4', 'counter': 22, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/install-master-nodes.yml\x1b[0m', 'start_line': 21, 'end_line': 22, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.454146+00:00'}
+2026-03-10T18:55:12.465624+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '482a27c0-ecfc-4d82-8b76-9acee5936d8c', 'counter': 23, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/install-worker-nodes.yml\x1b[0m', 'start_line': 22, 'end_line': 23, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.458651+00:00'}
+2026-03-10T18:55:12.465722+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9db5a71d-15bb-462d-96ea-42ac82556fa1', 'counter': 24, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s-client/tasks/get-kubeconfig.yml\x1b[0m', 'start_line': 23, 'end_line': 24, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.463619+00:00'}
+2026-03-10T18:55:12.476050+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c7432d96-bbb9-4264-bddd-47e3136be44a', 'counter': 25, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s-client/tasks/validate_k3s.yml\x1b[0m', 'start_line': 24, 'end_line': 25, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.465836+00:00'}
+2026-03-10T18:55:12.476146+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd6bda003-9392-4df6-b410-5d71660d395d', 'counter': 26, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/argocd/tasks/install-argocd.yml\x1b[0m', 'start_line': 25, 'end_line': 26, 'runner_ident': 'cf76a713-c9bd-43ed-ac2e-86569e89c689', 'created': '2026-03-10T18:55:12.470297+00:00'}
+2026-03-10T18:55:33.163375+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid
+2026-03-10T18:55:39.716041+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:55:41.101783+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ad888dab-48bc-4fba-9d90-df770c129575', 'counter': 1, 'stdout': '\x1b[0;34mansible-playbook [core 2.20.3]\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.094562+00:00'}
+2026-03-10T18:55:41.101966+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8abf29dc-6f0d-45ed-906b-ad31a10689de', 'counter': 2, 'stdout': '\x1b[0;34m  config file = /navigator/ansible.cfg\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.094655+00:00'}
+2026-03-10T18:55:41.102102+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9f1c535e-570d-4acd-9bdd-182573a99f5c', 'counter': 3, 'stdout': "\x1b[0;34m  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']\x1b[0m", 'start_line': 2, 'end_line': 3, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.094678+00:00'}
+2026-03-10T18:55:41.102179+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0cc272e5-6f2e-470f-8e15-5731bbef1de6', 'counter': 4, 'stdout': '\x1b[0;34m  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.094694+00:00'}
+2026-03-10T18:55:41.102265+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b35f6bb1-965e-41b6-8fe1-32148e26ad0e', 'counter': 5, 'stdout': '\x1b[0;34m  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.094707+00:00'}
+2026-03-10T18:55:41.102360+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e2f0a968-9662-4c7e-ab59-8f565b95ebe0', 'counter': 6, 'stdout': '\x1b[0;34m  executable location = /usr/local/bin/ansible-playbook\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.094720+00:00'}
+2026-03-10T18:55:41.102429+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '26642c88-8ede-4669-8de2-1cb340fa03a7', 'counter': 7, 'stdout': '\x1b[0;34m  python version = 3.12.12 (main, Jan 16 2026, 00:00:00) [GCC 14.3.1 20250617 (Red Hat 14.3.1-2)] (/usr/bin/python3)\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.094732+00:00'}
+2026-03-10T18:55:41.102499+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1e112545-b3ab-4720-a4a1-1aa5fde9945d', 'counter': 8, 'stdout': '\x1b[0;34m  jinja version = 3.1.6\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.094743+00:00'}
+2026-03-10T18:55:41.102565+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a515e96d-c951-4c9b-bc1e-430ef50177b7', 'counter': 9, 'stdout': '\x1b[0;34m  pyyaml version = 6.0.3 (with libyaml v0.2.5)\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.094754+00:00'}
+2026-03-10T18:55:41.102633+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '58c14aba-a302-4db5-a18e-0b6d3dd31685', 'counter': 10, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.094765+00:00'}
+2026-03-10T18:55:41.143534+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7d6843d3-3e28-430b-9160-0a9094291f9d', 'counter': 11, 'stdout': '\x1b[0;34mhost_list declined parsing /home/jelle/repos/homelab/inventories/shared/hosts.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 10, 'end_line': 11, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.133440+00:00'}
+2026-03-10T18:55:41.143632+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '18a3f4d3-bf4b-436b-9bfe-1139bf8ea00f', 'counter': 12, 'stdout': '\x1b[0;34mscript declined parsing /home/jelle/repos/homelab/inventories/shared/hosts.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 11, 'end_line': 12, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.133494+00:00'}
+2026-03-10T18:55:41.143695+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7c092097-a038-402e-be54-9acab400e8ec', 'counter': 13, 'stdout': '\x1b[0;34mParsed /home/jelle/repos/homelab/inventories/shared/hosts.yml inventory source with ini plugin\x1b[0m', 'start_line': 12, 'end_line': 13, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.133852+00:00'}
+2026-03-10T18:55:41.143767+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c95439b3-edbf-4247-be5e-b98292cad69d', 'counter': 14, 'stdout': '\x1b[0;34mhost_list declined parsing /home/jelle/repos/homelab/inventories/lab/k3s.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 13, 'end_line': 14, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.134409+00:00'}
+2026-03-10T18:55:41.143829+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3c71ed03-a6b8-4865-9da4-3e0332722576', 'counter': 15, 'stdout': '\x1b[0;34mscript declined parsing /home/jelle/repos/homelab/inventories/lab/k3s.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 14, 'end_line': 15, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.134447+00:00'}
+2026-03-10T18:55:41.143890+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '525bd13e-9a29-4ec6-b47e-67cbcfbd49b0', 'counter': 16, 'stdout': '\x1b[0;34mParsed /home/jelle/repos/homelab/inventories/lab/k3s.yml inventory source with yaml plugin\x1b[0m', 'start_line': 15, 'end_line': 16, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.135851+00:00'}
+2026-03-10T18:55:41.184751+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '15faf2fd-76a6-4452-82d4-e3741e74e17e', 'counter': 17, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/ssh/tasks/prepare-control-node.yml\x1b[0m', 'start_line': 16, 'end_line': 17, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.180953+00:00'}
+2026-03-10T18:55:41.195173+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '44a3d236-4e71-4026-88a7-5802a74e93f9', 'counter': 18, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/ssh/tasks/configure-ssh-host.yml\x1b[0m', 'start_line': 17, 'end_line': 18, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.184971+00:00'}
+2026-03-10T18:55:41.195256+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7fa4f03b-55c2-4141-9d4a-b62102789f58', 'counter': 19, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/network/tasks/wired.yml\x1b[0m', 'start_line': 18, 'end_line': 19, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.191013+00:00'}
+2026-03-10T18:55:41.195320+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'eb51291e-816f-464b-ae3b-36b9a4c03418', 'counter': 20, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/network/tasks/wifi.yml\x1b[0m', 'start_line': 19, 'end_line': 20, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.193601+00:00'}
+2026-03-10T18:55:41.205565+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '58a1e368-1c1e-4769-b01f-b3e843cc1dbb', 'counter': 21, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/enable-cgroup.yml\x1b[0m', 'start_line': 20, 'end_line': 21, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.198040+00:00'}
+2026-03-10T18:55:41.205647+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '53f133ad-93d6-4837-96dc-48793dba2978', 'counter': 22, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/install-master-nodes.yml\x1b[0m', 'start_line': 21, 'end_line': 22, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.200678+00:00'}
+2026-03-10T18:55:41.205710+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '37099aa1-35a3-4b20-b045-3929336a05ed', 'counter': 23, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/install-worker-nodes.yml\x1b[0m', 'start_line': 22, 'end_line': 23, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.205228+00:00'}
+2026-03-10T18:55:41.215968+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9842bec8-2f18-451b-a03e-347c0a7b3083', 'counter': 24, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s-client/tasks/get-kubeconfig.yml\x1b[0m', 'start_line': 23, 'end_line': 24, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.209704+00:00'}
+2026-03-10T18:55:41.216043+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '926a3b23-98f7-4719-88e3-cfadf3d714a2', 'counter': 25, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s-client/tasks/validate_k3s.yml\x1b[0m', 'start_line': 24, 'end_line': 25, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.211754+00:00'}
+2026-03-10T18:55:41.216106+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '76339738-59c4-4688-99b3-02d7b0ad0555', 'counter': 26, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/argocd/tasks/install-argocd.yml\x1b[0m', 'start_line': 25, 'end_line': 26, 'runner_ident': 'b66e7de0-28b7-424c-a479-c18361457144', 'created': '2026-03-10T18:55:41.215499+00:00'}
+2026-03-10T18:56:53.029000+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid
+2026-03-10T18:56:54.180504+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T18:56:55.536021+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'dea7e5ac-f654-4cc6-b3c4-3bd2b22f2045', 'counter': 1, 'stdout': '\x1b[0;34mansible-playbook [core 2.20.3]\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.527588+00:00'}
+2026-03-10T18:56:55.536170+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e767b2a0-efb4-46a6-8cca-7052dbb7a951', 'counter': 2, 'stdout': '\x1b[0;34m  config file = /navigator/ansible.cfg\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.527677+00:00'}
+2026-03-10T18:56:55.536241+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9ea7715d-7468-4302-b3f8-7b2dc2e3f3ef', 'counter': 3, 'stdout': "\x1b[0;34m  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']\x1b[0m", 'start_line': 2, 'end_line': 3, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.527701+00:00'}
+2026-03-10T18:56:55.536308+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8f4e2378-8a6f-4b75-b7a7-e0cea73983a1', 'counter': 4, 'stdout': '\x1b[0;34m  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.527717+00:00'}
+2026-03-10T18:56:55.536371+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '634be27b-d291-4fed-b9f2-1cbfe48dcbcf', 'counter': 5, 'stdout': '\x1b[0;34m  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.527729+00:00'}
+2026-03-10T18:56:55.536419+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3aeb0b9e-5e7a-4b1e-b02a-ed4101a7d35d', 'counter': 6, 'stdout': '\x1b[0;34m  executable location = /usr/local/bin/ansible-playbook\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.527739+00:00'}
+2026-03-10T18:56:55.536480+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'cd4f94e3-6b09-4eba-be80-91025ca3726c', 'counter': 7, 'stdout': '\x1b[0;34m  python version = 3.12.12 (main, Jan 16 2026, 00:00:00) [GCC 14.3.1 20250617 (Red Hat 14.3.1-2)] (/usr/bin/python3)\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.527751+00:00'}
+2026-03-10T18:56:55.536543+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd625da14-be19-44c9-9871-ec3d34f4bd8c', 'counter': 8, 'stdout': '\x1b[0;34m  jinja version = 3.1.6\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.527761+00:00'}
+2026-03-10T18:56:55.536603+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '6b512ca4-fdaa-4509-b2d0-b77f82a9301e', 'counter': 9, 'stdout': '\x1b[0;34m  pyyaml version = 6.0.3 (with libyaml v0.2.5)\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.527770+00:00'}
+2026-03-10T18:56:55.536662+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '49ca2400-64b0-4534-b086-7f389f26c462', 'counter': 10, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.527781+00:00'}
+2026-03-10T18:56:55.566965+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c9bc4983-357a-4593-800d-1aa17107a34b', 'counter': 11, 'stdout': '\x1b[0;34mhost_list declined parsing /home/jelle/repos/homelab/inventories/shared/hosts.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 10, 'end_line': 11, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.566804+00:00'}
+2026-03-10T18:56:55.567044+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '520ffaf2-6925-4d0b-9c23-4b74373ccded', 'counter': 12, 'stdout': '\x1b[0;34mscript declined parsing /home/jelle/repos/homelab/inventories/shared/hosts.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 11, 'end_line': 12, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.566860+00:00'}
+2026-03-10T18:56:55.577306+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1df1e1c2-07cf-463b-a5e2-14cfd31d6adc', 'counter': 13, 'stdout': '\x1b[0;34mParsed /home/jelle/repos/homelab/inventories/shared/hosts.yml inventory source with ini plugin\x1b[0m', 'start_line': 12, 'end_line': 13, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.567352+00:00'}
+2026-03-10T18:56:55.577385+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '43f22cb5-0263-4cab-b960-1e6ec5084ad3', 'counter': 14, 'stdout': '\x1b[0;34mhost_list declined parsing /home/jelle/repos/homelab/inventories/lab/k3s.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 13, 'end_line': 14, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.567888+00:00'}
+2026-03-10T18:56:55.577447+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1409d202-07e8-4eec-a370-ca438ddd0ac8', 'counter': 15, 'stdout': '\x1b[0;34mscript declined parsing /home/jelle/repos/homelab/inventories/lab/k3s.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 14, 'end_line': 15, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.567926+00:00'}
+2026-03-10T18:56:55.577506+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'cb5aacdb-f354-467a-b820-8851229bd5c9', 'counter': 16, 'stdout': '\x1b[0;34mParsed /home/jelle/repos/homelab/inventories/lab/k3s.yml inventory source with yaml plugin\x1b[0m', 'start_line': 15, 'end_line': 16, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.569396+00:00'}
+2026-03-10T18:56:55.617862+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'bae24270-73e5-442c-8547-2988dc7dbac8', 'counter': 17, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/ssh/tasks/prepare-control-node.yml\x1b[0m', 'start_line': 16, 'end_line': 17, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.613369+00:00'}
+2026-03-10T18:56:55.628220+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0a58b68b-a5ef-402a-b6cd-682ff1cf3914', 'counter': 18, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/ssh/tasks/configure-ssh-host.yml\x1b[0m', 'start_line': 17, 'end_line': 18, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.618085+00:00'}
+2026-03-10T18:56:55.628353+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c1223a12-5a74-4995-a206-6de9f9594dbe', 'counter': 19, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/network/tasks/wired.yml\x1b[0m', 'start_line': 18, 'end_line': 19, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.624838+00:00'}
+2026-03-10T18:56:55.628418+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '66eb9efe-8644-4c61-ade9-0e8f437f90fe', 'counter': 20, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/network/tasks/wifi.yml\x1b[0m', 'start_line': 19, 'end_line': 20, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.627692+00:00'}
+2026-03-10T18:56:55.638564+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '95cf9769-7b38-421a-bf23-17ba02d9861f', 'counter': 21, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/enable-cgroup.yml\x1b[0m', 'start_line': 20, 'end_line': 21, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.632252+00:00'}
+2026-03-10T18:56:55.638662+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '29d7f8fe-dd80-4c44-9ac5-8d28187ceac0', 'counter': 22, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/install-master-nodes.yml\x1b[0m', 'start_line': 21, 'end_line': 22, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.635023+00:00'}
+2026-03-10T18:56:55.648804+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b9d35930-c5b2-4ce9-929c-32f445cd6ca5', 'counter': 23, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/install-worker-nodes.yml\x1b[0m', 'start_line': 22, 'end_line': 23, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.639219+00:00'}
+2026-03-10T18:56:55.648885+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7d513462-d772-425d-9280-0b5230ac450a', 'counter': 24, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s-client/tasks/get-kubeconfig.yml\x1b[0m', 'start_line': 23, 'end_line': 24, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.643577+00:00'}
+2026-03-10T18:56:55.648950+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '52a61a80-cef9-4429-9bc4-7ae9b2220c27', 'counter': 25, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s-client/tasks/validate_k3s.yml\x1b[0m', 'start_line': 24, 'end_line': 25, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.645539+00:00'}
+2026-03-10T18:56:55.659085+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a09b90e1-60f5-463c-8b85-f5fc24309a04', 'counter': 26, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/argocd/tasks/install-argocd.yml\x1b[0m', 'start_line': 25, 'end_line': 26, 'runner_ident': 'b79cb2fd-4b9a-4d13-b194-44a4edc46e5f', 'created': '2026-03-10T18:56:55.649427+00:00'}
+2026-03-10T19:02:27.383829+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:04:04.676834+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:04:06.129901+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f52a08ff-29da-4a72-9735-9d2959714bdc', 'counter': 1, 'stdout': '\x1b[0;34mansible-playbook [core 2.20.3]\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.119922+00:00'}
+2026-03-10T19:04:06.130145+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f366d036-29b8-4957-99c9-39bc98213895', 'counter': 2, 'stdout': '\x1b[0;34m  config file = /navigator/ansible.cfg\x1b[0m', 'start_line': 1, 'end_line': 2, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.120112+00:00'}
+2026-03-10T19:04:06.130221+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '1f2e0014-1bce-4216-b4d8-7a087f493c1a', 'counter': 3, 'stdout': "\x1b[0;34m  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']\x1b[0m", 'start_line': 2, 'end_line': 3, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.120161+00:00'}
+2026-03-10T19:04:06.130290+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a3d8c037-882b-43ef-84f4-dc2e9fdcda94', 'counter': 4, 'stdout': '\x1b[0;34m  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible\x1b[0m', 'start_line': 3, 'end_line': 4, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.120186+00:00'}
+2026-03-10T19:04:06.130363+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e16e8a14-7771-4652-9a55-08a6aeba35f3', 'counter': 5, 'stdout': '\x1b[0;34m  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections\x1b[0m', 'start_line': 4, 'end_line': 5, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.120204+00:00'}
+2026-03-10T19:04:06.130431+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4c8a9a91-d936-4bbd-89ef-0f025d8d103c', 'counter': 6, 'stdout': '\x1b[0;34m  executable location = /usr/local/bin/ansible-playbook\x1b[0m', 'start_line': 5, 'end_line': 6, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.120221+00:00'}
+2026-03-10T19:04:06.130497+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a71a492f-8d79-48cb-8d10-e55aaf0bf619', 'counter': 7, 'stdout': '\x1b[0;34m  python version = 3.12.12 (main, Jan 16 2026, 00:00:00) [GCC 14.3.1 20250617 (Red Hat 14.3.1-2)] (/usr/bin/python3)\x1b[0m', 'start_line': 6, 'end_line': 7, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.120237+00:00'}
+2026-03-10T19:04:06.130576+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '8d9fb7ae-b820-4388-b6b7-8a01fcc4ebbd', 'counter': 8, 'stdout': '\x1b[0;34m  jinja version = 3.1.6\x1b[0m', 'start_line': 7, 'end_line': 8, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.120252+00:00'}
+2026-03-10T19:04:06.130655+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'a66d7d37-4475-4608-ae98-65554606d99d', 'counter': 9, 'stdout': '\x1b[0;34m  pyyaml version = 6.0.3 (with libyaml v0.2.5)\x1b[0m', 'start_line': 8, 'end_line': 9, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.120267+00:00'}
+2026-03-10T19:04:06.130717+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b196450d-b9b2-485e-810d-bd9e88210132', 'counter': 10, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 9, 'end_line': 10, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.120535+00:00'}
+2026-03-10T19:04:06.171552+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b6ae1e45-0d0e-4d71-b707-7ddec5847503', 'counter': 11, 'stdout': '\x1b[0;34mhost_list declined parsing /home/jelle/repos/homelab/inventories/shared/hosts.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 10, 'end_line': 11, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.167582+00:00'}
+2026-03-10T19:04:06.171660+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c5699f0b-74d2-4d34-b4c1-412d397725b2', 'counter': 12, 'stdout': '\x1b[0;34mscript declined parsing /home/jelle/repos/homelab/inventories/shared/hosts.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 11, 'end_line': 12, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.167656+00:00'}
+2026-03-10T19:04:06.171726+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '108dd8fd-9e75-4178-a9ac-bab6cd75ef55', 'counter': 13, 'stdout': '\x1b[0;34mParsed /home/jelle/repos/homelab/inventories/shared/hosts.yml inventory source with ini plugin\x1b[0m', 'start_line': 12, 'end_line': 13, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.168521+00:00'}
+2026-03-10T19:04:06.171789+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'f90ba706-9a66-4489-8f69-31c334c5b10e', 'counter': 14, 'stdout': '\x1b[0;34mhost_list declined parsing /home/jelle/repos/homelab/inventories/lab/k3s.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 13, 'end_line': 14, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.169155+00:00'}
+2026-03-10T19:04:06.171851+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '7d875422-df45-4071-8c7f-36341de1d43d', 'counter': 15, 'stdout': '\x1b[0;34mscript declined parsing /home/jelle/repos/homelab/inventories/lab/k3s.yml as it did not pass its verify_file() method\x1b[0m', 'start_line': 14, 'end_line': 15, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.169229+00:00'}
+2026-03-10T19:04:06.171914+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '86aaf759-cc1e-4ac3-be9b-e0009ab91cbf', 'counter': 16, 'stdout': '\x1b[0;34mParsed /home/jelle/repos/homelab/inventories/lab/k3s.yml inventory source with yaml plugin\x1b[0m', 'start_line': 15, 'end_line': 16, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.170592+00:00'}
+2026-03-10T19:04:06.222932+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5107337e-1fe0-421b-ae2c-c3b1e035ed71', 'counter': 17, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/ssh/tasks/prepare-control-node.yml\x1b[0m', 'start_line': 16, 'end_line': 17, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.218227+00:00'}
+2026-03-10T19:04:06.223045+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3ed27c33-44b4-4ad9-92b5-654f8caf4e1f', 'counter': 18, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/ssh/tasks/configure-ssh-host.yml\x1b[0m', 'start_line': 17, 'end_line': 18, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.222557+00:00'}
+2026-03-10T19:04:06.233299+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e4f449e5-7a8c-4743-868b-c4920349538f', 'counter': 19, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/network/tasks/wired.yml\x1b[0m', 'start_line': 18, 'end_line': 19, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.228949+00:00'}
+2026-03-10T19:04:06.233383+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ef6bba91-8b8a-41be-aa9c-147dba75224a', 'counter': 20, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/network/tasks/wifi.yml\x1b[0m', 'start_line': 19, 'end_line': 20, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.231551+00:00'}
+2026-03-10T19:04:06.243655+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'ec842988-da1b-4910-bf39-85204f49b9f9', 'counter': 21, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/enable-cgroup.yml\x1b[0m', 'start_line': 20, 'end_line': 21, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.236080+00:00'}
+2026-03-10T19:04:06.243752+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e1fcdbe3-e452-46e6-8991-3186076579da', 'counter': 22, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/install-master-nodes.yml\x1b[0m', 'start_line': 21, 'end_line': 22, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.239251+00:00'}
+2026-03-10T19:04:06.243820+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd25faa08-c914-49b5-bb0d-5ab82fa1b5e4', 'counter': 23, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s/tasks/install-worker-nodes.yml\x1b[0m', 'start_line': 22, 'end_line': 23, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.243004+00:00'}
+2026-03-10T19:04:06.254087+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '0953105b-170c-4c7d-ad9f-1395b66b3faa', 'counter': 24, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s-client/tasks/get-kubeconfig.yml\x1b[0m', 'start_line': 23, 'end_line': 24, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.248039+00:00'}
+2026-03-10T19:04:06.254174+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '5d64e234-07c8-4af9-99e2-072bb53d39ab', 'counter': 25, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/k3s-client/tasks/validate_k3s.yml\x1b[0m', 'start_line': 24, 'end_line': 25, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.250065+00:00'}
+2026-03-10T19:04:06.264482+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '22af8096-5079-43cd-a0f4-cdace7fb447c', 'counter': 26, 'stdout': '\x1b[0;34mstatically imported: /navigator/roles/argocd/tasks/install-argocd.yml\x1b[0m', 'start_line': 25, 'end_line': 26, 'runner_ident': '0efb8ec3-1385-4dcd-93bd-45ad8fca26dd', 'created': '2026-03-10T19:04:06.254479+00:00'}
+2026-03-10T19:04:50.243470+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:05:34.920278+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:05:36.316539+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '06af0cf0-2695-4386-a451-f8136d5ea74b', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'c811d9d7-4fe4-4029-b0c3-20baa189c9dc', 'created': '2026-03-10T19:05:36.309254+00:00'}
+2026-03-10T19:06:16.886550+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:14:30.558594+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:14:31.224522+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2026-03-10T19:14:31.224605+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2026-03-10T19:14:31.224620+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: docker.io/jellebens/ansible-excecution-environment:1.2.0: image not known
+
+2026-03-10T19:14:34.427949+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e4f3256d-fcfb-4eb1-9483-8815f4ffa513', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '151e4846-c0a1-4828-aa0b-368f975165dd', 'created': '2026-03-10T19:14:34.425462+00:00'}
+2026-03-10T19:15:14.801615+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:21:40.677392+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:21:42.259382+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'c9e91781-09ed-4268-9ebc-9f1428f1e284', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '98c76699-d282-40cf-9d6b-4923bc0b2b06', 'created': '2026-03-10T19:21:42.253745+00:00'}
+2026-03-10T19:22:21.610079+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:25:38.077363+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:25:39.485672+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '40e668af-ae9b-4b88-a478-ba2867ac20ce', 'counter': 1, 'stdout': '\x1b[0;34mUsing /navigator/ansible.cfg as config file\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': 'bf809dfb-b351-479c-839d-0af6b2f56fc1', 'created': '2026-03-10T19:25:39.479007+00:00'}
+2026-03-10T19:26:17.526577+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:27:31.293139+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:28:13.736214+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:36:34.952991+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:36:40.817657+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:37:07.582675+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:37:12.240492+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:37:40.719810+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:37:46.100057+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:42:17.585625+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:42:22.882054+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:47:44.849451+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:47:49.647645+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'
+2026-03-10T19:48:47.806485+00:00 WARNING 'ansible_navigator.main' Path `/navigator/ansible.cfg` does not exist. Falling back to non-strict resolution.
+2026-03-10T19:54:34.814079+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '05384f4c-6651-4315-9a5e-8f24e667f6f6', 'counter': 66, 'stdout': '\x1b[1;35m[WARNING]: Deprecation warnings can be disabled by setting `deprecation_warnings=False` in ansible.cfg.\x1b[0m', 'start_line': 63, 'end_line': 64, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810647+00:00'}
+2026-03-10T19:54:34.814242+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b7d0cbb2-ee45-4639-908d-3bb7c5ab5536', 'counter': 67, 'stdout': '\x1b[0;35m[DEPRECATION WARNING]: INJECT_FACTS_AS_VARS default to `True` is deprecated, top-level facts will not be auto injected after the change. This feature will be removed from ansible-core version 2.24.\x1b[0m', 'start_line': 64, 'end_line': 65, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810714+00:00'}
+2026-03-10T19:54:34.814324+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '534e2a5e-8c33-494c-83d2-173398f38476', 'counter': 68, 'stdout': '\x1b[0;35mOrigin: /navigator/roles/cilium/tasks/install-cilium.yml:52:28\x1b[0m', 'start_line': 65, 'end_line': 66, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810735+00:00'}
+2026-03-10T19:54:34.814393+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'e40e4146-4914-4b5d-9ea1-b2cbd79c3518', 'counter': 69, 'stdout': '\x1b[0;35m\x1b[0m', 'start_line': 66, 'end_line': 67, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810750+00:00'}
+2026-03-10T19:54:34.814455+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '88f9b921-c035-4a4b-a9c7-f8cf1259a6b3', 'counter': 70, 'stdout': '\x1b[0;35m50 - name: Wait until node is Ready\x1b[0m', 'start_line': 67, 'end_line': 68, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810763+00:00'}
+2026-03-10T19:54:34.814515+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '3a911859-8207-420f-8b58-57392ef5e54e', 'counter': 71, 'stdout': '\x1b[0;35m51   delegate_to: localhost\x1b[0m', 'start_line': 68, 'end_line': 69, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810776+00:00'}
+2026-03-10T19:54:34.814576+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b45c0e95-7f26-49f3-a136-4623e5fa817a', 'counter': 72, 'stdout': '\x1b[0;35m52   ansible.builtin.command: >\x1b[0m', 'start_line': 69, 'end_line': 70, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810788+00:00'}
+2026-03-10T19:54:34.814637+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd55c565c-9e23-422a-b0f5-de6bc27539b4', 'counter': 73, 'stdout': '\x1b[0;35m                              ^ column 28\x1b[0m', 'start_line': 70, 'end_line': 71, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810800+00:00'}
+2026-03-10T19:54:34.814699+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'd2f1e7b9-d2b6-4912-be97-8f7e1aca2dc7', 'counter': 74, 'stdout': '\x1b[0;35m\x1b[0m', 'start_line': 71, 'end_line': 72, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810811+00:00'}
+2026-03-10T19:54:34.814761+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '637443f4-9089-4836-8829-892e67f972b3', 'counter': 75, 'stdout': '\x1b[0;35mUse `ansible_facts["fact_name"]` (no `ansible_` prefix) instead.\x1b[0m', 'start_line': 72, 'end_line': 73, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810823+00:00'}
+2026-03-10T19:54:34.814821+00:00 CRITICAL 'ansible_navigator.actions.run_playbook._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '00811e02-681e-49e3-a216-d4fa996c1a9a', 'counter': 76, 'stdout': '\x1b[0;35m\x1b[0m', 'start_line': 73, 'end_line': 74, 'runner_ident': '108683a7-549a-43e6-8e7a-5b137b85f717', 'created': '2026-03-10T19:54:34.810835+00:00'}
+2026-03-10T19:54:35.586512+00:00 ERROR 'ansible_navigator.actions.run_playbook.write_artifact' Saving the artifact file failed, resulted in the following error: f[Errno 13] Permission denied: '/navigator'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks/deploy_k3s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts/playbooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/navigator/artifacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jelle/.venvs/ansible-navigator/lib/python3.12/site-packages/ansible_navigator/actions/run.py", line 931, in write_artifact
+    Path(Path(filename).parent).mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1317, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/navigator'

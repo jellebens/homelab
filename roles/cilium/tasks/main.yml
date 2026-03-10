@@ -1,0 +1,8 @@
+#SPDX-License-Identifier: MIT-0
+---
+- name: Install Cilium
+  import_tasks: install-cilium.yml
+  #when: inventory_hostname == groups['masters'][0]
+  run_once: true
+  tags:
+    - cilium
