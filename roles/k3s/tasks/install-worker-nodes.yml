@@ -25,16 +25,6 @@
     timeout: 200
     state: started
 
-- name: K3S | Check if k3s agent uninstall script exists
-  ansible.builtin.stat:
-    path: /usr/local/bin/k3s-agent-uninstall.sh
-  register: k3s_agent_uninstall
-
-- name: K3S | Uninstall k3s agent if installed
-  become: true
-  ansible.builtin.command: /usr/local/bin/k3s-agent-uninstall.sh
-  when: k3s_agent_uninstall.stat.exists
-
 - name: K3S | Install k3s worker (agent)
   become: true
   ansible.builtin.shell: curl -sfL https://get.k3s.io | \

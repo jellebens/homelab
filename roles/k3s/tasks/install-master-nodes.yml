@@ -7,16 +7,6 @@
       Missing vars for {{ inventory_hostname }}.
       Expected: k3s_version
 
-- name: K3S | Check if k3s server uninstall script exists
-  ansible.builtin.stat:
-    path: /usr/local/bin/k3s-uninstall.sh
-  register: k3s_server_uninstall
-
-- name: K3S | Uninstall k3s server if installed
-  become: true
-  ansible.builtin.command: /usr/local/bin/k3s-uninstall.sh
-  when: k3s_server_uninstall.stat.exists
-
 - name: K3S | Install k3s master
   become: true
   shell: curl -sfL https://get.k3s.io | sh -

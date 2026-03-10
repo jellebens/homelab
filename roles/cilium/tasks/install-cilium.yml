@@ -46,16 +46,3 @@
     KUBECONFIG: "{{ kubeconfig }}"
   register: cilium_operator
   changed_when: false
-
-- name: Wait until node is Ready
-  delegate_to: localhost
-  ansible.builtin.command: >
-    kubectl get node {{ ansible_hostname }}
-    -o jsonpath={.status.conditions[?(@.type=="Ready")].status}
-  environment:
-    KUBECONFIG: "{{ kubeconfig }}"
-  register: node_ready
-  changed_when: false
-  retries: 30
-  delay: 10
-  until: node_ready.stdout == "True"
