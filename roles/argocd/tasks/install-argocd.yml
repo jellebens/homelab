@@ -1,16 +1,16 @@
 ---
-- name: ARGOCD | Check if kubeconfig exists
+- name: Check if kubeconfig exists
   delegate_to: localhost
   ansible.builtin.stat:
     path: "{{ kubeconfig }}"
   register: kubeconfig_present
   
-- name: ARGOCD | Create kubeconfig
+- name: Create kubeconfig
   ansible.builtin.include_role:
     name: k3s
   when: not kubeconfig_present.stat.exists
 
-- name: ARGOCD | Create argocd namespace
+- name: Create argocd namespace
   delegate_to: localhost
   kubernetes.core.k8s:
     api_version: v1
@@ -19,7 +19,7 @@
     state: present
     kubeconfig: "{{ kubeconfig }}"
   
-- name: ARGOCD | Install ArgoCD
+- name: Install ArgoCD
   delegate_to: localhost
   kubernetes.core.k8s:
     state: present
@@ -27,7 +27,7 @@
     namespace: argocd
     kubeconfig: "{{ kubeconfig }}"
 
-- name: ARGOCD | Wait for ArgoCD server
+- name: Wait for ArgoCD server
   delegate_to: localhost
   kubernetes.core.k8s_info:
     kind: Pod
@@ -40,7 +40,7 @@
   delay: 10
   until: argocd_pods.resources | length > 0
 
-- name: ARGOCD | Wait until all ArgoCD pods are Ready
+- name: Wait until all ArgoCD pods are Ready
   ansible.builtin.command:
     cmd: kubectl --kubeconfig {{ kubeconfig }} wait --for=condition=Ready pod --all -n argocd --timeout=600s
   delegate_to: localhost

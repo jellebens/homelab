@@ -1,0 +1,90 @@
+---
+- name: Validate variables
+  ansible.builtin.assert:
+    that:
+        - metallb_ip_range is defined
+        -  metallb_namespace is defined
+        - metallb_chart_version is defined
+        - metallb_lab_pool_name is defined
+        - metallb_lab_l2adv_name is defined
+    fail_msg: >
+      Missing vars for {{ inventory_hostname }}.
+      Expected: metallb_ip_range, metallb_namespace, metallb_chart_version, metallb_lab_pool_name, metallb_lab_l2adv_name
+
+- name: Check if kubeconfig exists
+  delegate_to: localhost
+  ansible.builtin.stat:
+    path: "{{ kubeconfig }}"
+  register: kubeconfig_present
+  
+- name: Create kubeconfig
+  ansible.builtin.include_role:
+    name: k3s
+  when: not kubeconfig_present.stat.exists
+
+- name: Add Helm repo
+  delegate_to: localhost
+  kubernetes.core.helm_repository:
+    name: metallb
+    repo_url: https://metallb.github.io/metallb
+
+- name: Install MetalLB
+  delegate_to: localhost
+  kubernetes.core.helm:
+    name: metallb
+    chart_ref: metallb/metallb
+    chart_version: "{{ metallb_chart_version }}"
+    release_namespace: "{{ metallb_namespace }}"
+    create_namespace: true
+    kubeconfig: "{{ kubeconfig }}"
+    wait: true
+    update_repo_cache: true
+    values:
+      crds:
+        enabled: true
+
+- name: Wait for controller deployment
+  delegate_to: localhost
+  kubernetes.core.k8s_info:
+    api_version: apps/v1
+    kind: Deployment
+    namespace: "{{ metallb_namespace }}"
+    name: metallb-controller
+    kubeconfig: "{{ kubeconfig }}"
+  register: metallb_controller
+  retries: 30
+  delay: 10
+  until: >
+    metallb_controller.resources | length > 0 and
+    metallb_controller.resources[0].status.availableReplicas is defined and
+    metallb_controller.resources[0].status.availableReplicas | int > 0
+
+- name: Create IPAddressPool
+  delegate_to: localhost
+  kubernetes.core.k8s:
+    state: present
+    kubeconfig: "{{ kubeconfig }}"
+    definition:
+      apiVersion: metallb.io/v1beta1
+      kind: IPAddressPool
+      metadata:
+        name: "{{ metallb_lab_pool_name }}"
+        namespace: "{{ metallb_namespace }}"
+      spec:
+        addresses: 
+          - "{{ metallb_ip_range }}"
+
+- name: Create L2Advertisement
+  delegate_to: localhost
+  kubernetes.core.k8s:
+    state: present
+    kubeconfig: "{{ kubeconfig }}"
+    definition:
+      apiVersion: metallb.io/v1beta1
+      kind: L2Advertisement
+      metadata:
+        name: "{{ metallb_lab_l2adv_name }}"
+        namespace: "{{ metallb_namespace }}"
+      spec:
+        ipAddressPools:
+          - "{{ metallb_lab_pool_name }}"

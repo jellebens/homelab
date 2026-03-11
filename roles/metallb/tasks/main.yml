@@ -1,0 +1,8 @@
+#SPDX-License-Identifier: MIT-0
+---
+- name: Install and configure MetalLB
+  import_tasks: install-metallb.yml
+  when: inventory_hostname == groups['masters'][0]
+  run_once: true
+  tags:
+    - metallb

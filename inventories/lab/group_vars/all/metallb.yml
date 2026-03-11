@@ -1,0 +1,6 @@
+metallb_ip_range: 192.168.1.160-192.168.1.170
+
+metallb_namespace: metallb-system
+metallb_chart_version: "0.15.3"
+metallb_lab_pool_name: lab-pool
+metallb_lab_l2adv_name: lab-l2

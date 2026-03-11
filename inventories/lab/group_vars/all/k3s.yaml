@@ -1,4 +1,2 @@
-masters_count: 1
-workers_count: 5
 k3s_version: v1.35.1+k3s1
 k3s_port: 6443

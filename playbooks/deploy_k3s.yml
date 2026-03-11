@@ -12,6 +12,7 @@
     - role: k3s
     - role: k3s-client
     - role: cilium
+    - role : metallb
     - role: argocd
     # - role: monitoring
     #   tags: [monitoring]
