@@ -1,5 +1,5 @@
 ---
-- name: K3S | Validate networking variables
+- name: Validate networking variables
   ansible.builtin.assert:
     that:
       - k3s_version is defined
@@ -7,7 +7,7 @@
       Missing vars for {{ inventory_hostname }}.
       Expected: k3s_version
 
-- name: K3S | Install k3s master
+- name: Install k3s master
   become: true
   shell: curl -sfL https://get.k3s.io | sh -
   args:
@@ -16,15 +16,11 @@
     INSTALL_K3S_VERSION: "{{ k3s_version }}"
     INSTALL_K3S_EXEC: >
       server
-      --cluster-init
-      --flannel-backend=none 
-      --disable-network-policy
-      --tls-san {{ ansible_host }}
-      --node-name {{ inventory_hostname }}
-      --write-kubeconfig-mode 644
+       --node-name {{ inventory_hostname }}
+      
 
 
-- name: K3S | Wait for node-token file to appear
+- name: Wait for node-token file to appear
   become: true
   ansible.builtin.shell: test -f /var/lib/rancher/k3s/server/node-token
   register: token_file
@@ -32,23 +28,23 @@
   delay: 10
   until: token_file.rc == 0
 
-- name: K3S | Read K3S node token
+- name: Read K3S node token
   become: true
   ansible.builtin.command: cat /var/lib/rancher/k3s/server/node-token
   register: k3s_token
   failed_when: k3s_token.rc != 0 or k3s_token.stdout is undefined
   changed_when: false
 
-- name: K3S | Set K3S_TOKEN as a fact
+- name: Set K3S_TOKEN as a fact
   set_fact:
     k3s_token: "{{ k3s_token.stdout | trim }}"
 
-- name: K3S | Wait for kube-apiserver to respond
-  become: true
-  ansible.builtin.command: >
-    kubectl get --raw=/readyz
-  register: apiready
-  changed_when: false
-  retries: 30
-  delay: 5
-  until: apiready.rc == 0 and ('ok' in apiready.stdout | lower)
+# - name: Wait for kube-apiserver to respond
+#   become: true
+#   ansible.builtin.command: >
+#     kubectl get --raw=/readyz
+#   register: apiready
+#   changed_when: false
+#   retries: 30
+#   delay: 5
+#   until: apiready.rc == 0 and ('ok' in apiready.stdout | lower)

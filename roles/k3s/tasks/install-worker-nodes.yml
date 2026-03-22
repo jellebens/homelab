@@ -1,5 +1,5 @@
 ---
-- name: K3S | Validate networking variables
+- name: Validate networking variables
   ansible.builtin.assert:
     that:
       - k3s_version is defined
@@ -8,7 +8,7 @@
       Missing vars for {{ inventory_hostname }}.
       Expected: k3s_version, k3s_server_ip, k3s_token
 
-- name: K3S | Ensure iptables tools are installed
+- name: Ensure iptables tools are installed
   become: true
   ansible.builtin.apt:
     name:
@@ -17,7 +17,7 @@
     state: present
     update_cache: yes
 
-- name: K3S | Wait for kube-apiserver
+- name: Wait for kube-apiserver
   ansible.builtin.wait_for:
     host: "{{ hostvars[groups['masters'][0]].ansible_host | default(groups['masters'][0]) }}"
     port: 6443
@@ -25,7 +25,7 @@
     timeout: 200
     state: started
 
-- name: K3S | Install k3s worker (agent)
+- name: Install k3s worker (agent)
   become: true
   ansible.builtin.shell: curl -sfL https://get.k3s.io | \
       INSTALL_K3S_VERSION={{ k3s_version }} \

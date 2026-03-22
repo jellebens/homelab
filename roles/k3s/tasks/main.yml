@@ -5,8 +5,15 @@
   tags:
     - cgroup
 
-- name: Install and Configure the master nodes
+- name: Install the master nodes
   import_tasks: install-master-nodes.yml
+  when: "'masters' in group_names"
+  tags:
+    - k3s
+    - masters
+
+- name: Configure the master nodes
+  import_tasks: configure-master.yml
   when: "'masters' in group_names"
   tags:
     - k3s
@@ -18,3 +25,9 @@
   tags:
     - k3s
     - workers
+
+- name: Uninstall k3s
+  import_tasks: uninstall.yml
+  when: "'k3s-cleanup' in ansible_run_tags"
+  tags:
+    - k3s-cleanup

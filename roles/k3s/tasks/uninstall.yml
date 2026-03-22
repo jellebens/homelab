@@ -1,0 +1,11 @@
+- name: Uninstall k3s on master nodes
+  become: true
+  ansible.builtin.command: /usr/local/bin/k3s-uninstall.sh
+  ignore_errors: true
+  when: "'masters' in group_names"
+
+- name: Uninstall k3s on worker nodes
+  become: true
+  ansible.builtin.command: /usr/local/bin/k3s-agent-uninstall.sh
+  ignore_errors: true
+  when: "'workers' in group_names"
