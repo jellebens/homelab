@@ -23,7 +23,12 @@
     create_namespace: true
     kubeconfig: "{{ kubeconfig }}"
     values:
-      kubeProxyReplacement: false
+      kubeProxyReplacement: true
+      l2announcements:
+        enabled: true
+      k8sClientRateLimit:
+        qps: 50
+        burst: 100
       ipam:
         operator:
           clusterPoolIPv4PodCIDRList:
