@@ -1,0 +1,23 @@
+- name: Clone Helm chart repo
+  delegate_to: localhost
+  ansible.builtin.git:
+    repo: https://github.com/jellebens/gitops.git
+    dest: /tmp/gitops
+    version: main
+    force: true
+
+- name: Install Helm chart from Git repo
+  delegate_to: localhost
+  kubernetes.core.helm:
+    name: argocd-bootstrap
+    chart_ref: /tmp/gitops/bootstrap
+    release_namespace: argocd
+    create_namespace: true
+    kubeconfig: "{{ kubeconfig }}"
+    wait: true
+
+- name: Clean up cloned repo
+  delegate_to: localhost
+  ansible.builtin.file:
+    path: /tmp/gitops
+    state: absent

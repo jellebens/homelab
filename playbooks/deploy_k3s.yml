@@ -11,8 +11,9 @@
     - role: network
     - role: k3s
     - role: k3s-client
-    - role: cilium
-    - role : metallb
     - role: argocd
+    # - role: cilium -> moving to argocd
+    # - role : metallb -> moving to argocd
+    
     # - role: monitoring
     #   tags: [monitoring]

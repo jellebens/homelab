@@ -6,3 +6,10 @@
   run_once: true
   tags:
     - argocd
+
+- name: Bootstrap ArgoCD with applications
+  import_tasks: bootstrap-cluster.yml
+  when: inventory_hostname == groups['masters'][0]
+  run_once: true
+  tags:
+    - argocd
