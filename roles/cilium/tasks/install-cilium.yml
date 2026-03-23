@@ -29,6 +29,10 @@
       k8sClientRateLimit:
         qps: 50
         burst: 100
+      ingressController:
+        enabled: true
+        default: true
+        loadBalancerMode: "dedicated"
       ipam:
         operator:
           clusterPoolIPv4PodCIDRList:
