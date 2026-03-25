@@ -4,7 +4,7 @@ controller:
     serviceMonitor:
       enabled: true
       additionalLabels:
-        release: prometheus
+        release: kube-prometheus-stack
 
 server:
   metrics:
@@ -12,7 +12,7 @@ server:
     serviceMonitor:
       enabled: true
       additionalLabels:
-        release: prometheus
+        release: kube-prometheus-stack
 
 repoServer:
   metrics:
@@ -20,7 +20,7 @@ repoServer:
     serviceMonitor:
       enabled: true
       additionalLabels:
-        release: prometheus
+        release: kube-prometheus-stack
   env:
     - name: ARGOCD_ENABLE_GRPC_TIME_HISTOGRAM
       value: "true"
@@ -31,7 +31,7 @@ applicationSet:
     serviceMonitor:
       enabled: true
       additionalLabels:
-        release: prometheus
+        release: kube-prometheus-stack
 
 notifications:
   metrics:
@@ -39,4 +39,4 @@ notifications:
     serviceMonitor:
       enabled: true
       additionalLabels:
-        release: prometheus
+        release: kube-prometheus-stack
