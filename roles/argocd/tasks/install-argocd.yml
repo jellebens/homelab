@@ -18,31 +18,21 @@
     name: argocd
     state: present
     kubeconfig: "{{ kubeconfig }}"
-  
+
+- name: Add ArgoCD Helm repo
+  delegate_to: localhost
+  kubernetes.core.helm_repository:
+    name: argocd
+    repo_url: https://argoproj.github.io/argo-helm
+
 - name: Install ArgoCD
   delegate_to: localhost
-  kubernetes.core.k8s:
-    state: present
-    src: "https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml"
-    namespace: argocd
+  kubernetes.core.helm:
+    name: argocd
+    chart_ref: argocd/argo-cd
+    release_namespace: argocd
+    create_namespace: true
     kubeconfig: "{{ kubeconfig }}"
-
-- name: Wait for ArgoCD server
-  delegate_to: localhost
-  kubernetes.core.k8s_info:
-    kind: Pod
-    namespace: argocd
-    label_selectors:
-      - app.kubernetes.io/name=argocd-server
-    kubeconfig: "{{ kubeconfig }}"
-  register: argocd_pods
-  retries: 30
-  delay: 10
-  until: argocd_pods.resources | length > 0
-
-- name: Wait until all ArgoCD pods are Ready
-  ansible.builtin.command:
-    cmd: kubectl --kubeconfig {{ kubeconfig }} wait --for=condition=Ready pod --all -n argocd --timeout=600s
-  delegate_to: localhost
-  run_once: true
-  changed_when: false
+    wait: true
+    wait_timeout: 10m
+    values: "{{ lookup('template', role_path + '/templates/argocd-values.yml.j2') | from_yaml }}"
