@@ -9,6 +9,6 @@ all:
           hosts:
             k3s-node01.local: {}
             k3s-node02.local: {}
-            #k3s-node03.local: {}  
+            k3s-node03.local: {}  
             k3s-node04.local: {}
             k3s-node05.local: {}

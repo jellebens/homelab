@@ -23,6 +23,8 @@
     create_namespace: true
     kubeconfig: "{{ kubeconfig }}"
     values:
+      k8sServiceHost: "{{ k3s_api }}"
+      k8sServicePort: "{{ k3s_port }}"
       kubeProxyReplacement: true
       l2announcements:
         enabled: true
