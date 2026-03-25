@@ -22,24 +22,10 @@
     release_namespace: kube-system
     create_namespace: true
     kubeconfig: "{{ kubeconfig }}"
-    values:
-      k8sServiceHost: "{{ k3s_api }}"
-      k8sServicePort: "{{ k3s_port }}"
-      kubeProxyReplacement: true
-      l2announcements:
-        enabled: true
-      k8sClientRateLimit:
-        qps: 50
-        burst: 100
-      ingressController:
-        enabled: true
-        default: true
-        loadBalancerMode: "dedicated"
-      ipam:
-        operator:
-          clusterPoolIPv4PodCIDRList:
-            - "10.42.0.0/16"
-
+    values: "{{ lookup('template', role_path + '/templates/cilium-values.yml.j2') | from_yaml }}"
+    wait: true
+    wait_timeout: 10m
+      
 - name: Wait for Cilium pods
   delegate_to: localhost
   ansible.builtin.command: >

@@ -1,0 +1,50 @@
+k8sServiceHost: "{{ k3s_api }}"
+k8sServicePort: "{{ k3s_port }}"
+k8sClientRateLimit:
+  qps: 50
+  burst: 100
+
+kubeProxyReplacement: true
+
+l2announcements:
+  enabled: true
+
+ingressController:
+  enabled: true
+  default: true
+  loadBalancerMode: "dedicated"
+ipam:
+  operator:
+    clusterPoolIPv4PodCIDRList:
+      - "10.42.0.0/16"
+
+prometheus:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+
+operator:
+  prometheus:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+
+hubble:
+  enabled: true
+  metrics:
+    enableOpenMetrics: true
+    enabled:
+      - dns
+      - drop
+      - tcp
+      - flow
+      - icmp
+      - http
+    serviceMonitor:
+      enabled: true
+  relay:
+    enabled: true
+    prometheus:
+      enabled: true
+      serviceMonitor:
+        enabled: true
