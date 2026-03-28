@@ -22,12 +22,16 @@ prometheus:
   enabled: true
   serviceMonitor:
     enabled: true
+    labels:
+      release: kube-prometheus-stack
 
 operator:
   prometheus:
     enabled: true
     serviceMonitor:
       enabled: true
+      labels:
+        release: kube-prometheus-stack
 
 hubble:
   enabled: true
@@ -42,9 +46,5 @@ hubble:
       - http
     serviceMonitor:
       enabled: true
-  relay:
-    enabled: true
-    prometheus:
-      enabled: true
-      serviceMonitor:
-        enabled: true
+      labels:
+        release: kube-prometheus-stack

@@ -49,6 +49,7 @@
       flannel-backend: "none"
       disable-network-policy: true
       disable-kube-proxy: true
+      supervisor-metrics: true
       disable:
         - servicelb
         - traefik
