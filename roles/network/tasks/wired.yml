@@ -24,13 +24,23 @@
   with_items: "{{ nm_connections.stdout_lines }}"
   when: item.split(':')[1] == static_interface
 
-- name: Configure {{ static_interface }}
+
+- name: Set DNS servers on NetworkManager connection
   ansible.builtin.command: >
     nmcli connection modify "{{ nm_connection_name }}"
+    ipv4.dns "192.168.50.144 192.168.50.1 1.1.1.1"
+    ipv4.ignore-auto-dns yes
     ipv4.method auto
-    connection.autoconnect yes
   register: nm_modify
   become: true
+  changed_when: true
+
+- name: Set DNS search domain on NetworkManager connection
+  ansible.builtin.command: >
+    nmcli connection modify "{{ nm_connection_name }}"
+    ipv4.dns-search "local"
+  become: true
+  changed_when: true
 
 - name: Reboot to apply networking changes
   ansible.builtin.reboot:
