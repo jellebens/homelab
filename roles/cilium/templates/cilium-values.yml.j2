@@ -11,8 +11,11 @@ l2announcements:
 
 ingressController:
   enabled: true
-  default: true
-  loadBalancerMode: "dedicated"
+  default: false
+  loadBalancerMode: "shared"
+
+gatewayAPI:
+  enabled: true
 ipam:
   operator:
     clusterPoolIPv4PodCIDRList:
