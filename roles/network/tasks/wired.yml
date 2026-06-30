@@ -42,6 +42,19 @@
   become: true
   changed_when: true
 
+# The wired connection must be pure DHCP (ipv4.method auto). Earlier provisioning
+# left a manual ipv4.addresses (e.g. 192.168.50.16x/24) on some nodes, so eth0
+# came up with BOTH the static .16x (primary) and the DHCP-reserved .15x
+# (secondary) — and k3s auto-detected the wrong (.16x) IP as its node InternalIP.
+# Clear any manual address/gateway so only the DHCP reservation remains.
+- name: Clear stale manual IPv4 address/gateway on the wired connection
+  ansible.builtin.command: >
+    nmcli connection modify "{{ nm_connection_name }}"
+    ipv4.addresses ""
+    ipv4.gateway ""
+  become: true
+  changed_when: true
+
 - name: Reboot to apply networking changes
   ansible.builtin.reboot:
     reboot_timeout: 300        
