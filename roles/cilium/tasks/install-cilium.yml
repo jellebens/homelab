@@ -43,3 +43,20 @@
     KUBECONFIG: "{{ kubeconfig }}"
   register: cilium_operator
   changed_when: false
+
+# k3s ships the cluster CoreDNS (kube-dns) with a single replica (the bundled
+# manifest omits `replicas`, so scaling it here persists and is not reverted by
+# the k3s deploy controller). Run 3 for HA — a single DNS pod was a SPOF when its
+# node got isolated. CoreDNS already has topologySpreadConstraints, so the
+# replicas spread one-per-node automatically. Done after the CNI is up so the
+# new pods can schedule.
+- name: Scale cluster CoreDNS (kube-dns) to 3 replicas for HA
+  delegate_to: localhost
+  kubernetes.core.k8s_scale:
+    api_version: apps/v1
+    kind: Deployment
+    name: coredns
+    namespace: kube-system
+    replicas: 3
+    kubeconfig: "{{ kubeconfig }}"
+    wait: true
