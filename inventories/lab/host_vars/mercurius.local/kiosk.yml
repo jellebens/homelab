@@ -1,3 +1,4 @@
 ---
 #kiosk_url: "http://vesta:8123/dashboard-homelab/0?kiosk"
-kiosk_url: "http://grafana.lab.local/d/minirack-cluster-resources/minirack-cluster-resources?orgId=1&from=now-15m&to=now&timezone=utc&var-datasource=default&var-cluster=&refresh=5s&editIndex=0&kiosk=true"
+#kiosk_url: "http://grafana.lab.local/d/minirack-cluster-resources/minirack-cluster-resources?orgId=1&from=now-15m&to=now&timezone=utc&var-datasource=default&var-cluster=&refresh=5s&editIndex=0&kiosk=true"
+kiosk_url: "http://grafana.lab.local/d/zeus-kiosk/zeus-e28094-live-kiosk?orgId=1&from=now-6h&to=now&timezone=browser&refresh=30s&var-datasource=default&var-cluster=&editIndex=0&kiosk=true"
