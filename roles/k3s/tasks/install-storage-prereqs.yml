@@ -1,0 +1,37 @@
+---
+# Longhorn node prerequisites (gitops card #176). The longhorn-manager
+# DaemonSet hard-fails without iscsiadm on the host ("failed to check
+# environment ... iscsiadm --version ... No such file or directory"), and the
+# NFS client is needed for the DS918 backup target. Safe to re-run any time;
+# the managers recover on their own once iscsid is up (no redeploy needed).
+- name: Install Longhorn storage prerequisites (open-iscsi + NFS client)
+  become: true
+  ansible.builtin.apt:
+    name:
+      - open-iscsi
+      - nfs-common
+    state: present
+    update_cache: true
+
+- name: Persist the iscsi_tcp kernel module across reboots
+  become: true
+  ansible.builtin.copy:
+    dest: /etc/modules-load.d/iscsi_tcp.conf
+    content: "iscsi_tcp\n"
+    mode: "0644"
+
+- name: Load the iscsi_tcp kernel module now
+  become: true
+  ansible.builtin.command: modprobe iscsi_tcp
+  changed_when: false
+
+- name: Enable and start iscsid
+  become: true
+  ansible.builtin.systemd:
+    name: iscsid
+    enabled: true
+    state: started
+
+- name: Verify iscsiadm answers (the exact longhorn-manager precheck)
+  ansible.builtin.command: iscsiadm --version
+  changed_when: false

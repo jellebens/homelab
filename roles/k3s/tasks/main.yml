@@ -5,6 +5,12 @@
   tags:
     - cgroup
 
+- name: Install Longhorn storage prerequisites on all nodes
+  import_tasks: install-storage-prereqs.yml
+  tags:
+    - storage
+    - longhorn
+
 - name: Install the master nodes
   import_tasks: install-master-nodes.yml
   when: "'masters' in group_names"
