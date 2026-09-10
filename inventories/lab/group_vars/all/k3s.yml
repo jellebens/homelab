@@ -1,3 +1,10 @@
 k3s_version: v1.35.1+k3s1
 k3s_port: 6443
-k3s_api: k3s-master01.local
+# Cilium's k8sServiceHost (roles/cilium) — MUST be the control-plane IP, not a
+# DNS name. The CNI is what the cluster's own DNS (coredns-lab VIP .180) rides
+# on, and the node resolvers' fallback (.144 DS918) NXDOMAINs bare .local
+# names, so a name here deadlocks the cluster after any cilium restart
+# (2026-09-10 outage: every agent crash-looped on "lookup k3s-master01.local
+# ... no such host"). The apiserver cert carries the node IPs in its SANs, so
+# TLS verifies fine. .151 = k3s-master01's DHCP-reserved address.
+k3s_api: 192.168.50.151
