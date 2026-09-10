@@ -1,0 +1,11 @@
+---
+- name: Setting up a sandbox environment with Cilium and ArgoCD
+  hosts: sandbox
+  gather_facts: true
+  
+  vars:
+    kubeconfig: "{{ lookup('env','KUBECONFIG') }}"
+
+  roles:
+    - role: cilium
+    - role: argocd

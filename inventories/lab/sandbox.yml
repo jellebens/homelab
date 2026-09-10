@@ -1,0 +1,7 @@
+all:
+  children:
+    sandbox:
+      children:
+        masters:
+          hosts:
+            jelle-laptop: {}
