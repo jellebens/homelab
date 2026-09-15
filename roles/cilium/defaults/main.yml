@@ -1,3 +1,33 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # defaults file for cilium
+
+# Cilium Helm chart version. PINNED on purpose: the chart_ref is an OCI
+# reference with no version, so an unpinned run pulls whatever is newest
+# (2026-09-10: a rerun silently moved the cluster from its previous release
+# to 1.20.1). Bump this together with cilium_gateway_api_version below — every Cilium
+# minor documents the Gateway API release it requires, and the operator's
+# Gateway API controller refuses to start when the installed CRDs are older
+# ("Required GatewayAPI resources are not found"). Routes created after that
+# point are never programmed while older routes keep serving, which is a
+# silent failure.
+cilium_chart_version: "1.20.1"
+
+# Gateway API CRD bundle Cilium {{ cilium_chart_version }} requires
+# (https://docs.cilium.io/en/v1.20/network/servicemesh/gateway-api/gateway-api/).
+# Installed BEFORE the Helm release so the operator finds them at startup.
+# Nothing in gitops owns these: Argo CD comes up after Cilium, so they are a
+# bootstrap concern of this role.
+cilium_gateway_api_version: "v1.6.1"
+cilium_gateway_api_channel: standard
+cilium_gateway_api_crd_base: >-
+  https://raw.githubusercontent.com/kubernetes-sigs/gateway-api/{{
+  cilium_gateway_api_version }}/config/crd/{{ cilium_gateway_api_channel }}
+cilium_gateway_api_crds:
+  - gatewayclasses
+  - gateways
+  - httproutes
+  - referencegrants
+  - grpcroutes
+  - backendtlspolicies
+  - tlsroutes

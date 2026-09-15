@@ -1,0 +1,52 @@
+---
+# Gateway API CRDs at the version Cilium requires (see defaults/main.yml).
+# Applied one file at a time exactly as the Cilium docs do, server-side so an
+# upgrade over CRDs that were once applied client-side does not stall on
+# field-manager conflicts. Server-side apply always reports
+# "serverside-applied", so change detection compares the bundle-version
+# annotation the upstream manifests carry against cilium_gateway_api_version.
+- name: Check if kubeconfig exists
+  delegate_to: localhost
+  ansible.builtin.stat:
+    path: "{{ kubeconfig }}"
+  register: cilium_kubeconfig_present
+
+- name: Create kubeconfig
+  ansible.builtin.include_role:
+    name: k3s
+  when: not cilium_kubeconfig_present.stat.exists
+
+- name: Read the installed Gateway API bundle version per CRD
+  delegate_to: localhost
+  ansible.builtin.command: >
+    kubectl get crd {{ item }}.gateway.networking.k8s.io
+    -o jsonpath='{.metadata.annotations.gateway\.networking\.k8s\.io/bundle-version}'
+  environment:
+    KUBECONFIG: "{{ kubeconfig }}"
+  loop: "{{ cilium_gateway_api_crds }}"
+  register: cilium_gateway_api_installed
+  changed_when: false
+  failed_when: false # absent CRD = empty version = will be installed
+
+- name: Install the Gateway API CRD bundle {{ cilium_gateway_api_version }}
+  delegate_to: localhost
+  ansible.builtin.command: >
+    kubectl apply --server-side --force-conflicts
+    -f {{ cilium_gateway_api_crd_base }}/gateway.networking.k8s.io_{{ item }}.yaml
+  environment:
+    KUBECONFIG: "{{ kubeconfig }}"
+  loop: "{{ cilium_gateway_api_crds }}"
+  changed_when: >-
+    (cilium_gateway_api_installed.results
+     | selectattr('item', 'equalto', item)
+     | map(attribute='stdout') | first | default('')) != cilium_gateway_api_version
+
+- name: Wait for the Gateway API CRDs to be established
+  delegate_to: localhost
+  ansible.builtin.command: >
+    kubectl wait --for=condition=Established --timeout=60s
+    crd/{{ item }}.gateway.networking.k8s.io
+  environment:
+    KUBECONFIG: "{{ kubeconfig }}"
+  loop: "{{ cilium_gateway_api_crds }}"
+  changed_when: false
