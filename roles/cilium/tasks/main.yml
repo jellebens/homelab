@@ -1,7 +1,17 @@
 #SPDX-License-Identifier: MIT-0
 ---
+# Gateway API CRDs first: the Cilium operator looks for them at startup and
+# leaves its Gateway API controller off when they are missing or too old.
+- name: Install Gateway API CRDs
+  ansible.builtin.import_tasks: install-gateway-api-crds.yml
+  run_once: true
+  tags:
+    - cilium
+    - gateway-api
+    - k3s
+
 - name: Install Cilium
-  import_tasks: install-cilium.yml
+  ansible.builtin.import_tasks: install-cilium.yml
   #when: inventory_hostname == groups['masters'][0]
   run_once: true
   tags:

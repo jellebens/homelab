@@ -1,38 +1,50 @@
-Role Name
-=========
+# cilium
 
-A brief description of the role goes here.
+Installs Cilium as the k3s CNI (kube-proxy replacement, L2 announcements,
+Ingress controller, Gateway API, Hubble) from the OCI Helm chart, and the
+Gateway API CRDs it depends on. Runs once, delegated to localhost against
+`{{ kubeconfig }}`.
 
-Requirements
-------------
+## Order of work
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+1. `install-gateway-api-crds.yml` — apply the Gateway API CRD bundle at
+   `cilium_gateway_api_version`, server-side, then wait until they are established.
+2. `install-cilium.yml` — Helm-install the chart at `cilium_chart_version`
+   with `templates/cilium-values.yml.j2`, wait for the agent DaemonSet and
+   the operator, then scale the cluster CoreDNS to 3 replicas.
 
-Role Variables
---------------
+The CRDs go first because the Cilium operator checks for them at startup:
+with a missing or too-old bundle its Gateway API controller does not start,
+and every HTTPRoute created from then on stays unprogrammed (empty status,
+404 from Envoy) while routes programmed earlier keep working. That is how the
+`ceres-firmware` route failed on 2026-09-15 after an unpinned rerun had moved
+Cilium to 1.20.1 on top of hand-applied v1.4.0 CRDs.
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+## Variables (`defaults/main.yml`)
 
-Dependencies
-------------
+| Variable | Default | Meaning |
+|---|---|---|
+| `cilium_chart_version` | `"1.20.1"` | Helm chart version. Always pinned. |
+| `cilium_gateway_api_version` | `"v1.6.1"` | Gateway API release Cilium's docs list for that chart version. |
+| `cilium_gateway_api_channel` | `standard` | CRD channel directory in the Gateway API repo. |
+| `cilium_gateway_api_crds` | 7 CRDs | The bundle Cilium requires, incl. `tlsroutes` and `backendtlspolicies`. |
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+**Bump the two versions together.** Each Cilium minor names the Gateway API
+release it needs in
+`https://docs.cilium.io/en/v<major.minor>/network/servicemesh/gateway-api/gateway-api/`.
 
-Example Playbook
-----------------
+From the inventory (`inventories/lab/group_vars/all/k3s.yml`): `k3s_api`
+(control-plane IP, never a DNS name) and `k3s_port`.
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+## What lives elsewhere
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+The Gateway, its listeners, every HTTPRoute and ReferenceGrant are gitops:
+`platform/gateway-config` (+ `.config/lab/gateway.yaml`) and the landing
+zones, reconciled by Argo CD. This role only provides the CRDs and the
+controller.
 
-License
--------
+## Run
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+```bash
+ansible-navigator run playbooks/deploy_k3s.yml -i inventories/shared -i inventories/lab/mercurius.yml --vault-password-file ~/.ansible-vault-pass --tags cilium
+```
