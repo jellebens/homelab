@@ -3,7 +3,7 @@
   ansible.builtin.git:
     repo: https://github.com/jellebens/gitops.git
     dest: /tmp/gitops
-    version: main
+    version: master # gitops deploys from master (GitFlow since 2026-07-02); there is no main
     force: true
 
 - name: Install Helm chart from Git repo
@@ -14,7 +14,7 @@
     release_namespace: argocd
     create_namespace: true
     valuefiles:
-      - /tmp/gitops/.config/shared.yaml
+      - /tmp/gitops/.config/shared/values.yaml
       - /tmp/gitops/.config/{{ environment }}/values.yaml
     kubeconfig: "{{ kubeconfig }}"
     wait: true
