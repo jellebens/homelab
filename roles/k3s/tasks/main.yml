@@ -32,6 +32,12 @@
     - k3s
     - workers
 
+- name: Trust the lab CA for the private registries (Harbor)
+  import_tasks: configure-registries.yml
+  tags:
+    - k3s
+    - registries
+
 - name: Uninstall k3s
   import_tasks: uninstall.yml
   when: "'k3s-cleanup' in ansible_run_tags"
