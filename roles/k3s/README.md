@@ -1,38 +1,74 @@
-Role Name
-=========
+k3s
+===
 
-A brief description of the role goes here.
+Installs and configures k3s on the `k3s` group: `masters` run the server,
+`workers` run the agent. Tasks (see `tasks/main.yml`), with their tags:
 
-Requirements
-------------
+| Tasks | Tags | What |
+|---|---|---|
+| `enable-cgroup.yml` | `cgroup` | cgroup kernel flags on the Pis (reboots via the `reboot_pi` handler) |
+| `install-storage-prereqs.yml` | `storage`, `longhorn` | Longhorn prerequisites |
+| `install-master-nodes.yml`, `configure-master.yml` | `k3s`, `masters` | k3s server + node token |
+| `install-worker-nodes.yml` | `k3s`, `workers` | k3s agent |
+| `configure-registries.yml` | `k3s`, `registries` | containerd trust for the private registries (Harbor) |
+| `uninstall.yml` | `k3s-cleanup` | only when that tag is asked for |
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Private registries (Harbor)
+---------------------------
 
-Role Variables
---------------
+`configure-registries.yml` lets containerd on every node pull from
+**`harbor.lab.local`** (the Harbor registry in gitops `platform/harbor-config`).
+For each entry in `k3s_private_registries` (`defaults/main.yml`) it:
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+1. copies the lab root CA (`files/lab-root-ca.crt`, the same file as
+   `gitops/lab-root-ca.crt`) to `/etc/rancher/k3s/lab-root-ca.crt`;
+2. pins `<address> <host>` in a managed block in `/etc/hosts`;
+3. writes `/etc/rancher/k3s/registries.yaml` with `configs.<host>.tls.ca_file`;
+4. if the CA or `registries.yaml` changed, restarts k3s (or k3s-agent) **one node
+   at a time**. Each restart waits until containerd answers and has rendered
+   `/var/lib/rancher/k3s/agent/etc/containerd/certs.d/<host>/hosts.toml` with the
+   CA. If any node fails that check, the whole run stops (`any_errors_fatal`).
+   `KillMode=process` on the k3s units keeps running containers alive. The master
+   restart makes the API unavailable for about 30 s, so leader-election controllers
+   (kyverno, cnpg, longhorn CSI sidecars, cilium-operator) restart once.
 
-Dependencies
-------------
+Run only this part:
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+```sh
+ansible-navigator run playbooks/deploy_k3s.yml --tags registries \
+  -i inventories/shared -i inventories/lab/k3s.yml \
+  --vault-password-file ~/.ansible-vault-pass
+```
 
-Example Playbook
-----------------
+Add `--limit k3s-node05.local` to try one node first, or `--check --diff` to preview.
+**Never run the play untagged** for this. The untagged play includes the network
+role, which reboots every node in parallel.
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+### Why the /etc/hosts pin
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+containerd runs inside the static k3s binary and uses Go's built-in resolver.
+That resolver treats every `*.local` name as mDNS and never sends it to the DNS
+servers. So `crictl pull harbor.lab.local/...` failed with
+`lookup harbor.lab.local: no such host`, even though `getent` and `curl` on the
+same node (glibc) resolve it through the DS918. Every `*.lab.local` name behaves
+this way for containerd. The pin also keeps image pulls independent of the
+in-cluster DNS, which rides on the CNI (see the 2026-09-10 outage in gitops
+AGENTS.md). **Keep `address` equal to the gateway VIP**
+(`lbipam.cilium.io/ips` in gitops `.config/lab/gateway.yaml`, now `192.168.50.200`).
 
-License
--------
+### Credentials
 
-BSD
+Only TLS trust is configured, not credentials. Public Harbor projects pull
+anonymously. A private project needs an `imagePullSecret` (a Harbor robot
+account, sealed into the namespace that pulls).
 
-Author Information
-------------------
+### Adding a registry
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Add an entry to `k3s_private_registries` (`host`, `address`) and rerun with
+`--tags registries`. Its cert must come from the lab CA. Any other CA needs its
+own `ca_file`, which the template does not support yet.
+
+### Rotating the lab CA
+
+Replace `files/lab-root-ca.crt` with the new `gitops/lab-root-ca.crt` and rerun.
+The copy task changes, so every node restarts again, one at a time.

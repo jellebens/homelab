@@ -1,3 +1,22 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # defaults file for roles/k3s
+
+# Lab root CA (cert-manager ClusterIssuer lab-ca-issuer in gitops, a copy of
+# gitops/lab-root-ca.crt). containerd trusts it for the registries below.
+k3s_lab_ca_path: /etc/rancher/k3s/lab-root-ca.crt
+
+# Private registries containerd may pull from (/etc/rancher/k3s/registries.yaml).
+# Only TLS trust is configured: no mirrors, and no credentials. Pulls from
+# private projects authenticate with an imagePullSecret in the pod's namespace.
+#
+# `address` is pinned in /etc/hosts. containerd (inside the static k3s binary)
+# uses Go's built-in resolver, which treats every *.local name as mDNS and never
+# sends it to the DNS servers: `lookup harbor.lab.local: no such host`, while
+# glibc tools (getent, curl) on the same node resolve it fine. The /etc/hosts
+# entry is read first and also keeps image pulls independent of the in-cluster
+# DNS (coredns-lab rides on the CNI). Keep it equal to the gateway VIP
+# (gitops .config/lab/gateway.yaml lbipam.cilium.io/ips).
+k3s_private_registries:
+  - host: harbor.lab.local
+    address: 192.168.50.200

@@ -1,0 +1,8 @@
+# Managed by Ansible (homelab roles/k3s, configure-registries.yml). Edits here
+# are overwritten. k3s renders containerd's config from this file only at start.
+configs:
+{% for registry in k3s_private_registries %}
+  "{{ registry.host }}":
+    tls:
+      ca_file: {{ k3s_lab_ca_path }}
+{% endfor %}

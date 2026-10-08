@@ -1,0 +1,81 @@
+---
+# containerd on every node trusts the lab CA for the private registries
+# (Harbor at harbor.lab.local). k3s turns registries.yaml into containerd's
+# certs.d/<registry>/hosts.toml at start, so a change needs a k3s restart.
+# KillMode=process on the k3s units keeps running containers alive across it.
+
+- name: Ensure /etc/rancher/k3s exists
+  become: true
+  ansible.builtin.file:
+    path: /etc/rancher/k3s
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Install the lab root CA for containerd
+  become: true
+  ansible.builtin.copy:
+    src: lab-root-ca.crt
+    dest: "{{ k3s_lab_ca_path }}"
+    owner: root
+    group: root
+    mode: "0644"
+  register: k3s_lab_ca
+
+# Go's resolver (containerd) never sends *.local names to DNS; see defaults/main.yml.
+# /etc/hosts is read on every lookup, so this needs no restart.
+- name: Pin the registry addresses in /etc/hosts
+  become: true
+  ansible.builtin.blockinfile:
+    path: /etc/hosts
+    marker: "# {mark} ANSIBLE MANAGED: k3s private registries (roles/k3s)"
+    block: |
+      {% for registry in k3s_private_registries %}
+      {{ registry.address }} {{ registry.host }}
+      {% endfor %}
+
+- name: Write the k3s registries.yaml
+  become: true
+  ansible.builtin.template:
+    src: registries.yaml.j2
+    dest: /etc/rancher/k3s/registries.yaml
+    owner: root
+    group: root
+    mode: "0600"
+  register: k3s_registries_file
+
+# One node at a time, and each restart waits until containerd answers again and
+# has rendered every registry's hosts.toml. Restart and wait are ONE task:
+# Ansible's linear strategy runs a task on all hosts before the next one, so a
+# separate wait task would let every node restart back to back.
+- name: Restart k3s to load the registry config (one node at a time)
+  become: true
+  ansible.builtin.shell: |
+    set -e
+    systemctl restart {{ k3s_service }}
+    for i in $(seq 1 60); do
+      ok=1
+      k3s crictl info >/dev/null 2>&1 || ok=0
+      {% for registry in k3s_private_registries %}
+      grep -qs "{{ k3s_lab_ca_path }}" /var/lib/rancher/k3s/agent/etc/containerd/certs.d/{{ registry.host }}/hosts.toml || ok=0
+      {% endfor %}
+      [ "$ok" = 1 ] && exit 0
+      sleep 5
+    done
+    echo "containerd did not come back with the registry config within 5 min" >&2
+    exit 1
+  vars:
+    k3s_service: "{{ 'k3s' if 'masters' in group_names else 'k3s-agent' }}"
+  throttle: 1
+  # A node that does not come back stops the run, not just itself.
+  any_errors_fatal: true
+  when: k3s_lab_ca.changed or k3s_registries_file.changed
+
+- name: Wait for every node to be Ready
+  become: true
+  ansible.builtin.command: >
+    k3s kubectl wait node --all --for=condition=Ready --timeout=300s
+  delegate_to: "{{ groups['masters'][0] }}"
+  run_once: true
+  changed_when: false
