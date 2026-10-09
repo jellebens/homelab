@@ -30,6 +30,8 @@
   kubernetes.core.helm:
     name: argocd
     chart_ref: argocd/argo-cd
+    # Pinned: unpinned, a rerun upgrades Argo CD to whatever chart is newest.
+    chart_version: "{{ argocd_chart_version }}"
     release_namespace: argocd
     create_namespace: true
     kubeconfig: "{{ kubeconfig }}"

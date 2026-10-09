@@ -1,3 +1,12 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # defaults file for roles/argocd
+
+# argo-cd Helm chart version. Matches the live release (argo-cd-10.9.1 = Argo CD
+# v3.5.3, 2026-10-09). Bump deliberately; the role never upgrades on its own.
+argocd_chart_version: "10.9.1"
+
+# Hosts whose TLS Argo CD must trust (argocd-tls-certs-cm), each signed by the lab
+# root CA (roles/k3s/files/lab-root-ca.crt, the same file as gitops/lab-root-ca.crt).
+argocd_lab_ca_hosts:
+  - harbor.lab.local

@@ -1,3 +1,13 @@
+configs:
+  tls:
+    # argocd-tls-certs-cm: lets the repo-server pull Helm/OCI charts from lab hosts
+    # (Harbor) whose certs come from the lab root CA.
+    certificates:
+{% for host in argocd_lab_ca_hosts %}
+      {{ host }}: |
+        {{ lookup('file', role_path + '/../k3s/files/lab-root-ca.crt') | indent(8) }}
+{% endfor %}
+
 controller:
   metrics:
     enabled: true
