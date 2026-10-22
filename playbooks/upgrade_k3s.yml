@@ -1,0 +1,148 @@
+---
+# Upgrade k3s to k3s_version (inventories/lab/group_vars/all/k3s.yml), one node
+# at a time: the server first, then the agents. See roles/k3s/README.md,
+# "Upgrading k3s".
+#
+#   ansible-navigator run playbooks/upgrade_k3s.yml \
+#     -i inventories/shared -i inventories/lab/k3s.yml \
+#     --vault-password-file ~/.ansible-vault-pass
+#
+# Do NOT use deploy_k3s.yml for this: its master install task is skipped once
+# /usr/local/bin/k3s exists, and its agent install task would re-run the
+# install script on every worker in parallel.
+
+# Every node must answer before anything is touched. An unreachable host only
+# drops out of a play (and the next play still runs), so the count is checked.
+- name: Pre-flight, every k3s node must be reachable
+  hosts: k3s
+  gather_facts: false
+  tasks:
+    - name: Ping
+      ansible.builtin.ping:
+
+    - name: Stop unless every node answered
+      ansible.builtin.assert:
+        that:
+          - ansible_play_hosts | length == groups['k3s'] | length
+        fail_msg: >
+          Unreachable: {{ groups['k3s'] | difference(ansible_play_hosts) }}.
+          Nothing was changed. Check name resolution of *.local from the
+          execution environment (podman) and SSH, then re-run.
+      run_once: true
+
+- name: Upgrade the k3s servers (one at a time)
+  hosts: masters
+  serial: 1
+  any_errors_fatal: true
+  gather_facts: false
+  tasks:
+    - name: Read the installed k3s version
+      ansible.builtin.command: /usr/local/bin/k3s --version
+      register: k3s_version_before
+      changed_when: false
+
+    # Rollback point. k3s keeps it under /var/lib/rancher/k3s/server/db/snapshots
+    # (kubectl get etcdsnapshotfiles). Only when this run will change the server.
+    - name: Take an etcd snapshot before the upgrade
+      become: true
+      ansible.builtin.command: >
+        k3s etcd-snapshot save
+        --name pre-upgrade-{{ k3s_version | regex_replace('[^0-9A-Za-z]+', '-') }}
+      when: k3s_version not in k3s_version_before.stdout
+
+    - name: Upgrade this server
+      ansible.builtin.include_role:
+        name: k3s
+        tasks_from: upgrade
+
+    # The agents re-run the install script with the join token, like a fresh install.
+    - name: Read the node token for the agents
+      become: true
+      ansible.builtin.command: cat /var/lib/rancher/k3s/server/node-token
+      register: k3s_token_cmd
+      changed_when: false
+      no_log: true
+
+    - name: Keep the token as a fact
+      ansible.builtin.set_fact:
+        k3s_token: "{{ k3s_token_cmd.stdout | trim }}"
+      no_log: true
+
+    # The agents' play checks this: a play that loses its only host (unreachable
+    # server) ends, and Ansible still runs the NEXT play, so without a guard the
+    # agents would be upgraded ahead of the server.
+    - name: Mark the server as done
+      ansible.builtin.set_fact:
+        k3s_server_upgraded: "{{ k3s_version }}"
+
+- name: Upgrade the k3s agents (one at a time)
+  hosts: workers
+  serial: 1
+  any_errors_fatal: true
+  gather_facts: false
+  tasks:
+    - name: The server must be on {{ k3s_version }} before any agent moves
+      ansible.builtin.assert:
+        that:
+          - hostvars[groups['masters'][0]].k3s_server_upgraded | default('') == k3s_version
+          - hostvars[groups['masters'][0]].k3s_token is defined
+        fail_msg: >
+          The server play did not finish on {{ groups['masters'][0] }}
+          (unreachable, or stopped before the node was Ready on {{ k3s_version }}).
+          Fix that first; agents never run ahead of the server.
+
+    - name: Upgrade this agent
+      ansible.builtin.include_role:
+        name: k3s
+        tasks_from: upgrade
+
+- name: Check the cluster after the upgrade
+  hosts: masters
+  gather_facts: false
+  tasks:
+    - name: Wait for every node to be Ready
+      become: true
+      ansible.builtin.command: >
+        k3s kubectl wait node --all --for=condition=Ready --timeout=300s
+      run_once: true
+      changed_when: false
+
+    - name: Read every node's version
+      become: true
+      ansible.builtin.command: >
+        k3s kubectl get nodes
+        -o jsonpath='{range .items[*]}{.metadata.name}={.status.nodeInfo.kubeletVersion}{"\n"}{end}'
+      register: k3s_node_versions
+      run_once: true
+      changed_when: false
+
+    - name: Every node must be on {{ k3s_version }}
+      ansible.builtin.assert:
+        that:
+          - k3s_node_versions.stdout_lines | reject('search', '=' ~ (k3s_version | regex_escape) ~ '$') | list | length == 0
+        fail_msg: "Not every node is on {{ k3s_version }}: {{ k3s_node_versions.stdout_lines }}"
+        success_msg: "All nodes on {{ k3s_version }}: {{ k3s_node_versions.stdout_lines }}"
+      run_once: true
+
+    # The CNI is the one thing that must be fully back before anyone declares victory
+    # (gitops AGENTS.md: node/app status looks healthy while ds/cilium is 0/N).
+    - name: Wait for the Cilium DaemonSet to be fully Ready
+      become: true
+      ansible.builtin.command: >
+        k3s kubectl -n kube-system rollout status ds/cilium --timeout=300s
+      run_once: true
+      changed_when: false
+
+    - name: List pods that are not Running or Succeeded
+      become: true
+      ansible.builtin.command: >
+        k3s kubectl get pods -A
+        --field-selector=status.phase!=Running,status.phase!=Succeeded
+      register: k3s_odd_pods
+      run_once: true
+      changed_when: false
+
+    - name: Pods to look at (empty means none)
+      ansible.builtin.debug:
+        msg: "{{ k3s_odd_pods.stdout_lines + k3s_odd_pods.stderr_lines }}"
+      run_once: true

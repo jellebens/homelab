@@ -12,6 +12,52 @@ Installs and configures k3s on the `k3s` group: `masters` run the server,
 | `install-worker-nodes.yml` | `k3s`, `workers` | k3s agent |
 | `configure-registries.yml` | `k3s`, `registries` | containerd trust for the private registries (Harbor) |
 | `uninstall.yml` | `k3s-cleanup` | only when that tag is asked for |
+| `upgrade.yml` | (none) | k3s version upgrade; only via `playbooks/upgrade_k3s.yml`, see below |
+
+Upgrading k3s
+-------------
+
+`k3s_version` (`inventories/lab/group_vars/all/k3s.yml`) is the release every
+node runs. To upgrade:
+
+1. Pick the new version from the **stable** channel
+   (`curl -s https://update.k3s.io/v1-release/channels | jq -r '.data[] | select(.name=="stable") | .latest'`)
+   and read its release notes. Move **one Kubernetes minor at a time**
+   (v1.35 → v1.36 → v1.37); `upgrade.yml` refuses a bigger jump, and a downgrade.
+2. Check the add-ons that pin a Kubernetes range against the new minor:
+   Cilium (`roles/cilium`, its docs list the tested versions), Longhorn, Argo CD
+   and Kyverno (gitops `platform/*`). Bump those first if needed.
+3. Bump `k3s_version`, then run:
+
+   ```sh
+   ansible-navigator run playbooks/upgrade_k3s.yml \
+     -i inventories/shared -i inventories/lab/k3s.yml \
+     --vault-password-file ~/.ansible-vault-pass
+   ```
+
+   The play takes an etcd snapshot (`pre-upgrade-<version>-*`, see
+   `kubectl get etcdsnapshotfiles`), upgrades the server, then each agent, **one
+   node at a time**, by re-running the k3s install script with the same arguments
+   the install tasks use. Each node must report the new version, `Ready`, and a
+   Ready Cilium agent before the next one starts; any failure stops the run
+   (`any_errors_fatal`). Nothing is drained: `KillMode=process` keeps the
+   containers running across the k3s restart, as with the registries restart
+   above. The server restart makes the API unavailable for about 30 s. A final
+   play waits for every node and `ds/cilium` and lists pods that are not Running.
+   A node already on `k3s_version` is skipped, so the play can be re-run.
+4. Commit the bump (the version history is in the comment above `k3s_version`)
+   and note the new version in gitops `AGENTS.md`.
+
+**Do not use `deploy_k3s.yml --tags k3s` for upgrades.** Its master install task
+has `creates: /usr/local/bin/k3s`, so it never touches an installed server, while
+its agent task re-runs the install script on every worker **in parallel** — the
+pin bump would then upgrade all agents at once, ahead of the server.
+
+Rolling back: a Kubernetes minor cannot be downgraded in place (etcd, kubelet).
+Restore the `pre-upgrade-*` snapshot with
+`k3s server --cluster-reset --cluster-reset-restore-path=<snapshot>` on the
+server at the OLD version (reinstall it with `INSTALL_K3S_VERSION=<old>`), then
+reinstall the agents at the old version. See the k3s docs on cluster restore.
 
 Private registries (Harbor)
 ---------------------------
