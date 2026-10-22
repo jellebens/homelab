@@ -1,4 +1,9 @@
-k3s_version: v1.35.1+k3s1
+# The k3s release every node runs. Pick it from the "stable" channel
+# (https://update.k3s.io/v1-release/channels), move ONE minor at a time, and
+# roll it out with playbooks/upgrade_k3s.yml (roles/k3s/README.md, "Upgrading
+# k3s"). deploy_k3s.yml installs this version on NEW nodes only.
+# History: v1.35.1+k3s1 (install) -> v1.36.5+k3s1 (2026-10-22).
+k3s_version: v1.36.5+k3s1
 k3s_port: 6443
 # Cilium's k8sServiceHost (roles/cilium) — MUST be the control-plane IP, not a
 # DNS name. The CNI is what the cluster's own DNS (coredns-lab VIP .180) rides

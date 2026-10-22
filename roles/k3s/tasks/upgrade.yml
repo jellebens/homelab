@@ -1,0 +1,95 @@
+---
+# Upgrade k3s on THIS node to k3s_version by re-running the install script with
+# the same arguments the install tasks used (install-master-nodes.yml,
+# install-worker-nodes.yml), so the systemd unit and env file come out the same
+# as a fresh install. A node already on k3s_version is left alone.
+#
+# Not imported by tasks/main.yml: only playbooks/upgrade_k3s.yml calls this,
+# one node at a time (servers first, then agents). The install script restarts
+# the service itself; KillMode=process on the unit keeps the containers
+# running across the restart, so nothing is drained.
+
+- name: Read the installed k3s version
+  ansible.builtin.command: /usr/local/bin/k3s --version
+  register: k3s_version_cmd
+  changed_when: false
+
+- name: Record the installed version
+  ansible.builtin.set_fact:
+    k3s_installed_version: '{{ k3s_version_cmd.stdout_lines[0] | regex_search("v[0-9]+\.[0-9]+\.[0-9]+\+k3s[0-9]+") }}'
+
+- name: Show what happens to this node
+  ansible.builtin.debug:
+    msg: "{{ inventory_hostname }}: {{ k3s_installed_version }} -> {{ k3s_version }}{{ ' (already there, nothing to do)' if k3s_installed_version == k3s_version else '' }}"
+
+# Kubernetes' version skew policy: control plane and kubelet move ONE minor at a
+# time. v1.35 -> v1.37 must go through v1.36 (bump k3s_version twice).
+- name: Refuse to skip a minor version
+  ansible.builtin.assert:
+    that:
+      - (k3s_version.split('.')[1] | int) - (k3s_installed_version.split('.')[1] | int) <= 1
+      - (k3s_version.split('.')[1] | int) >= (k3s_installed_version.split('.')[1] | int)
+    fail_msg: >
+      {{ inventory_hostname }} is on {{ k3s_installed_version }} and k3s_version is
+      {{ k3s_version }}: upgrade one minor version at a time, and never downgrade
+      (etcd and the kubelet do not support it; roll back from the pre-upgrade
+      etcd snapshot instead).
+
+- name: Upgrade the k3s server
+  become: true
+  ansible.builtin.shell: curl -sfL https://get.k3s.io | sh -
+  environment:
+    INSTALL_K3S_VERSION: "{{ k3s_version }}"
+    INSTALL_K3S_EXEC: "server --node-name {{ inventory_hostname }}"
+  when:
+    - "'masters' in group_names"
+    - k3s_installed_version != k3s_version
+
+- name: Upgrade the k3s agent
+  become: true
+  ansible.builtin.shell: curl -sfL https://get.k3s.io | sh -s - agent
+  environment:
+    INSTALL_K3S_VERSION: "{{ k3s_version }}"
+    K3S_URL: "https://{{ hostvars[groups['masters'][0]].ansible_host | default(groups['masters'][0]) }}:{{ k3s_port }}"
+    K3S_TOKEN: "{{ hostvars[groups['masters'][0]].k3s_token }}"
+    K3S_NODE_NAME: "{{ inventory_hostname }}"
+    K3S_KUBECONFIG_MODE: "644"
+  no_log: true
+  when:
+    - "'workers' in group_names"
+    - k3s_installed_version != k3s_version
+
+- name: Wait for the API server to answer again
+  become: true
+  ansible.builtin.command: k3s kubectl get --raw /readyz
+  register: k3s_readyz
+  until: k3s_readyz.rc == 0 and 'ok' in k3s_readyz.stdout
+  retries: 60
+  delay: 5
+  changed_when: false
+  when: "'masters' in group_names"
+
+- name: Wait until the node reports {{ k3s_version }} and Ready
+  become: true
+  ansible.builtin.command: >
+    k3s kubectl get node {{ inventory_hostname }}
+    -o jsonpath='{.status.nodeInfo.kubeletVersion} {.status.conditions[?(@.type=="Ready")].status}'
+  delegate_to: "{{ groups['masters'][0] }}"
+  register: k3s_node_state
+  until: k3s_node_state.stdout == k3s_version ~ ' True'
+  retries: 60
+  delay: 5
+  changed_when: false
+
+- name: Wait until the Cilium agent on this node is Ready again
+  become: true
+  ansible.builtin.command: >
+    k3s kubectl -n kube-system get pods -l k8s-app=cilium
+    --field-selector spec.nodeName={{ inventory_hostname }}
+    -o jsonpath='{.items[*].status.conditions[?(@.type=="Ready")].status}'
+  delegate_to: "{{ groups['masters'][0] }}"
+  register: k3s_cilium_state
+  until: k3s_cilium_state.stdout == 'True'
+  retries: 60
+  delay: 5
+  changed_when: false
