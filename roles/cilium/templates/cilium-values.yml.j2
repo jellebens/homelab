@@ -19,6 +19,38 @@ ingressController:
 
 gatewayAPI:
   enabled: true
+
+# Mutual authentication (ceres ADR-0017, 2026-09-18). SPIRE hands every Cilium identity
+# a SPIFFE certificate, so a CiliumNetworkPolicy rule can REQUIRE the peer to prove who
+# it is (`authentication.mode: required`) before its first packet is let through. It
+# changes NO traffic by itself: only a rule that asks for it is affected — today, one:
+# the ceres Janus -> Vertumnus mesh port (gitops landingzones/ceres, mesh.enabled).
+# SPIRE sits on that one write path and nowhere else; with it down, the ceres console
+# cannot dose, and every control loop carries on untouched.
+authentication:
+  enabled: true
+  mutual:
+    spire:
+      enabled: true
+      install:
+        enabled: true
+        server:
+          dataStorage:
+            enabled: true
+            # Two StorageClasses are marked default (local-path AND longhorn): be explicit,
+            # so the SPIRE server's CA survives a node. On a from-scratch rebuild the server
+            # waits Pending until Argo has installed Longhorn — nothing but auth-required
+            # rules needs it before then.
+            storageClass: longhorn
+
+# Transparent encryption between nodes (ceres ADR-0017). Mutual authentication proves
+# WHO is connecting; it does not encrypt. WireGuard does, for pod traffic that leaves a
+# node (all six run 6.12, which has WireGuard built in; Cilium sizes the MTU for the
+# overhead). Same-node traffic never leaves the node and is not encrypted.
+encryption:
+  enabled: true
+  type: wireguard
+
 ipam:
   operator:
     clusterPoolIPv4PodCIDRList:
