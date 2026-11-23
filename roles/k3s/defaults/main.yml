@@ -20,3 +20,9 @@ k3s_lab_ca_path: /etc/rancher/k3s/lab-root-ca.crt
 k3s_private_registries:
   - host: harbor.lab.local
     address: 192.168.50.200
+
+# The template cloud-init writes /etc/hosts from on a node that has
+# `manage_etc_hosts: true`: one per distribution, and the nodes are Debian. The
+# registry pin goes in here as well, or it is gone after the next boot
+# (tasks/configure-registries.yml). A node without cloud-init has no such file.
+k3s_cloud_init_hosts_template: "/etc/cloud/templates/hosts.{{ ansible_facts['distribution'] | lower }}.tmpl"

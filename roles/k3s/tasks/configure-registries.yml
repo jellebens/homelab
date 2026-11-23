@@ -35,6 +35,30 @@
       {{ registry.address }} {{ registry.host }}
       {% endfor %}
 
+# cloud-init with `manage_etc_hosts: true` (the nodes flashed with a user-data
+# file) writes /etc/hosts anew from its template at every boot, which drops the
+# block above: the master lost its pin at the boot of 2026-11-01 and could not
+# pull from Harbor until it was put back. So the same block goes into the
+# template as well. cloud-init copies a line it does not know as it is, and the
+# marker is the same, so what it renders is the block the task above expects.
+# A node without cloud-init has no template and is left alone.
+- name: Look for cloud-init's template for /etc/hosts
+  become: true
+  ansible.builtin.stat:
+    path: "{{ k3s_cloud_init_hosts_template }}"
+  register: k3s_cloud_init_hosts_template_stat
+
+- name: Pin the registry addresses in cloud-init's /etc/hosts template
+  become: true
+  ansible.builtin.blockinfile:
+    path: "{{ k3s_cloud_init_hosts_template }}"
+    marker: "# {mark} ANSIBLE MANAGED: k3s private registries (roles/k3s)"
+    block: |
+      {% for registry in k3s_private_registries %}
+      {{ registry.address }} {{ registry.host }}
+      {% endfor %}
+  when: k3s_cloud_init_hosts_template_stat.stat.exists
+
 - name: Write the k3s registries.yaml
   become: true
   ansible.builtin.template:

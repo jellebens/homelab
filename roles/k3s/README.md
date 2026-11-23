@@ -68,7 +68,8 @@ For each entry in `k3s_private_registries` (`defaults/main.yml`) it:
 
 1. copies the lab root CA (`files/lab-root-ca.crt`, the same file as
    `gitops/lab-root-ca.crt`) to `/etc/rancher/k3s/lab-root-ca.crt`;
-2. pins `<address> <host>` in a managed block in `/etc/hosts`;
+2. pins `<address> <host>` in a managed block in `/etc/hosts`, and in
+   cloud-init's templates for that file where a node has them (see below);
 3. writes `/etc/rancher/k3s/registries.yaml` with `configs.<host>.tls.ca_file`;
 4. if the CA or `registries.yaml` changed, restarts k3s (or k3s-agent) **one node
    at a time**. Each restart waits until containerd answers and has rendered
@@ -89,6 +90,23 @@ ansible-navigator run playbooks/deploy_k3s.yml --tags registries \
 Add `--limit k3s-node05.local` to try one node first, or `--check --diff` to preview.
 **Never run the play untagged** for this. The untagged play includes the network
 role, which reboots every node in parallel.
+
+### The pin has to survive a reboot
+
+Three of the nodes (`k3s-master01`, `k3s-node01`, `k3s-node03`) were flashed
+with a cloud-init `user-data` file that says `manage_etc_hosts: true`. On such a
+node cloud-init writes `/etc/hosts` anew from
+`/etc/cloud/templates/hosts.debian.tmpl` at every boot, and a block that is only
+in `/etc/hosts` is gone after it. That is how the master lost its pin at the
+boot of 2026-11-01: `lookup harbor.lab.local: no such host` for every pod
+scheduled there, found on 2026-11-23. So the role writes the same block, with
+the same marker, into that template (`k3s_cloud_init_hosts_template`). The
+other nodes have no cloud-init and no template, and the task does nothing
+there.
+
+Not every cloud-init node rewrites the file at every boot: on `k3s-node01` the
+module was skipped at that same boot and the pin stayed. The template is
+pinned on all of them all the same.
 
 ### Why the /etc/hosts pin
 
