@@ -1,3 +1,14 @@
+- name: The inventory must say which gitops environment this cluster is
+  ansible.builtin.assert:
+    that:
+      - gitops_environment is defined
+      - gitops_environment is string
+      - gitops_environment | length > 0
+    fail_msg: >
+      Set gitops_environment (e.g. "lab") in the inventory group_vars: it selects
+      gitops .config/<gitops_environment>/values.yaml. Do not call it "environment",
+      that is a reserved Ansible keyword.
+
 - name: Clone Helm chart repo
   delegate_to: localhost
   ansible.builtin.git:
@@ -15,7 +26,7 @@
     create_namespace: true
     values_files:
       - /tmp/gitops/.config/shared/values.yaml
-      - /tmp/gitops/.config/{{ environment }}/values.yaml
+      - /tmp/gitops/.config/{{ gitops_environment }}/values.yaml
     kubeconfig: "{{ kubeconfig }}"
     wait: true
 

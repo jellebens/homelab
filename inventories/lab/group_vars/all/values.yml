@@ -1,2 +1,7 @@
-environment: lab
+# Which gitops .config/<name>/ directory this cluster uses (roles/argocd).
+# NOT named `environment`: that is a reserved Ansible keyword. Since ansible-core
+# 2.19 `{{ environment }}` resolves to the task keyword (an empty list, rendered
+# "[]") instead of this value, and the argocd bootstrap then looked for
+# .config/[]/values.yaml (2026-11-24).
+gitops_environment: lab
 domain: lab.local
