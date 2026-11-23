@@ -13,7 +13,7 @@
     chart_ref: /tmp/gitops/bootstrap
     release_namespace: argocd
     create_namespace: true
-    valuefiles:
+    values_files:
       - /tmp/gitops/.config/shared/values.yaml
       - /tmp/gitops/.config/{{ environment }}/values.yaml
     kubeconfig: "{{ kubeconfig }}"
