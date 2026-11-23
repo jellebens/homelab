@@ -1,38 +1,42 @@
-Role Name
-=========
+argocd
+======
 
-A brief description of the role goes here.
+Installs Argo CD as the `argocd` Helm release (chart `argocd/argo-cd`) in namespace
+`argocd`, then bootstraps the cluster from the gitops repo. Everything after
+bootstrap is GitOps-managed from `jellebens/gitops` (`platform/argocd-config` tunes
+this release; see its README).
 
-Requirements
+Variables (`defaults/main.yml`)
+-------------------------------
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `argocd_chart_version` | `10.9.1` | argo-cd chart version (Argo CD v3.5.3). **Pinned**: without it a rerun upgrades Argo CD to the newest chart. Bump deliberately. |
+| `argocd_lab_ca_hosts` | `[harbor.lab.local]` | Hosts trusted with the lab root CA in `argocd-tls-certs-cm`, so the repo-server can pull charts from Harbor. |
+
+Values live in `templates/argocd-values.yml.j2`.
+
+Lab CA trust
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+The repo-server trusts the lab root CA for every host in `argocd_lab_ca_hosts`
+(`configs.tls.certificates`). The CA is read from `roles/k3s/files/lab-root-ca.crt`,
+the same file the k3s nodes trust for `harbor.lab.local`, so there is one copy to
+rotate. Added on 2026-10-09 for the ARC/Harbor POC (gitops cards #338/#339), where
+Argo pulls the ARC charts from `harbor.lab.local/actions/...` via the gitops
+repo-creds `harbor-repo`.
 
-Role Variables
---------------
+**Applying a change without rerunning the whole role:** the live release was updated
+on 2026-10-09 with exactly these values, pinned to the deployed chart:
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+```sh
+helm -n argocd upgrade argocd argocd/argo-cd --version 10.9.1 --reuse-values \
+  --set-file 'configs.tls.certificates.harbor\.lab\.local=roles/k3s/files/lab-root-ca.crt'
+```
 
-Dependencies
-------------
+Run `--dry-run=server` first and diff it against `helm -n argocd get manifest argocd`.
+That upgrade changed only `argocd-tls-certs-cm`. The repo-server reads the mounted
+ConfigMap at request time, so no restart is needed.
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
-
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+**Rotating the CA:** replace `roles/k3s/files/lab-root-ca.crt` (see the k3s role
+README), then rerun this role or the `helm upgrade` above.
