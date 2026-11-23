@@ -1,2 +1,2 @@
-environment: lab
+env: lab
 domain: lab.local

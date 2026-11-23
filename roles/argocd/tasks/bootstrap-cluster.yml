@@ -15,7 +15,7 @@
     create_namespace: true
     values_files:
       - /tmp/gitops/.config/shared/values.yaml
-      - /tmp/gitops/.config/{{ environment }}/values.yaml
+      - /tmp/gitops/.config/{{ env }}/values.yaml
     kubeconfig: "{{ kubeconfig }}"
     wait: true
 
